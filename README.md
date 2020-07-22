@@ -1,2 +1,3 @@
 # variantDB_updater
-ATool 
+A updating tool for VariantDB maintenance and new variant features calculation.
+
