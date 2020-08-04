@@ -1,15 +1,35 @@
 import os
+import time
 
 def test_venv():
-	sh = 'source test_venv/bin/activate\npython -V'
+
+	sh = 'source test_venv/bin/activate\npython -V\ndeactivate\npython -V'
 	f = open('test.sh','w')
 	f.write(sh)
 
-	os.popen('sh test.sh > test.txt')
+
+	os.popen('sh test.sh')
+
 	#sh = 'pip list'
 	#os.system(sh)
+def test_transvar():
+	sh = "source /data/Luhy/tools/2020/transvar/bin/activate\ntransvar panno -i 'PIK3CA:p.E545K' --ucsc --ccds"
+	sh2 = 'source test_venv/bin/activate\npython -V'
+	f = open('test.sh','w')
+	f.write(sh)
+	f.close()
+	os.system('sh test.sh > test.txt')
+	#time.sleep(1)
+	f2 = open('test2.sh','w')
+	f2.write('source test_venv/bin/activate\npip list')
+	f2.close()
+	os.system('sh test2.sh > test2.txt')
+	#os.popen(sh2)
+
 def inti_variant_input(var_list,output_path,jobid):
+	basic_dict = {}
 	f_input = open(output_path+ '/' + jobid + '/' + jobid +'.input','w')
+	job_count = 0
 	for i in var_list:
 		print(i)
 		temp = i.split(':')
@@ -18,19 +38,82 @@ def inti_variant_input(var_list,output_path,jobid):
 			nl += col
 			nl += '\t'
 		f_input.write(nl[:-1] + '\n')
-		
+		chrom =temp[0]
+		pos = temp[1]
+		ref = temp[2]
+		mut = temp[3]
+
+		basic_dict[job_count] = {'chr' : chrom, 'pos':pos,'ref':ref,'mut':mut}
+		job_count += 1
+	return basic_dict
+
+def transvar_process(output_path,jobid,basic_dict):
+	#print(basic_dict)
+	#sh = "source /data/Luhy/tools/2020/transvar/bin/activate\ntransvar ganno --ccds -i 'chr3:g.178936091G>A'"
+	has_error = False
+	error_type = ''
+	sh = "source /data/Luhy/tools/2020/transvar/bin/activate\n"
+	#{0: {'chr': '7', 'pos': '140453136', 'ref': 'A', 'mut': 'T'}}  # basic dict
+	total_count = len(basic_dict)
+	fw = open(output_path+ '/' + jobid + '/' + jobid +'_transvar_out.tsv','w')
+	fw.write('index\tchr\tposition\tref\talt\ttranscript\tsymbol\taa_change\n')
+	for i in range(total_count):
+		info = basic_dict[i]
+		sh_head = "transvar ganno --ccds -i 'chr"
+		temp_sh = sh_head + str(info['chr']) + ':g.' + str(info['pos']) + info['ref'] + '>' + info['mut'] + "'\n"
+		sh += temp_sh
+	sh_root = output_path+ '/' + jobid + '/' + jobid +'_transvar.sh'
+	f_sh = open(sh_root,'w')
+	f_sh.write(sh[:-1])
+	f_sh.close()
+	transvar_result_file = output_path+ '/' + jobid + '/' + jobid +'_transvar.result'
+	os.system('sh '+ sh_root + ' > ' + transvar_result_file)
+	time.sleep(1)
+	f_result = open(transvar_result_file,'r')
+	transvar_result_dict = {}
+	l = f_result.readline()
+	#l = f_result.readline()
+	result_index = 0
+	while l:
+		#print(l)
+		if l[0:5] != 'input': #cols name
+			
+			#print(l[0:4])
+			temp = l.split('\t')
+			#print(temp)
+			transcript = temp[1].split(' (p')[0]
+			symbol = temp[2]
+			aa_change = temp[4].split('/')[-1]
+			print(transcript,symbol,aa_change)
+			nl = str(result_index) + '\t' + str(basic_dict[result_index]['chr']) + '\t' + str(basic_dict[result_index]['pos']) + '\t' + basic_dict[result_index]['ref'] + '\t' + basic_dict[result_index]['mut'] + '\t' + \
+			transcript + '\t' +  symbol + '\t' +  aa_change + '\n'
+			fw.write(nl)
+			result_index += 1
+
+		l = f_result.readline()
+	fw.close()
+	return has_error,error_type
 
 
-
-
-def feature_process(var_list,output_path,jobid,feature_config):
+def feature_process(var_list,output_path,jobid,feature_config=None):
 	#test_venv()
-	inti_variant_input(var_list,output_path,jobid)
+	basic_dict = inti_variant_input(var_list,output_path,jobid)
+	print(basic_dict)
+	#if not feature_config:
+	has_error,error_type = transvar_process(output_path,jobid,basic_dict)
+	if has_error:
+		exit(error_type)
+
+
+
+
 
 
 
 def main():
-	print('test')
+
+	test_transvar()
+
 
 if __name__ == '__main__':
 	main()

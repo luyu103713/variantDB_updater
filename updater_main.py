@@ -50,15 +50,18 @@ def main():
 		hasTitle = False
 	if main_opt.options.feature_config:
 		feature_config = main_opt.options.feature_config
+	else:
+		feature_config = None
 		#print(feature_config)
 
 	error_code,error_massage,var_list,file_base_list= readFile.readFileFromInput(input_file,'variant',split_symbol,hasTitle) # now only read variant
 	if error_code:
-		exit(error_massage)		
-	#print(var_list)
+		exit(error_massage)	
 
-	feature_process(var_list,output_path,jobid,feature_config)
-	#collect_result(output_path,jobid)
+	print(var_list)
+
+	feature_process(var_list,output_path,jobid,feature_config)	
+	#result_dict = collect_result(output_path,jobid)
 
 
 if __name__ == '__main__':
