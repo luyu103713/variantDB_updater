@@ -46,6 +46,67 @@ def inti_variant_input(var_list,output_path,jobid):
 		basic_dict[job_count] = {'chr' : chrom, 'pos':pos,'ref':ref,'mut':mut}
 		job_count += 1
 	return basic_dict
+def test_ANNOVAR():
+	sh = 'perl /data/Luhy/ANNOVAR/annovar/table_annovar.pl example/ex1.avinput humandb/ -buildver hg19 -out output/test -remove -protocol refGene,cytoBand,exac03,avsnp147,dbnsfp30a -operation gx,r,f,f,f -nastring . -csvout -polish -xref example/gene_xref.txt'
+	f = open('test.sh','w')
+	f.write(sh)
+	f.close()
+	os.system('sh test.sh > test.txt')	
+def write_avinput(output_path,jobid,basic_dict):
+	f_avinput = output_path+ '/' + jobid + '/' + jobid +'_annovar.avinput'
+	fw = open(f_avinput,'w')
+	#fw.write()
+	total_count = len(basic_dict)
+	for i in range(total_count):
+		#info = basic_dict[i]
+		#1	948921	948921	T	C
+		nl =  str(basic_dict[i]['chr']) + '\t' + str(basic_dict[i]['pos']) + '\t' + str(basic_dict[i]['pos']) + '\t' + basic_dict[i]['ref'] + '\t' + basic_dict[i]['mut'] + '\n'
+		fw.write(nl)
+	fw.close()
+	return f_avinput
+
+def ANNOVAR_process(output_path,jobid,basic_dict):
+	has_error = False
+	error_type = ''
+	
+	avinput_file = write_avinput(output_path,jobid,basic_dict)
+	sh = "perl /data/Luhy/ANNOVAR/annovar/table_annovar.pl " + avinput_file + " humandb/ -buildver hg19 -out " + output_path+ '/' + jobid + '/' + jobid \
+	+ " -remove -protocol refGene,cytoBand,exac03,avsnp147,dbnsfp30a -operation gx,r,f,f,f -nastring . -csvout -polish -xref example/gene_xref.txt"
+	sh_root = output_path+ '/' + jobid + '/' + jobid +'_annovar.sh'
+
+	f_sh = open(sh_root,'w')
+	f_sh.write(sh)
+	f_sh.close()
+
+	os.system('sh '+ sh_root)
+	time.sleep(1)
+	#rename annovar output
+	fw = open(output_path+ '/' + jobid + '/' + jobid +'_annovar_out.tsv','w')
+	fbase = open(output_path+ '/' + jobid + '/' + jobid +'.hg19_multianno.csv','r')
+	l = fbase.readline()
+	nl = 'index'
+	temp = l.split(',')
+	for col in temp:
+		nl += '\t'
+		nl += col
+	fw.write(nl)
+	index = 0
+	l = fbase.readline()
+	while l:
+		nl = str(index)
+		temp = l.split(',')
+		for col in temp:
+			nl += '\t'
+			nl += col
+		fw.write(nl)		
+		index += 1
+		l = fbase.readline()
+		
+
+	
+	return has_error,error_type
+
+
 
 def transvar_process(output_path,jobid,basic_dict):
 	#print(basic_dict)
@@ -95,14 +156,17 @@ def transvar_process(output_path,jobid,basic_dict):
 	return has_error,error_type
 
 
+
+
 def feature_process(var_list,output_path,jobid,feature_config=None):
 	#test_venv()
 	basic_dict = inti_variant_input(var_list,output_path,jobid)
-	print(basic_dict)
-	#if not feature_config:
-	has_error,error_type = transvar_process(output_path,jobid,basic_dict)
-	if has_error:
-		exit(error_type)
+	#print(basic_dict)
+	if not feature_config:
+		has_error,error_type = transvar_process(output_path,jobid,basic_dict)
+		if has_error:
+			exit(error_type)
+		has_error,error_type = ANNOVAR_process(output_path,jobid,basic_dict)
 
 
 
@@ -112,7 +176,8 @@ def feature_process(var_list,output_path,jobid,feature_config=None):
 
 def main():
 
-	test_transvar()
+	#test_transvar()
+	test_ANNOVAR()
 
 
 if __name__ == '__main__':
