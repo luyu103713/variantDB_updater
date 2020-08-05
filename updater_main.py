@@ -26,9 +26,9 @@ class updater_opt:
 
     def verification(self):
         if not self.options.input or not self.options.output or not self.options.filename:
-            exit('ERROR: must support input,output and database parameters!\nType "python updater.py -h" to seek for help')
+            exit('ERROR: must support input,output and file id parameters!\nType "python updater.py -h" to seek for help')
 def match_config(config_dict):     # Logic of calculation order!!
-	normal_methods = ['transvar','annovar','biodbnet']
+	normal_methods = ['transvar','annovar','biodbnet','transfic']
 
 	del_list = []
 	for k in config_dict:                      #first delete key not right in config
@@ -50,6 +50,14 @@ def match_config(config_dict):     # Logic of calculation order!!
 
 	if config_dict['biodbnet']:     # bionetbio rely on transvar 
 		config_dict['transvar'] = True
+	if config_dict['transfic']:   # tansfic rely on ensgid annovar sorce in dbnsfp
+		config_dict['biodbnet'] = True
+		config_dict['annovar'] = True
+		config_dict['transvar'] = True
+
+
+
+
 	return config_dict
 	
 
@@ -99,6 +107,7 @@ def main():
 	print(var_list)
 
 	feature_process(var_list,output_path,jobid,config_dict)	
+	#print()
 	#result_dict = collect_result(output_path,jobid)
 
 
