@@ -27,6 +27,33 @@ class updater_opt:
     def verification(self):
         if not self.options.input or not self.options.output or not self.options.filename:
             exit('ERROR: must support input,output and database parameters!\nType "python updater.py -h" to seek for help')
+def match_config(config_dict):     # Logic of calculation order!!
+	normal_methods = ['transvar','annovar','biodbnet']
+
+	del_list = []
+	for k in config_dict:                      #first delete key not right in config
+		if k not in normal_methods:
+			del_list.append(k)
+	for k in del_list:
+		config_dict.pop(k)
+
+	for k in config_dict:                       #2nd , if not False,we do it
+
+		if config_dict[k] != 'False':
+			config_dict[k] = True
+		else:
+			config_dict[k] = False
+
+	for k in normal_methods:                 #3rd , the methods not in config, we do it
+		if k not in config_dict:
+			config_dict[k] = True
+
+	if config_dict['biodbnet']:     # bionetbio rely on transvar 
+		config_dict['transvar'] = True
+	return config_dict
+	
+
+
 
 def main():
 	main_opt = updater_opt()
@@ -48,10 +75,21 @@ def main():
 		hasTitle = True
 	else:
 		hasTitle = False
+	#print(main_opt.options.feature_config)
 	if main_opt.options.feature_config:
 		feature_config = main_opt.options.feature_config
+		f_config = open(feature_config,'r')
+		ls = f_config.readlines()
+		config_dict = {}
+		for l in ls:
+			l = l.strip()
+			temp = l.split(':')
+			config_dict[temp[0]] = temp[1]
+
+		config_dict = match_config(config_dict)
+
 	else:
-		feature_config = None
+		config_dict = None
 		#print(feature_config)
 
 	error_code,error_massage,var_list,file_base_list= readFile.readFileFromInput(input_file,'variant',split_symbol,hasTitle) # now only read variant
@@ -60,7 +98,7 @@ def main():
 
 	print(var_list)
 
-	feature_process(var_list,output_path,jobid,feature_config)	
+	feature_process(var_list,output_path,jobid,config_dict)	
 	#result_dict = collect_result(output_path,jobid)
 
 

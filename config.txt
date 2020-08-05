@@ -1,0 +1,3 @@
+biodbnet:True
+annovar:False
+wd:False

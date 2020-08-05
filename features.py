@@ -1,5 +1,7 @@
 import os
 import time
+import requests
+import json
 
 def test_venv():
 
@@ -46,12 +48,61 @@ def inti_variant_input(var_list,output_path,jobid):
 		basic_dict[job_count] = {'chr' : chrom, 'pos':pos,'ref':ref,'mut':mut}
 		job_count += 1
 	return basic_dict
+
 def test_ANNOVAR():
 	sh = 'perl /data/Luhy/ANNOVAR/annovar/table_annovar.pl example/ex1.avinput humandb/ -buildver hg19 -out output/test -remove -protocol refGene,cytoBand,exac03,avsnp147,dbnsfp30a -operation gx,r,f,f,f -nastring . -csvout -polish -xref example/gene_xref.txt'
 	f = open('test.sh','w')
 	f.write(sh)
 	f.close()
-	os.system('sh test.sh > test.txt')	
+	os.system('sh test.sh > test.txt')
+def biodbnet_process(output_path,jobid,basic_dict):
+	f_transvar = open(output_path+ '/' + jobid + '/' + jobid +'_transvar_out.tsv','r')
+	symbol_dict = {}
+
+	l = f_transvar.readline()
+	l = f_transvar.readline()
+	while l:
+		temp =l.split('\t')
+		index = int(temp[0])
+		symbol = temp[6]
+		symbol_dict[symbol] = index
+
+		l = f_transvar.readline()
+	total_count = len(basic_dict)
+
+	url = "https://biodbnet-abcc.ncifcrf.gov/webServices/rest.php/biodbnetRestApi.json?method=db2db&input=genesymbol&inputValues="
+	for key in symbol_dict:
+		#https://biodbnet-abcc.ncifcrf.gov/webServices/rest.php/biodbnetRestApi.json?method=db2db&input=genesymbol&inputValues=TP53,BRAF&outputs=affyid&taxonId=9606
+		url += key
+		url += ','
+	url = url[:-1] + "&outputs=ensemblgeneid&taxonId=9606"
+	#print(url)
+	r = requests.get(url)
+	text_dict = json.loads(r.text)
+	#print(text)
+	fw = open(output_path+ '/' + jobid + '/' + jobid +'_ensemblgeneid_out.tsv','w')
+	fw.write('index\tsymbol\tensemblgeneid\n')
+	write_dict = {}
+	for i in range(total_count):
+		print(text_dict[str(i)])
+		symbol = text_dict[str(i)]['InputValue']
+		index = symbol_dict[symbol]
+		if text_dict[str(i)]['outputs'] != []:
+			ensg = text_dict[str(i)]['outputs']['Ensembl Gene ID'][0]   #use first
+		else:
+			ensg = '.'
+		write_dict[index] = [symbol,ensg]
+
+	for i in range(total_count):
+
+		nl = str(i) + '\t' + write_dict[i][0] + '\t' + write_dict[i][1] + '\n'
+		fw.write(nl)
+	fw.close()
+	f_transvar.close()
+	
+
+
+
 def write_avinput(output_path,jobid,basic_dict):
 	f_avinput = output_path+ '/' + jobid + '/' + jobid +'_annovar.avinput'
 	fw = open(f_avinput,'w')
@@ -158,15 +209,33 @@ def transvar_process(output_path,jobid,basic_dict):
 
 
 
-def feature_process(var_list,output_path,jobid,feature_config=None):
+
+def feature_process(var_list,output_path,jobid,config_dict=None):
 	#test_venv()
 	basic_dict = inti_variant_input(var_list,output_path,jobid)
-	#print(basic_dict)
-	if not feature_config:
+
+	print(config_dict)
+	if not config_dict:
 		has_error,error_type = transvar_process(output_path,jobid,basic_dict)
 		if has_error:
 			exit(error_type)
 		has_error,error_type = ANNOVAR_process(output_path,jobid,basic_dict)
+		if has_error:
+			exit(error_type)
+
+		biodbnet_process(output_path,jobid,basic_dict)
+	else:  # use config_dict
+		if config_dict['transvar']:
+			has_error,error_type = transvar_process(output_path,jobid,basic_dict)
+			if has_error:
+				exit(error_type)
+		if config_dict['annovar']:			
+			has_error,error_type = ANNOVAR_process(output_path,jobid,basic_dict)
+			if has_error:
+				exit(error_type)
+		if config_dict['biodbnet']:
+			biodbnet_process(output_path,jobid,basic_dict)
+
 
 
 
