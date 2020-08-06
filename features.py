@@ -3,6 +3,8 @@ import time
 import requests
 import json
 from cut_file import get_index_for_cols
+from mufa_ui import test_mufa
+
 def test_venv():
 
 	sh = 'source test_venv/bin/activate\npython -V\ndeactivate\npython -V'
@@ -346,7 +348,8 @@ def feature_process(var_list,output_path,jobid,config_dict=None):
 	#test_venv()
 	basic_dict = inti_variant_input(var_list,output_path,jobid)
 
-	#print(config_dict)
+
+	print(basic_dict)
 	if not config_dict:
 		has_error,error_type = transvar_process(output_path,jobid,basic_dict)
 		if has_error:
@@ -382,7 +385,9 @@ def main():
 
 	#test_transvar()
 	#test_ANNOVAR()
-	transfic_process('./output/','0103',{0: {'chr': '7', 'pos': '140453136', 'ref': 'A', 'mut': 'T'}, 1: {'chr': '3', 'pos': '178936091', 'ref': 'G', 'mut': 'A'}, 2: {'chr': '5', 'pos': '2131234', 'ref': 'G', 'mut': 'A'}})
+	#transfic_process('./output/','0103',{0: {'chr': '7', 'pos': '140453136', 'ref': 'A', 'mut': 'T'}, 1: {'chr': '3', 'pos': '178936091', 'ref': 'G', 'mut': 'A'}, 2: {'chr': '5', 'pos': '2131234', 'ref': 'G', 'mut': 'A'}})
+	test_mufa('./output/','0202',{0: {'chr': '7', 'pos': '140453136', 'ref': 'A', 'mut': 'T'}, 1: {'chr': '3', 'pos': '178936091', 'ref': 'G', 'mut': 'A'}, \
+		2: {'chr': '5', 'pos': '2131234', 'ref': 'G', 'mut': 'A'}, 3: {'chr': '17', 'pos': '7577121', 'ref': 'G', 'mut': 'A'}},'transfic_score')
 
 
 if __name__ == '__main__':

@@ -1,0 +1,1001 @@
+index	uid	gene_id	SIFT_score	Polyphen2_score	MutationAssessor_score	SIFT_transfic_score	Polyphen2_transfic_score	MutationAssessor_transfic_score	SIFT_transfic_label	Polyphen2_transfic_label	MutationAssessor_transfic_label
+10:100008701:G:A	479673	ENSG00000138131	0.017	1.0	2.175	0.885	1.604	0.489	medium_impact	high_impact	medium_impact
+10:100010855:C:T	531945	ENSG00000138131	0.001	1.0	2.97	2.298	1.604	1.173	high_impact	high_impact	medium_impact
+10:100010921:G:A	468978	ENSG00000138131	0.0	1.0	3.44	2.298	1.604	1.577	high_impact	high_impact	medium_impact
+10:100011451:G:A	46052	ENSG00000138131	0.0	0.999	2.505	2.298	1.604	0.773	high_impact	high_impact	medium_impact
+10:100013356:G:A	114529	ENSG00000138131	0.001	1.0	3.03	2.298	1.604	1.224	high_impact	high_impact	medium_impact
+10:100015364:G:A	297120	ENSG00000138131	0.012	0.999	2.195	1.060	1.604	0.506	medium_impact	high_impact	medium_impact
+10:100015439:G:A	14399	ENSG00000138131	0.001	0.997	2.82	2.298	1.267	1.044	high_impact	medium_impact	medium_impact
+10:100016640:C:T	527403	ENSG00000138131	0.004	1.0	3.18	1.609	1.604	1.353	medium_impact	high_impact	medium_impact
+10:100016685:C:T	234848	ENSG00000138131	0.0	1.0	2.165	2.298	1.604	0.480	high_impact	high_impact	medium_impact
+10:100017453:T:G	70402	ENSG00000138131	0.0	1.0	2.88	2.298	1.604	1.095	high_impact	high_impact	medium_impact
+10:100017523:C:T	99125	ENSG00000138131	0.0	1.0	4.12	2.298	1.604	2.162	high_impact	high_impact	high_impact
+10:100017840:C:T	337136	ENSG00000138131	0.265	0.008	1	-0.620	-1.979	-0.521	medium_impact	low_impact	medium_impact
+10:100017882:C:T	73979	ENSG00000138131	0.004	1.0	3.05	1.609	1.604	1.241	medium_impact	high_impact	medium_impact
+10:100017897:C:T	263776	ENSG00000138131	0.001	1.0	4.445	2.298	1.604	2.441	high_impact	high_impact	high_impact
+10:100020750:C:G	412382	ENSG00000138131	0.209	0.003	0.685	-0.466	-2.280	-0.792	medium_impact	low_impact	medium_impact
+10:100020778:C:T	296286	ENSG00000138131	0.119	1.0	2.995	-0.134	1.604	1.194	medium_impact	high_impact	medium_impact
+10:100020880:C:T	412012	ENSG00000138131	0.591	0.007	0.345	-1.308	-2.020	-1.085	low_impact	low_impact	low_impact
+10:100021841:C:T	158378	ENSG00000138131	0.001	1.0	2.475	2.298	1.604	0.747	high_impact	high_impact	medium_impact
+10:100021866:C:T	244594	ENSG00000138131	0.096	0.014	1.765	-0.014	-1.806	0.136	medium_impact	low_impact	medium_impact
+10:100021874:G:A	265748	ENSG00000138131	0.026	0.488	1.885	0.670	-0.521	0.240	medium_impact	medium_impact	medium_impact
+10:100022589:G:A	365927	ENSG00000138131	0.011	0.143	0.805	1.104	-1.054	-0.689	medium_impact	low_impact	medium_impact
+10:100022608:C:T	481278	ENSG00000138131	0.001	1.0	2.975	2.298	1.604	1.177	high_impact	high_impact	medium_impact
+10:100022716:G:C	479365	ENSG00000138131	0.174	0.001	1.59	-0.354	-2.617	-0.014	medium_impact	low_impact	medium_impact
+10:100143598:C:T	168599	ENSG00000119943	0.025	0.907	2.73	0.639	0.684	1.183	medium_impact	medium_impact	medium_impact
+10:100144782:C:T	423922	ENSG00000119943	0.637	0.117	0.945	-1.112	-0.347	-0.465	low_impact	medium_impact	medium_impact
+10:100148167:G:A	479370	ENSG00000119943	0.095	0.081	2.455	0.055	-0.445	0.930	medium_impact	medium_impact	medium_impact
+10:100148176:A:G	119658	ENSG00000119943	1.0	0.0	-2.63	-3.739	-1.520	-3.765	low_impact	low_impact	low_impact
+10:100150787:G:A	198038	ENSG00000119943	0.005	0.955	3.015	1.314	0.871	1.447	medium_impact	medium_impact	medium_impact
+10:100150791:G:A	150721	ENSG00000119943	0.004	0.472	2.24	1.406	0.111	0.731	medium_impact	medium_impact	medium_impact
+10:100152233:A:T	513727	ENSG00000119943	0.002	0.974	3.73	1.694	1.007	2.107	medium_impact	medium_impact	high_impact
+10:100155028:G:T	155487	ENSG00000119943	0.001	0.998	3.49	1.982	1.629	1.885	medium_impact	high_impact	medium_impact
+10:100155207:G:A	262913	ENSG00000119943	0.191	0.02	1.625	-0.281	-0.796	0.163	medium_impact	medium_impact	medium_impact
+10:100157191:G:A	45634	ENSG00000119943	0.461	0.002	1.43	-0.814	-1.353	-0.017	medium_impact	low_impact	medium_impact
+10:100159875:G:A	235976	ENSG00000119943	0.0	0.989	3.58	1.982	1.217	1.968	medium_impact	medium_impact	medium_impact
+10:100167712:C:T	416508	ENSG00000119943	0.0	1.0	4.66	1.982	1.795	2.965	medium_impact	high_impact	high_impact
+10:100179804:T:C	3296		0.192	0.106	2.25						
+10:100179851:T:C	216507	ENSG00000107521	1.0	0.0	-2.015	-3.104	-1.447	-3.316	low_impact	low_impact	low_impact
+10:100182142:G:A	221941	ENSG00000107521	0.02	0.433	2.25	0.942	0.168	1.341	medium_impact	medium_impact	medium_impact
+10:100182145:G:A	261621	ENSG00000107521	0.066	0.997	2.595	0.477	1.647	1.717	medium_impact	high_impact	medium_impact
+10:100182223:C:T	42733	ENSG00000107521	0.0	1.0	2.87	2.071	1.915	2.018	high_impact	high_impact	high_impact
+10:100183378:C:T	3893830	ENSG00000107521	0.0			2.071			high_impact		
+10:100183511:G:A	245087	ENSG00000107521	0.001	0.997	1.67	2.071	1.647	0.707	high_impact	high_impact	medium_impact
+10:100183528:T:C	275414	ENSG00000107521	1.0	0.0	0.805	-3.104	-1.447	-0.237	low_impact	low_impact	medium_impact
+10:100183570:G:C	119618	ENSG00000107521	0.02			0.942			medium_impact		
+10:100183612:T:C	318190	ENSG00000107521	0.091	0.817	2.505	0.346	0.598	1.619	medium_impact	medium_impact	medium_impact
+10:100183616:G:A	81488	ENSG00000107521	0.002	0.999	2.615	1.811	1.915	1.739	medium_impact	high_impact	medium_impact
+10:100185347:C:T	2668636	ENSG00000107521	0.002			1.811			medium_impact		
+10:100185419:A:T	223401	ENSG00000107521	0.001	0.976	2.72	2.071	1.135	1.854	high_impact	medium_impact	medium_impact
+10:100185471:T:A	3893831	ENSG00000107521	0.009			1.245			medium_impact		
+10:100185627:G:A	1992762	ENSG00000107521	0.028			0.813			medium_impact		
+10:100189332:G:A	414233	ENSG00000107521	0.051	0.146	2.765	0.579	-0.196	1.903	medium_impact	medium_impact	medium_impact
+10:100189354:G:A	135411	ENSG00000107521	0.088	0.945	2.82	0.360	0.926	1.963	medium_impact	medium_impact	medium_impact
+10:100189368:T:A	4369136	ENSG00000107521									
+10:100189381:G:A	188367	ENSG00000107521	0.587	0.009	1.655	-0.648	-0.911	0.691	medium_impact	medium_impact	medium_impact
+10:100189586:G:A	176079	ENSG00000107521	0.182	0.482	0.69	0.047	0.216	-0.363	medium_impact	medium_impact	medium_impact
+10:100189619:G:T	450162	ENSG00000107521	0.385	0.383	2.555	-0.341	0.118	1.674	medium_impact	medium_impact	medium_impact
+10:100190387:G:T	301909	ENSG00000107521	0.158	1.0	2.865	0.111	1.915	2.012	medium_impact	high_impact	high_impact
+10:100190395:A:G	5147262	ENSG00000107521									
+10:100190419:G:A	5143536	ENSG00000107521	0.0			2.071			high_impact		
+10:100190928:A:C	3893833	ENSG00000107521	0.005			1.467			medium_impact		
+10:100190955:G:A	78234	ENSG00000107521	0.013	1.0	2.725	1.106	1.915	1.859	medium_impact	high_impact	medium_impact
+10:100190966:G:C	128496		1.0	0.002	-1.63						
+10:100190991:G:A	57942	ENSG00000107521	0.001	0.999	2.425	2.071	1.915	1.532	high_impact	high_impact	medium_impact
+10:100191027:G:A	188702	ENSG00000107521	0.037	0.935	2.54	0.705	0.883	1.657	medium_impact	medium_impact	medium_impact
+10:100193828:G:A	4035389	ENSG00000107521									
+10:100193844:G:A	19851	ENSG00000107521	0.009	1.0	2.62	1.245	1.915	1.745	medium_impact	high_impact	medium_impact
+10:100195049:G:T	77236	ENSG00000107521	0.058	1.0	2.105	0.528	1.915	1.182	medium_impact	high_impact	medium_impact
+10:100195138:C:T	208636	ENSG00000107521	0.012	1.0	2.62	1.136	1.915	1.745	medium_impact	high_impact	medium_impact
+10:100195159:G:T	244693	ENSG00000107521	0.01	1.0	2.62	1.205	1.915	1.745	medium_impact	high_impact	medium_impact
+10:100195468:G:A	300717	ENSG00000107521	0.031	1.0	2.57	0.773	1.915	1.690	medium_impact	high_impact	medium_impact
+10:100195477:G:A	135294	ENSG00000107521	0.0	1.0	2.62	2.071	1.915	1.745	high_impact	high_impact	medium_impact
+10:100195523:C:A	430117	ENSG00000107521	0.584	0.072	2.045	-0.643	-0.388	1.117	medium_impact	medium_impact	medium_impact
+10:100202886:C:T	84483	ENSG00000107521	0.182	0.818	1.995	0.047	0.599	1.062	medium_impact	medium_impact	medium_impact
+10:100202982:C:T	434727	ENSG00000107521	0.002	0.999	2.38	1.811	1.915	1.483	medium_impact	high_impact	medium_impact
+10:100219374:T:A	73538	ENSG00000172987	.	0.996			1.492			medium_impact	
+10:100219419:C:T	354519	ENSG00000172987	0.273	0.997	1.83	-0.426	1.561	0.833	medium_impact	high_impact	medium_impact
+10:100219420:G:A	81133	ENSG00000172987	0.115	1.0	2.175	0.040	1.826	1.230	medium_impact	high_impact	medium_impact
+10:100219428:C:T	5883	ENSG00000172987	0.015	0.989	1.39	0.981	1.247	0.327	medium_impact	medium_impact	medium_impact
+10:100242479:C:A	290266	ENSG00000172987	0.027	0.999	2.16	0.718	1.826	1.213	medium_impact	high_impact	medium_impact
+10:100242526:G:A	491382	ENSG00000172987	.	1.0			1.826			high_impact	
+10:100242534:T:G	200203	ENSG00000172987	0.352	0.4	1.67	-0.588	0.067	0.649	medium_impact	medium_impact	medium_impact
+10:100249833:A:G	457718		0.0	1.0	3.415						
+10:100249848:C:T	462402		0.235	0.607	0.75						
+10:100249859:C:A	199798	ENSG00000172987	0.006	0.891	1.645	1.388	0.670	0.620	medium_impact	medium_impact	medium_impact
+10:100249866:G:T	3950328	ENSG00000172987	.	1.0			1.826			high_impact	
+10:100249925:C:T	1955733	ENSG00000172987	.	0.01			-0.941			medium_impact	
+10:100374687:C:T	387883	ENSG00000172987	0.041	0.996	2.15	0.528	1.492	1.201	medium_impact	medium_impact	medium_impact
+10:100374722:C:T	201688	ENSG00000172987	0.003	0.999	3.025	1.694	1.826	2.208	medium_impact	high_impact	high_impact
+10:100380361:G:T	81065	ENSG00000172987	0.0	0.891	2.265	2.177	0.670	1.334	high_impact	medium_impact	medium_impact
+10:100380372:C:T	50351		0.044	0.996	2.395						
+10:100401615:T:C	3627956	ENSG00000172987	.	0.073			-0.447			medium_impact	
+10:100401663:C:T	1173085	ENSG00000172987	.	0.996			1.492			medium_impact	
+10:100401696:A:T	77338	ENSG00000172987	0.006	0.142	0	1.388	-0.268	-1.272	medium_impact	medium_impact	low_impact
+10:100453700:T:C	286490	ENSG00000172987	0.005	0.752	1.87	1.468	0.431	0.879	medium_impact	medium_impact	medium_impact
+10:100481427:C:T	2314357	ENSG00000172987	.	0.003			-1.232			low_impact	
+10:100481432:A:G	464827		0.252	0.001	-0.92						
+10:100481463:C:A	179103	ENSG00000172987	0.0	1.0	2.63	2.177	1.826	1.754	high_impact	high_impact	medium_impact
+10:100481469:A:C	2211175	ENSG00000172987	.	0.996			1.492			medium_impact	
+10:100481477:C:G	3627662	ENSG00000172987	.	0.989			1.247			medium_impact	
+10:100481489:C:T	31817	ENSG00000172987	0.295	0.991	1.995	-0.474	1.295	1.023	medium_impact	medium_impact	medium_impact
+10:100481490:G:A	3893837	ENSG00000172987	.	0.999			1.826			high_impact	
+10:100481570:C:T	52167	ENSG00000172987	0.29	0.999	1.7	-0.463	1.826	0.684	medium_impact	high_impact	medium_impact
+10:100481571:G:A	18012	ENSG00000172987	0.149	1.0	1.445	-0.091	1.826	0.390	medium_impact	high_impact	medium_impact
+10:100481584:C:A	5141950	ENSG00000172987	.	0.99			1.270			medium_impact	
+10:100503652:C:T	74168	ENSG00000172987	0.004	0.996	2.61	1.567	1.492	1.731	medium_impact	medium_impact	medium_impact
+10:100503654:C:A	221942	ENSG00000172987	0.001	0.996	2.63	2.177	1.492	1.754	high_impact	medium_impact	medium_impact
+10:100503657:G:C	367343	ENSG00000172987	0.001	0.999	2.58	2.177	1.826	1.696	high_impact	high_impact	medium_impact
+10:100503726:T:G	459571		0.012	0.557	0.975						
+10:100503735:C:T	191120	ENSG00000172987	0.001	0.999	2.63	2.177	1.826	1.754	high_impact	high_impact	medium_impact
+10:100503736:G:A	307562	ENSG00000172987	0.001	1.0	2.63	2.177	1.826	1.754	high_impact	high_impact	medium_impact
+10:100503739:G:A	107299	ENSG00000172987	0.014	0.998	0.69	1.012	1.659	-0.478	medium_impact	high_impact	medium_impact
+10:100503772:C:T	179104	ENSG00000172987	0.026	1.0	2.61	0.735	1.826	1.731	medium_impact	high_impact	medium_impact
+10:100503777:C:A	71230	ENSG00000172987	0.006	0.997	2.56	1.388	1.561	1.673	medium_impact	high_impact	medium_impact
+10:100904018:G:A	393846	ENSG00000172987	0.19	0.007	-0.49	-0.219	-1.028	-1.836	medium_impact	low_impact	low_impact
+10:100904111:T:C	365940	ENSG00000172987	0.199	0.035	1.24	-0.245	-0.634	0.154	medium_impact	medium_impact	medium_impact
+10:100904117:C:A	122618	ENSG00000172987	0.321	1.0	1.15	-0.527	1.826	0.051	medium_impact	high_impact	medium_impact
+10:100992201:T:C	227915	ENSG00000172987	0.054	0.827	1.525	0.401	0.541	0.482	medium_impact	medium_impact	medium_impact
+10:100992230:A:T	317473	ENSG00000172987	0.0	0.033	2.18	2.177	-0.648	1.236	high_impact	medium_impact	medium_impact
+10:100995288:C:T	402488	ENSG00000172987	0.616	1.0	1.65	-1.064	1.826	0.626	low_impact	high_impact	medium_impact
+10:100995356:C:A	93176	ENSG00000172987	0.052	0.728	1.445	0.419	0.401	0.390	medium_impact	medium_impact	medium_impact
+10:100995363:C:T	298723	ENSG00000172987	0.355	0.001	-0.145	-0.594	-1.497	-1.439	medium_impact	low_impact	low_impact
+10:100995386:C:A	3371	ENSG00000172987	0.097	0.557	1.04	0.124	0.219	-0.076	medium_impact	medium_impact	medium_impact
+10:100995414:A:G	271102	ENSG00000172987	1.0	0.001	0.755	-3.889	-1.497	-0.403	low_impact	low_impact	medium_impact
+10:100995447:G:A	440088	ENSG00000172987	0.016	0.983	1.24	0.953	1.140	0.154	medium_impact	medium_impact	medium_impact
+10:100995492:G:A	264217	ENSG00000172987	0.103	0.16	1.04	0.094	-0.235	-0.076	medium_impact	medium_impact	medium_impact
+10:101089259:G:A	513520	ENSG00000119946	0.1	0.072	0.345	0.178	-0.420	-0.705	medium_impact	medium_impact	medium_impact
+10:101089334:G:A	513741	ENSG00000119946	0.035	0.997	0.55	0.626	1.625	-0.490	medium_impact	high_impact	medium_impact
+10:101090189:C:T	135355	ENSG00000119946	0.001	1.0	3.095	2.062	1.894	2.179	high_impact	high_impact	high_impact
+10:101090324:C:T	753116	ENSG00000119946		1.0			1.894			high_impact	
+10:101090463:T:C	537968	ENSG00000119946	0.0	0.999	3.45	2.062	1.894	2.552	high_impact	high_impact	high_impact
+10:101090480:G:A	513577	ENSG00000119946	0.106	0.939	0.94	0.152	0.874	-0.081	medium_impact	medium_impact	medium_impact
+10:101090516:C:T	297737	ENSG00000119946	0.003	0.998	2.665	1.622	1.724	1.728	medium_impact	high_impact	medium_impact
+10:101090548:G:T	531771	ENSG00000119946		0.34			0.043			medium_impact	
+10:101090567:A:G	2857833	ENSG00000119946									
+10:101090649:A:T	513385	ENSG00000119946	0.001	0.999	1.14	2.062	1.894	0.129	high_impact	high_impact	medium_impact
+10:101090663:C:T	2134940	ENSG00000119946									
+10:101120624:C:T	365941	ENSG00000119946		1.0			1.894			high_impact	
+10:101120636:C:T	244541	ENSG00000119946	0.006	0.976	1.04	1.343	1.111	0.024	medium_impact	medium_impact	medium_impact
+10:101120666:G:T	213979	ENSG00000119946	0.011	0.998	2.76	1.099	1.724	1.828	medium_impact	high_impact	medium_impact
+10:101120670:C:T	42279	ENSG00000119946	0.014	0.959	0.55	1.001	0.976	-0.490	medium_impact	medium_impact	medium_impact
+10:101120678:C:T	53188	ENSG00000119946	0.0	0.997	1.73	2.062	1.625	0.748	high_impact	high_impact	medium_impact
+10:101124211:G:A	491363	ENSG00000119946		0.999			1.894			high_impact	
+10:101124723:C:T	492000	ENSG00000119946	0.004	0.999	1.7	1.506	1.894	0.716	medium_impact	high_impact	medium_impact
+10:101136871:C:T	234359	ENSG00000119946	0.003	0.116	2.5	1.622	-0.291	1.555	medium_impact	medium_impact	medium_impact
+10:101147691:C:T	3627715	ENSG00000119946									
+10:101147724:G:A	842831	ENSG00000119946		0.009			-0.944			medium_impact	
+10:101147915:G:A	2113166	ENSG00000119946		0.007			-1.006			low_impact	
+10:101147941:G:A	727300	ENSG00000119946		0.975			1.101			medium_impact	
+10:101148047:C:A	5280652										
+10:101148050:C:T	1086534	ENSG00000119946		0.265			-0.044			medium_impact	
+10:101150095:G:A	73189	ENSG00000119946	0.028	0.915	1.445	0.718	0.786	0.449	medium_impact	medium_impact	medium_impact
+10:101151218:C:T	3627280	ENSG00000119946									
+10:101151223:G:A	127726	ENSG00000119946		0.96			0.982			medium_impact	
+10:101151260:C:A	135361	ENSG00000119946	0.001	0.999	1.4	2.062	1.894	0.401	high_impact	high_impact	medium_impact
+10:101157323:G:T	2492603	ENSG00000120053									
+10:101157324:C:T	179107	ENSG00000120053	0.245	0.12	1.325	-0.641	-0.148	-0.563	medium_impact	medium_impact	medium_impact
+10:101157386:C:T	602375	ENSG00000120053									
+10:101163271:C:T	55766	ENSG00000120053	0.007	0.995	2.365	1.196	1.766	0.290	medium_impact	high_impact	medium_impact
+10:101163307:C:T	1186489	ENSG00000120053									
+10:101163320:C:T	685725	ENSG00000120053									
+10:101163526:C:T	244640	ENSG00000120053	0.007	0.998	2.995	1.196	2.007	0.806	medium_impact	high_impact	medium_impact
+10:101163549:C:T	482766	ENSG00000120053									
+10:101163586:C:T	30056	ENSG00000120053									
+10:101165953:G:A	1875752	ENSG00000120053									
+10:101166566:C:T	176691	ENSG00000120053	0.004	0.997	2.685	1.466	1.900	0.552	medium_impact	high_impact	medium_impact
+10:101180424:C:T	1897693	ENSG00000120053									
+10:101180427:G:A	537414	ENSG00000120053	0.002	0.996	2.47	1.799	1.825	0.376	medium_impact	high_impact	medium_impact
+10:101180539:G:A	727302	ENSG00000120053									
+10:101180556:C:T	1859085	ENSG00000120053									
+10:101180557:G:A	2198924	ENSG00000120053									
+10:101292917:C:T	54886	ENSG00000119919	0.0	1.0	2.75	2.059	1.929	1.661	high_impact	high_impact	medium_impact
+10:101293016:C:T	90647	ENSG00000119919	0.105	0.002	2.28	0.137	-1.321	1.180	medium_impact	low_impact	medium_impact
+10:101295029:G:A	479274	ENSG00000119919	0.282	0.0	0.69	-0.351	-1.493	-0.447	medium_impact	low_impact	medium_impact
+10:101295042:C:T	42734	ENSG00000119919	0.08	0.001	1.21	0.258	-1.493	0.085	medium_impact	low_impact	medium_impact
+10:101370760:G:A	201176	ENSG00000155287	0.093	0.882	2.025	0.246	0.690	0.939	medium_impact	medium_impact	medium_impact
+10:101370949:T:G	365951	ENSG00000155287	0.112	0.774	1.615	0.162	0.501	0.525	medium_impact	medium_impact	medium_impact
+10:101370995:C:T	145666	ENSG00000155287	1.0	0.033	-0.17	-3.467	-0.613	-1.274	low_impact	medium_impact	low_impact
+10:101371022:T:A	3626430	ENSG00000155287	0.0			2.117			high_impact		
+10:101371025:G:A	2857026	ENSG00000155287	0.042			0.589			medium_impact		
+10:101371082:G:A	1856216	ENSG00000155287	0.02			0.898			medium_impact		
+10:101372327:G:T	502368	ENSG00000155287	0.019	1.0	2.575	0.919	1.873	1.493	medium_impact	high_impact	medium_impact
+10:101373638:C:T	14400	ENSG00000155287	0.104	0.991	1.85	0.195	1.340	0.762	medium_impact	medium_impact	medium_impact
+10:101421333:A:G	418217	ENSG00000198018	1.0	0.0	-0.625	-3.456	-1.412	-1.663	low_impact	low_impact	low_impact
+10:101421334:T:C	229575		0.276	0.001	-0.345						
+10:101439068:A:C	407040	ENSG00000198018	0.072	0.006	1.965	0.312	-0.984	0.795	medium_impact	medium_impact	medium_impact
+10:101439530:G:A	300714	ENSG00000198018	0.141	0.048	1.11	0.014	-0.478	-0.016	medium_impact	medium_impact	medium_impact
+10:101445571:G:A	537538	ENSG00000198018	0.553	0.031	0.915	-0.791	-0.587	-0.201	medium_impact	medium_impact	medium_impact
+10:101448486:G:C	516140	ENSG00000198018	0.002	1.0	3.655	1.768	1.879	2.400	medium_impact	high_impact	high_impact
+10:101451181:G:A	521453	ENSG00000198018	0.032	0.994	2.425	0.652	1.451	1.232	medium_impact	medium_impact	medium_impact
+10:101451184:G:A	536713	ENSG00000198018	1.0	0.0	-0.28	-3.456	-1.412	-1.336	low_impact	low_impact	low_impact
+10:101451243:C:T	244772	ENSG00000198018	0.093	0.877	2.06	0.201	0.701	0.886	medium_impact	medium_impact	medium_impact
+10:101451259:T:C	47465	ENSG00000198018	0.346	0.002	-0.74	-0.452	-1.247	-1.772	medium_impact	low_impact	low_impact
+10:101455815:G:A	476897	ENSG00000198018	0.0	1.0	4.175	2.044	1.879	2.893	high_impact	high_impact	high_impact
+10:101455831:G:A	365954	ENSG00000198018	0.038	1.0	2.905	0.581	1.879	1.688	medium_impact	high_impact	medium_impact
+10:101455842:G:A	8685	ENSG00000198018	0.063	0.979	2.045	0.369	1.148	0.871	medium_impact	medium_impact	medium_impact
+10:101458401:G:A	265452	ENSG00000198018	0.185	0.593	0.84	-0.115	0.323	-0.273	medium_impact	medium_impact	medium_impact
+10:101458455:G:A	286451	ENSG00000198018	0.033	0.995	1.43	0.639	1.494	0.288	medium_impact	medium_impact	medium_impact
+10:101458485:G:T	469039	ENSG00000198018	0.001	0.996	3.96	2.044	1.548	2.689	high_impact	high_impact	high_impact
+10:101458520:G:A	302885	ENSG00000198018	0.003	0.988	1.21	1.606	1.284	0.079	medium_impact	medium_impact	medium_impact
+10:101460752:C:T	465987		0.019	0.03	2.79						
+10:101462286:C:T	244424	ENSG00000198018	0.001	0.994	1.865	2.044	1.451	0.701	high_impact	medium_impact	medium_impact
+10:101464256:G:A	491613	ENSG00000198018	0.303	0.507	0.975	-0.374	0.240	-0.144	medium_impact	medium_impact	medium_impact
+10:101464369:G:A	537236	ENSG00000198018	0.654	0.005	1.39	-0.959	-1.028	0.250	medium_impact	low_impact	medium_impact
+10:101476172:C:A	125201	ENSG00000014919	0.002	0.966	2.095	1.788	1.268	0.635	medium_impact	medium_impact	medium_impact
+10:101478222:A:G	270738	ENSG00000014919	0.035	0.93	2.51	0.466	1.054	1.036	medium_impact	medium_impact	medium_impact
+10:101478246:C:T	502065	ENSG00000014919	0.002	0.757	3.99	1.788	0.646	2.468	medium_impact	medium_impact	high_impact
+10:101480768:G:C	360341	ENSG00000014919	0.068	0.944	2.185	0.147	1.121	0.722	medium_impact	medium_impact	medium_impact
+10:101480821:G:A	222373	ENSG00000014919	0.063	0.003	0.76	0.185	-1.306	-0.657	medium_impact	low_impact	medium_impact
+10:101483877:G:C	232999	ENSG00000014919	0.039	0.972	1.68	0.415	1.324	0.233	medium_impact	medium_impact	medium_impact
+10:101486767:C:G	270754	ENSG00000014919	0.055	0.032	1.745	0.251	-0.632	0.296	medium_impact	medium_impact	medium_impact
+10:101486835:G:T	367348	ENSG00000014919	0.436	0.003	1.11	-0.930	-1.306	-0.318	medium_impact	low_impact	medium_impact
+10:101486849:C:T	343926	ENSG00000014919	0.0	1.0	3.99	2.105	2.269	2.468	high_impact	high_impact	high_impact
+10:101486858:T:C	383869	ENSG00000014919	0.0	1.0	3.115	2.105	2.269	1.621	high_impact	high_impact	medium_impact
+10:101487250:C:T	288081	ENSG00000014919	0.126	0.014	1.275	-0.164	-0.870	-0.158	medium_impact	medium_impact	medium_impact
+10:101489326:G:T	197233	ENSG00000014919	0.145	0.867	1.13	-0.238	0.854	-0.299	medium_impact	medium_impact	medium_impact
+10:101491734:C:A	306104	ENSG00000014919	0.223	0.275	0.805	-0.478	0.054	-0.613	medium_impact	medium_impact	medium_impact
+10:101499521:G:A	503633	ENSG00000119929	0.002	0.994	3.365	1.797	1.238	2.161	medium_impact	medium_impact	high_impact
+10:101502963:C:T	34448	ENSG00000119929	0.0	1.0	4.67	2.108	1.673	3.466	high_impact	high_impact	high_impact
+10:101502964:G:A	3632066	ENSG00000119929	0.0			2.108			high_impact		
+10:101502996:C:T	2134029	ENSG00000119929	0.204			-0.378			medium_impact		
+10:101503026:C:T	38087	ENSG00000119929	0.135	0.028	2.445	-0.156	-0.859	1.241	medium_impact	medium_impact	medium_impact
+10:101503802:C:G	504017	ENSG00000119929	0.246	0.039	0.445	-0.486	-0.776	-0.759	medium_impact	medium_impact	medium_impact
+10:101503802:C:T	317351	ENSG00000119929	0.004	0.533	2.675	1.485	0.032	1.471	medium_impact	medium_impact	medium_impact
+10:101507076:C:T	1186827	ENSG00000119929	0.0			2.108			high_impact		
+10:101507079:G:T	840716	ENSG00000119929	0.214			-0.405			medium_impact		
+10:101514376:C:T	475339	ENSG00000119929	0.0	1.0	2.645	2.108	1.673	1.441	high_impact	high_impact	medium_impact
+10:101514391:G:A	494338	ENSG00000119929	0.005	0.955	2.645	1.385	0.740	1.441	medium_impact	medium_impact	medium_impact
+10:101515387:C:T	517743	ENSG00000119929	0.264	0.014	1.355	-0.529	-1.030	0.151	medium_impact	low_impact	medium_impact
+10:101515429:C:G	538208	ENSG00000119929	0.012	0.001	1.175	0.989	-1.673	-0.029	medium_impact	low_impact	medium_impact
+10:101515437:G:T	298754	ENSG00000119929	0.071	0.126	2.52	0.164	-0.469	1.316	medium_impact	medium_impact	medium_impact
+10:101544447:A:T	217962	ENSG00000023839	1.0	0.0	-1.375	-3.779	-1.716	-2.168	low_impact	low_impact	low_impact
+10:101544522:T:A	527181	ENSG00000023839	0.001	0.043	2.71	1.846	-0.789	0.887	medium_impact	medium_impact	medium_impact
+10:101553314:G:A	538351	ENSG00000023839	0.128	0.987	2.635	-0.185	1.021	0.831	medium_impact	medium_impact	medium_impact
+10:101553386:C:A	13159	ENSG00000023839	0.132	0.795	1.98	-0.199	0.296	0.341	medium_impact	medium_impact	medium_impact
+10:101554225:G:A	331304	ENSG00000023839	0.212	0.955	2.585	-0.432	0.710	0.794	medium_impact	medium_impact	medium_impact
+10:101556903:G:A	527253	ENSG00000023839	0.106	0.647	0.895	-0.098	0.114	-0.470	medium_impact	medium_impact	medium_impact
+10:101556984:C:T	244746	ENSG00000023839	0.041	0.009	2.255	0.317	-1.179	0.547	medium_impact	low_impact	medium_impact
+10:101556999:C:T	87139	ENSG00000023839	0.008	0.999	0	0.997	1.648	-1.139	medium_impact	high_impact	low_impact
+10:101558994:G:A	144978	ENSG00000023839	0.31	0.002	0	-0.640	-1.547	-1.139	medium_impact	low_impact	low_impact
+10:101560168:C:T	443409	ENSG00000023839	0.02	0.971	2.685	0.619	0.821	0.868	medium_impact	medium_impact	medium_impact
+10:101560185:G:C	156284	ENSG00000023839	0.001	1.0	3.515	1.846	1.648	1.489	medium_impact	high_impact	medium_impact
+10:101560202:C:T	90648	ENSG00000023839	0.038	0.154	1.155	0.350	-0.449	-0.276	medium_impact	medium_impact	medium_impact
+10:101560210:T:G	308146	ENSG00000023839	0.01	0.405	2.13	0.905	-0.127	0.453	medium_impact	medium_impact	medium_impact
+10:101560288:C:T	319867	ENSG00000023839	0.0	1.0	3.82	1.846	1.648	1.717	medium_impact	high_impact	medium_impact
+10:101563798:C:T	452368	ENSG00000023839	0.197	0.481	2.525	-0.394	-0.052	0.749	medium_impact	medium_impact	medium_impact
+10:101563815:G:A	119665	ENSG00000023839	0.161	0.008	0.245	-0.294	-1.208	-0.956	medium_impact	low_impact	medium_impact
+10:101563847:T:G	345724	ENSG00000023839	0.0	1.0	3.71	1.846	1.648	1.635	medium_impact	high_impact	medium_impact
+10:101563999:C:T	30127	ENSG00000023839	0.053	0.644	1.63	0.208	0.111	0.079	medium_impact	medium_impact	medium_impact
+10:101564023:C:T	149663	ENSG00000023839	0.011	0.01	0.98	0.866	-1.153	-0.407	medium_impact	low_impact	medium_impact
+10:101565153:G:C	537355	ENSG00000023839	0.039	0.124	2.425	0.339	-0.510	0.674	medium_impact	medium_impact	medium_impact
+10:101567195:C:T	517804	ENSG00000023839	0.0	1.0	4.435	1.846	1.648	2.177	medium_impact	high_impact	high_impact
+10:101567212:G:T	468355	ENSG00000023839	0.15	0.054	1.745	-0.260	-0.731	0.165	medium_impact	medium_impact	medium_impact
+10:101567940:G:A	147522	ENSG00000023839	0.001	1.0	3.515	1.846	1.648	1.489	medium_impact	high_impact	medium_impact
+10:101567952:G:A	316171	ENSG00000023839	0.962	0.276	0.665	-2.282	-0.269	-0.642	low_impact	medium_impact	medium_impact
+10:101569906:G:A	164877	ENSG00000023839	1.0	0.002	0.205	-3.779	-1.547	-0.986	low_impact	low_impact	medium_impact
+10:101569958:G:A	434717	ENSG00000023839	0.307	0.063	1.06	-0.635	-0.691	-0.347	medium_impact	medium_impact	medium_impact
+10:101569961:A:C	231547		0.017	0.57	2.65						
+10:101571341:C:T	91789	ENSG00000023839	0.4	0.0	1.425	-0.801	-1.716	-0.074	medium_impact	low_impact	medium_impact
+10:101577118:G:T	179110	ENSG00000023839	0.004	0.866	2.32	1.281	0.421	0.596	medium_impact	medium_impact	medium_impact
+10:101578850:G:A	306770	ENSG00000023839	0.01	0.999	1.675	0.905	1.648	0.113	medium_impact	high_impact	medium_impact
+10:101578919:C:A	358866	ENSG00000023839	0.606	0.004	-0.035	-1.142	-1.377	-1.166	low_impact	low_impact	low_impact
+10:101578954:G:T	194508	ENSG00000023839	0.243	0.002	0.715	-0.504	-1.547	-0.605	medium_impact	low_impact	medium_impact
+10:101578955:C:T	491401	ENSG00000023839	0.081	0.751	1.825	0.023	0.235	0.225	medium_impact	medium_impact	medium_impact
+10:101578963:G:A	333597	ENSG00000023839	0.008	0.501	1.725	0.997	-0.033	0.151	medium_impact	medium_impact	medium_impact
+10:101578969:T:A	365963	ENSG00000023839	0.001	0.999	1.29	1.846	1.648	-0.175	medium_impact	high_impact	medium_impact
+10:101578993:C:A	245083	ENSG00000023839	0.442	0.0	0.88	-0.871	-1.716	-0.481	medium_impact	low_impact	medium_impact
+10:101590129:G:A	365964	ENSG00000023839	0.09	0.05	2.13	-0.024	-0.751	0.453	medium_impact	medium_impact	medium_impact
+10:101590171:C:T	135292	ENSG00000023839	0.057	0.975	2.99	0.176	0.859	1.097	medium_impact	medium_impact	medium_impact
+10:101590552:G:A	278420	ENSG00000023839	0.566	0.005	0.315	-1.074	-1.323	-0.904	low_impact	low_impact	medium_impact
+10:101591373:G:T	417298	ENSG00000023839	0.02	0.952	3.41	0.619	0.694	1.411	medium_impact	medium_impact	medium_impact
+10:101591417:C:T	301983	ENSG00000023839	0.671	0.003	-0.04	-1.256	-1.448	-1.169	low_impact	low_impact	low_impact
+10:101591524:G:A	282330	ENSG00000023839	0.992	0.0	-1.02	-2.929	-1.716	-1.902	low_impact	low_impact	low_impact
+10:101591866:G:T	412383	ENSG00000023839	0.002	1.0	4.3	1.564	1.648	2.076	medium_impact	high_impact	high_impact
+10:101595953:C:T	268143	ENSG00000023839	0.0	1.0	4.68	1.846	1.648	2.360	medium_impact	high_impact	high_impact
+10:101604082:C:A	527154	ENSG00000023839	0.002	0.972	2.655	1.564	0.830	0.846	medium_impact	medium_impact	medium_impact
+10:101604157:C:T	65235	ENSG00000023839	0.0	1.0	3.5	1.846	1.648	1.478	medium_impact	high_impact	medium_impact
+10:101605514:G:A	294797	ENSG00000023839	0.0	1.0	2.73	1.846	1.648	0.902	medium_impact	high_impact	medium_impact
+10:101605526:C:T	402761	ENSG00000023839	0.0	1.0	0.62	1.846	1.648	-0.676	medium_impact	high_impact	medium_impact
+10:101606802:G:C	539163	ENSG00000023839	0.002	1.0	1.295	1.564	1.648	-0.171	medium_impact	high_impact	medium_impact
+10:101606808:G:T	536995	ENSG00000023839	0.656	0.086	1.04	-1.229	-0.609	-0.362	low_impact	medium_impact	medium_impact
+10:101606856:G:A	28836	ENSG00000023839	0.003	0.996	0.31	1.398	1.310	-0.908	medium_impact	medium_impact	medium_impact
+10:101636972:G:T	244709	ENSG00000107554	0.003	1.0	2.875	1.469	1.860	2.015	medium_impact	high_impact	high_impact
+10:101639683:G:A	329685	ENSG00000107554	0.006	0.468	2.295	1.185	0.160	1.402	medium_impact	medium_impact	medium_impact
+10:101639731:G:A	958622	ENSG00000107554									
+10:101639877:A:C	46746	ENSG00000107554	0.181	0.328	0.895	-0.283	0.018	-0.077	medium_impact	medium_impact	medium_impact
+10:101639890:G:A	2134030	ENSG00000107554		0.001			-1.478			low_impact	
+10:101639896:G:T	1891856	ENSG00000107554									
+10:101639929:G:A	2091407	ENSG00000107554									
+10:101643927:G:T	365968	ENSG00000107554		0.994			1.426			medium_impact	
+10:101643929:G:A	342206	ENSG00000107554	0.011	0.958	1.445	0.936	0.947	0.504	medium_impact	medium_impact	medium_impact
+10:101645575:C:T	365969	ENSG00000107554		0.999			1.860			high_impact	
+10:101645608:C:T	537672	ENSG00000107554	0.293	0.041	0.205	-0.540	-0.571	-0.807	medium_impact	medium_impact	medium_impact
+10:101646058:G:A	470451	ENSG00000107554		0.967			1.007			medium_impact	
+10:101646152:C:T	244607	ENSG00000107554	0.076	1.0	2.77	0.120	1.860	1.904	medium_impact	high_impact	medium_impact
+10:101646214:C:T	287631	ENSG00000107554	0.008	1.0	2.865	1.067	1.860	2.004	medium_impact	high_impact	high_impact
+10:101646304:C:T	289400	ENSG00000107554		1.0			1.860			high_impact	
+10:101646368:C:A	444759	ENSG00000107554	0.001	1.0	3.24	1.918	1.860	2.401	medium_impact	high_impact	high_impact
+10:101648613:C:T	491087	ENSG00000107554	0.011	1.0	2.075	0.936	1.860	1.170	medium_impact	high_impact	medium_impact
+10:101648614:G:A	842344	ENSG00000107554		1.0			1.860			high_impact	
+10:101654743:G:T	870661	ENSG00000107554		1.0			1.860			high_impact	
+10:101656106:G:A	342544	ENSG00000107554		0.999			1.860			high_impact	
+10:101656145:T:C	574432	ENSG00000107554		1.0			1.860			high_impact	
+10:101657854:C:T	83793	ENSG00000107554	0.0	0.992	2.055	1.918	1.356	1.148	medium_impact	medium_impact	medium_impact
+10:101657896:G:A	3232871	ENSG00000107554	0.005	0.024		1.260	-0.704		medium_impact	medium_impact	
+10:101657908:T:A	3893933	ENSG00000107554	0.102	0.031		-0.012	-0.641		medium_impact	medium_impact	
+10:101657981:G:A	491209	ENSG00000107554	0.0	1.0	3.81	1.918	1.860	3.003	medium_impact	high_impact	high_impact
+10:101659737:C:T	2028041	ENSG00000107554	0.284			-0.522			medium_impact		
+10:101659823:C:G	2565178		0.0								
+10:101668733:T:C	118371	ENSG00000107554	0.362	0.327	0.425	-0.668	0.017	-0.574	medium_impact	medium_impact	medium_impact
+10:101668763:G:A	287391	ENSG00000107554	0.002			1.635			medium_impact		
+10:101715102:C:G	271272	ENSG00000107554	0.03	0.242	2.6	0.519	-0.085	1.724	medium_impact	medium_impact	medium_impact
+10:101715163:G:A	459782		0.121	0.049	1.87						
+10:101715180:C:T	431680	ENSG00000107554	0.026	0.094	2.075	0.579	-0.357	1.170	medium_impact	medium_impact	medium_impact
+10:101715193:G:C	270927	ENSG00000107554	0.253	0.049	1.67	-0.458	-0.526	0.742	medium_impact	medium_impact	medium_impact
+10:101715220:C:G	64197	ENSG00000107554	0.047	0.361	2.3	0.328	0.053	1.407	medium_impact	medium_impact	medium_impact
+10:101715232:G:A	104950	ENSG00000107554	0.146	0.991	1.01	-0.179	1.327	0.044	medium_impact	medium_impact	medium_impact
+10:101715261:G:A	491398	ENSG00000107554	0.891	0.004	2.56	-1.756	-1.142	1.682	low_impact	low_impact	medium_impact
+10:101715292:G:T	143728	ENSG00000107554	0.028	0.998	2.8	0.548	1.692	1.936	medium_impact	high_impact	medium_impact
+10:101715312:C:T	300310	ENSG00000107554	0.01	0.846	2.825	0.975	0.603	1.962	medium_impact	medium_impact	medium_impact
+10:101715334:G:A	117505	ENSG00000107554	0.112	0.017	1.8	-0.055	-0.790	0.879	medium_impact	medium_impact	medium_impact
+10:101715388:G:A	313180	ENSG00000107554	0.0	1.0	2.545	1.918	1.860	1.666	medium_impact	high_impact	medium_impact
+10:101715391:G:A	58756	ENSG00000107554	0.0	1.0	2.515	1.918	1.860	1.635	medium_impact	high_impact	medium_impact
+10:101715503:G:T	358867	ENSG00000107554	0.011	0.808	2.645	0.936	0.538	1.772	medium_impact	medium_impact	medium_impact
+10:101715515:T:G	492047	ENSG00000107554	0.008	0.361	2.47	1.067	0.053	1.587	medium_impact	medium_impact	medium_impact
+10:101715662:C:T	312643	ENSG00000107554	0.555	0.0	1.1	-0.989	-1.478	0.139	medium_impact	low_impact	medium_impact
+10:101715673:T:C	365971	ENSG00000107554	0.231	0.0	1.555	-0.409	-1.478	0.620	medium_impact	low_impact	medium_impact
+10:101715783:G:T	270356	ENSG00000107554	0.01	0.8	1.495	0.975	0.526	0.557	medium_impact	medium_impact	medium_impact
+10:101715865:A:G	299503	ENSG00000107554	0.046	0.944	1.905	0.338	0.874	0.990	medium_impact	medium_impact	medium_impact
+10:101715892:G:A	270513	ENSG00000107554	0.105	0.001	1.2	-0.025	-1.478	0.245	medium_impact	low_impact	medium_impact
+10:101715907:G:T	449084	ENSG00000107554	1.0	0.0	1.495	-3.716	-1.478	0.557	low_impact	low_impact	medium_impact
+10:101715927:C:A	282650	ENSG00000107554	0.158	0.112	1.495	-0.217	-0.309	0.557	medium_impact	medium_impact	medium_impact
+10:101715970:G:A	128335		0.251	0.0	1.4						
+10:101715976:G:A	491564	ENSG00000107554	0.066	0.017	1.245	0.182	-0.790	0.292	medium_impact	medium_impact	medium_impact
+10:101716029:G:A	328265	ENSG00000107554	0.414	0.0	0.345	-0.757	-1.478	-0.659	medium_impact	low_impact	medium_impact
+10:101716033:A:T	365972	ENSG00000107554	0.492	0.011	1.75	-0.886	-0.896	0.826	medium_impact	medium_impact	medium_impact
+10:101716054:C:T	365975	ENSG00000107554	0.012	0.017	1.79	0.900	-0.790	0.868	medium_impact	medium_impact	medium_impact
+10:101716155:G:T	365976	ENSG00000107554	0.058	0.761	1.79	0.238	0.471	0.868	medium_impact	medium_impact	medium_impact
+10:101716192:C:T	312644	ENSG00000107554	0.193	0.225	1.32	-0.316	-0.108	0.372	medium_impact	medium_impact	medium_impact
+10:101716419:C:T	148545	ENSG00000107554	0.347	0.643	0.205	-0.641	0.333	-0.807	medium_impact	medium_impact	medium_impact
+10:101716480:G:T	459487		0.007	0.998	1.325						
+10:101716590:G:A	286414	ENSG00000107554	0.032	0.694	2.35	0.491	0.389	1.460	medium_impact	medium_impact	medium_impact
+10:101716647:G:A	13581	ENSG00000107554	0.0	1.0	3.86	1.918	1.860	3.056	medium_impact	high_impact	high_impact
+10:101716656:C:T	454866		0.0	1.0	4.06						
+10:101716779:C:T	111832	ENSG00000107554	0.006	0.991	0.9	1.185	1.327	-0.072	medium_impact	medium_impact	medium_impact
+10:101716810:G:C	270991	ENSG00000107554	0.621	0.0	0	-1.101	-1.478	-1.023	low_impact	low_impact	low_impact
+10:101716831:G:T	365978	ENSG00000107554	0.371	0.015	1.1	-0.684	-0.820	0.139	medium_impact	medium_impact	medium_impact
+10:101728909:G:T	536423	ENSG00000107554	0.006	0.999	3.595	1.185	1.860	2.776	medium_impact	high_impact	high_impact
+10:101728961:G:A	365980	ENSG00000107554	0.021	0.988	1.075	0.668	1.257	0.113	medium_impact	medium_impact	medium_impact
+10:101728986:G:A	327133	ENSG00000107554	0.0	1.0	3.775	1.918	1.860	2.966	medium_impact	high_impact	high_impact
+10:101731824:C:T	456114		0.0	1.0	3.775						
+10:101731833:C:T	145952	ENSG00000107554	0.044	1.0	1.07	0.356	1.860	0.108	medium_impact	high_impact	medium_impact
+10:101731839:G:A	365981	ENSG00000107554	0.021	1.0	1.32	0.668	1.860	0.372	medium_impact	high_impact	medium_impact
+10:101731859:C:T	84597	ENSG00000107554	0.01	1.0	1.535	0.975	1.860	0.599	medium_impact	high_impact	medium_impact
+10:101802191:G:T	142864	ENSG00000120054	0.0	0.996	0.55	2.042	1.641	-0.600	high_impact	high_impact	medium_impact
+10:101802222:C:T	95130	ENSG00000120054	0.249	0.016	0.345	-0.201	-0.630	-0.801	medium_impact	medium_impact	medium_impact
+10:101814184:C:T	61157	ENSG00000120054	0.0	1.0	4.615	2.042	1.968	3.373	high_impact	high_impact	high_impact
+10:101816796:C:T	3871148	ENSG00000120054	0.13			0.107			medium_impact		
+10:101816817:G:A	265753	ENSG00000120054	0.009	1.0	2.835	1.190	1.968	1.633	medium_impact	high_impact	medium_impact
+10:101816837:G:A	2006454	ENSG00000120054	0.0			2.042			high_impact		
+10:101816839:A:T	352222	ENSG00000120054	0.001	0.74	2.865	2.042	0.587	1.663	high_impact	medium_impact	medium_impact
+10:101816862:G:T	499446	ENSG00000120054	0.044	0.97	2.165	0.562	1.160	0.978	medium_impact	medium_impact	medium_impact
+10:101816871:C:G	1541510	ENSG00000120054	0.001			2.042			high_impact		
+10:101824949:T:C	3626365	ENSG00000120054	1.0			-3.299			low_impact		
+10:101824970:G:A	3893947	ENSG00000120054	0.001			2.042			high_impact		
+10:101824989:G:A	753237	ENSG00000120054	0.25			-0.204			medium_impact		
+10:101824992:G:A	3406100	ENSG00000120054	0.045			0.553			medium_impact		
+10:101825039:G:A	476561	ENSG00000120054	1.0	0.999	1.28	-3.299	1.968	0.113	low_impact	high_impact	medium_impact
+10:101825081:T:C	499414	ENSG00000120054	0.004	0.996	1.6	1.505	1.641	0.426	medium_impact	high_impact	medium_impact
+10:101825108:G:A	94289	ENSG00000120054	0.016	1.0	3.325	0.964	1.968	2.112	medium_impact	high_impact	high_impact
+10:101825111:C:A	529490	ENSG00000120054	0.237	0.001	-0.04	-0.176	-1.287	-1.177	medium_impact	low_impact	low_impact
+10:101829616:T:G	295339	ENSG00000120054	0.137	0.0	-1.055	0.083	-1.287	-2.169	medium_impact	low_impact	low_impact
+10:101835723:C:T	488441	ENSG00000120054	0.0	1.0	2.49	2.042	1.968	1.296	high_impact	high_impact	medium_impact
+10:101835745:C:T	179115	ENSG00000120054	0.344	0.005	0.55	-0.379	-0.907	-0.600	medium_impact	medium_impact	medium_impact
+10:101835748:T:G	431723	ENSG00000120054	0.003	0.014	2.175	1.617	-0.662	0.988	medium_impact	medium_impact	medium_impact
+10:101835750:C:T	410038	ENSG00000120054	0.001	1.0	3.69	2.042	1.968	2.469	high_impact	high_impact	high_impact
+10:101835789:G:A	138565	ENSG00000120054	0.311	0.734	0.57	-0.321	0.580	-0.581	medium_impact	medium_impact	medium_impact
+10:101835810:C:T	42829	ENSG00000120054	0.0	0.985	3.96	2.042	1.327	2.733	high_impact	medium_impact	high_impact
+10:101835823:C:T	25487	ENSG00000120054	0.0	1.0	4.055	2.042	1.968	2.826	high_impact	high_impact	high_impact
+10:101841235:T:G	365984	ENSG00000120054	0.001	0.963	3.445	2.042	1.109	2.230	high_impact	medium_impact	high_impact
+10:101841262:C:T	42454	ENSG00000120054	0.118	0.078	1.025	0.149	-0.242	-0.136	medium_impact	medium_impact	medium_impact
+10:101841285:C:T	325486	ENSG00000120054	0.321	0.091	0.595	-0.339	-0.202	-0.556	medium_impact	medium_impact	medium_impact
+10:101841303:C:T	265563	ENSG00000120054	0.279	0.007	1.845	-0.261	-0.827	0.666	medium_impact	medium_impact	medium_impact
+10:101950628:T:A	454635		0.051	0.08	2.08						
+10:101959766:G:A	120601	ENSG00000213341	0.002	0.999	2.395	1.747	1.955	1.350	medium_impact	high_impact	medium_impact
+10:101964370:T:C	410412	ENSG00000213341	0.007	0.997	2.395	1.250	1.683	1.350	medium_impact	high_impact	medium_impact
+10:101964407:G:A	538444	ENSG00000213341	0.002	0.999	2.415	1.747	1.955	1.371	medium_impact	high_impact	medium_impact
+10:101964918:G:A	491198	ENSG00000213341	0.0	1.0	2.305	2.021	1.955	1.258	high_impact	high_impact	medium_impact
+10:101964942:T:G	295275	ENSG00000213341	0.381	0.07	1.5	-0.513	-0.389	0.430	medium_impact	medium_impact	medium_impact
+10:101969453:G:A	491632	ENSG00000213341	0.024	0.893	0	0.757	0.773	-1.112	medium_impact	medium_impact	low_impact
+10:101977825:C:G	360350	ENSG00000213341	0.0	1.0	4.225	2.021	1.955	3.231	high_impact	high_impact	high_impact
+10:101977883:C:T	216413	ENSG00000213341	0.384	0.0	0.6	-0.518	-1.456	-0.495	medium_impact	low_impact	medium_impact
+10:101978808:C:T	491100	ENSG00000213341	1.0	0.016	-1.66	-3.430	-0.768	-2.818	low_impact	medium_impact	low_impact
+10:101978828:G:A	229627		0.013	1.0	-0.61						
+10:101980409:T:C	530754	ENSG00000213341	0.13	0.978	0.925	0.045	1.186	-0.161	medium_impact	medium_impact	medium_impact
+10:101980418:T:C	428462	ENSG00000213341	0.0	0.999	3.305	2.021	1.955	2.285	high_impact	high_impact	high_impact
+10:101981886:G:T	474991	ENSG00000213341	0.011	0.995	0.44	1.070	1.556	-0.659	medium_impact	high_impact	medium_impact
+10:101982676:G:T	317589	ENSG00000213341	1.0	0.0	-0.95	-3.430	-1.456	-2.088	low_impact	low_impact	low_impact
+10:101993030:C:T	1856147	ENSG00000095485	0.067			0.334			medium_impact		
+10:101995447:C:A	617592	ENSG00000095485	0.013			1.021			medium_impact		
+10:101996654:G:T	312676	ENSG00000095485	0.733	0.113	1.715	-1.141	-0.314	0.753	low_impact	medium_impact	medium_impact
+10:101997810:C:T	3626419	ENSG00000095485	0.0			2.064			high_impact		
+10:101997837:C:T	2669979	ENSG00000095485	0.839			-1.400			low_impact		
+10:101997853:G:A	1086587	ENSG00000095485	0.009			1.172			medium_impact		
+10:102003498:C:A	2105098	ENSG00000095485	0.001			2.064			high_impact		
+10:102005616:G:A	1332982	ENSG00000095485	0.004			1.502			medium_impact		
+10:102006622:T:C	365985	ENSG00000095485	0.012	0.82	1.87	1.054	0.573	0.915	medium_impact	medium_impact	medium_impact
+10:102013229:C:A	261705	ENSG00000095485	0.0	1.0	3.78	2.064	1.910	2.907	high_impact	high_impact	high_impact
+10:102016131:T:C	295396	ENSG00000095485	0.234	0.001	1.18	-0.252	-1.516	0.195	medium_impact	low_impact	medium_impact
+10:102016230:C:T	490982	ENSG00000095485	0.192	0.258	1.87	-0.150	-0.065	0.915	medium_impact	medium_impact	medium_impact
+10:102020025:T:C	538200	ENSG00000095485	0.088	0.021	1.53	0.215	-0.756	0.560	medium_impact	medium_impact	medium_impact
+10:102020035:T:G	535935	ENSG00000095485	0.113	0.13	1.88	0.102	-0.274	0.925	medium_impact	medium_impact	medium_impact
+10:102020727:C:A	404891	ENSG00000095485	0.073	0.846	2.825	0.297	0.620	1.911	medium_impact	medium_impact	medium_impact
+10:102048209:C:T	114421	ENSG00000107593	0.0	0.001	0.55	2.075	-1.580	-0.339	high_impact	low_impact	medium_impact
+10:102049786:G:A	170259	ENSG00000107593	0.136	0.0	0.205	0.165	-1.580	-0.701	medium_impact	low_impact	medium_impact
+10:102051084:T:A	2318340	ENSG00000107593									
+10:102051114:G:A	341372	ENSG00000107593									
+10:102052796:G:T	1713632	ENSG00000107593									
+10:102054399:G:A	317300	ENSG00000107593	0.0	1.0	3.255	2.075	1.908	2.503	high_impact	high_impact	high_impact
+10:102054754:C:T	365989	ENSG00000107593	0.027	1.0	1.95	0.820	1.908	1.132	medium_impact	high_impact	medium_impact
+10:102054773:G:T	468352	ENSG00000107593	0.0	0.995	2.625	2.075	1.501	1.842	high_impact	high_impact	medium_impact
+10:102055882:G:C	107304	ENSG00000107593	0.024	0.989	2.705	0.866	1.300	1.926	medium_impact	medium_impact	medium_impact
+10:102055885:C:A	2477763	ENSG00000107593									
+10:102055890:C:T	179119	ENSG00000107593	0.01	0.987	2.61	1.202	1.257	1.826	medium_impact	medium_impact	medium_impact
+10:102055941:C:T	116457	ENSG00000107593	0.087	0.998	2.855	0.355	1.733	2.083	medium_impact	high_impact	high_impact
+10:102055962:A:C	3627628	ENSG00000107593									
+10:102055998:G:A	1897661	ENSG00000107593									
+10:102056015:C:T	1848656	ENSG00000107593									
+10:102056745:C:T	423169	ENSG00000107593									
+10:102056751:G:T	287351	ENSG00000107593	0.164	0.218	1.355	0.082	-0.158	0.507	medium_impact	medium_impact	medium_impact
+10:102056830:G:C	3632149	ENSG00000107593									
+10:102056841:C:T	3706461	ENSG00000107593									
+10:102056894:C:T	1462141	ENSG00000107593									
+10:102056924:G:A	365990	ENSG00000107593	0.024	0.698	2.625	0.866	0.376	1.842	medium_impact	medium_impact	medium_impact
+10:102056933:G:A	234847	ENSG00000107593	1.0	0.007	1.345	-3.140	-1.087	0.497	low_impact	low_impact	medium_impact
+10:102057272:G:A	360352	ENSG00000107593	1.0	0.002	-1.05	-3.140	-1.404	-2.020	low_impact	low_impact	low_impact
+10:102057296:C:T	66922	ENSG00000107593	0.001	1.0	3.415	2.075	1.908	2.672	high_impact	high_impact	high_impact
+10:102057362:A:C	442664	ENSG00000107593	0.0	0.93	3.1	2.075	0.817	2.341	high_impact	medium_impact	high_impact
+10:102058326:C:A	296844	ENSG00000107593	0.002	1.0	3.165	1.813	1.908	2.409	medium_impact	high_impact	high_impact
+10:102058491:A:G	239602	ENSG00000107593	0.143	0.004	1.79	0.143	-1.229	0.964	medium_impact	low_impact	medium_impact
+10:102059361:G:A	398467	ENSG00000107593	0.268	0.11	1.645	-0.153	-0.364	0.812	medium_impact	medium_impact	medium_impact
+10:102089039:C:A	489566	ENSG00000107593	0.004	0.999	2.7	1.550	1.908	1.920	medium_impact	high_impact	medium_impact
+10:102089628:C:T	345874	ENSG00000107593	0.105	0.115	1.69	0.276	-0.351	0.859	medium_impact	medium_impact	medium_impact
+10:102089791:C:T	520514	ENSG00000107593	0.124	0.01	1.555	0.205	-0.996	0.717	medium_impact	medium_impact	medium_impact
+10:102116311:A:C	442544	ENSG00000099194	1.0	0.0	-3.16	-3.768	-1.895	-3.329	low_impact	low_impact	low_impact
+10:102116313:G:A	536735	ENSG00000099194	0.259	0.0	-1.745	-0.431	-1.895	-2.242	medium_impact	low_impact	low_impact
+10:102120550:C:T	365991	ENSG00000099194	0.009	0.999	2.085	1.100	3.374	0.700	medium_impact	high_impact	medium_impact
+10:102120595:G:A	156103	ENSG00000099194	0.391	0.342	1.51	-0.686	0.490	0.259	medium_impact	medium_impact	medium_impact
+10:102222945:C:A	290861	ENSG00000075290	0.013	0.0	0	0.848	-1.642	-1.180	medium_impact	low_impact	low_impact
+10:102239712:C:T	310316	ENSG00000075290	0.0	0.999	4.435	1.980	1.402	4.309	medium_impact	medium_impact	high_impact
+10:102239754:G:A	329264	ENSG00000075290	0.409	0.009	-0.18	-0.894	-1.156	-1.403	medium_impact	low_impact	low_impact
+10:102239763:C:T	24436	ENSG00000075290	0.004	1.0	3.275	1.370	1.402	2.873	medium_impact	medium_impact	high_impact
+10:102239764:G:A	297705	ENSG00000075290	0.021	1.0	2.175	0.633	1.402	1.512	medium_impact	medium_impact	medium_impact
+10:102242029:C:A	127543	ENSG00000075290	0.001	1.0	3.47	1.980	1.402	3.114	medium_impact	medium_impact	high_impact
+10:102242169:G:A	285240	ENSG00000075290	0.002	0.416	2.055	1.675	-0.195	1.363	medium_impact	medium_impact	medium_impact
+10:102242188:C:G	367364	ENSG00000075290	0.108	0.016	1.285	-0.128	-1.028	0.410	medium_impact	low_impact	medium_impact
+10:102249076:G:A	385698	ENSG00000075826	0.107	0.001	0.345	0.148	-1.483	-0.705	medium_impact	low_impact	medium_impact
+10:102249077:G:A	170104	ENSG00000075826	0.235	0.002	-0.665	-0.228	-1.314	-1.765	medium_impact	low_impact	low_impact
+10:102249086:C:A	502578	ENSG00000075826	0.037	0.006	1.085	0.603	-1.044	0.071	medium_impact	low_impact	medium_impact
+10:102249885:G:A	365993	ENSG00000075826	0.164	0.536	0	-0.049	0.241	-1.067	medium_impact	medium_impact	low_impact
+10:102256140:G:A	365997	ENSG00000075826	0.021	0.002	2.395	0.836	-1.314	1.445	medium_impact	low_impact	medium_impact
+10:102256950:T:C	531573	ENSG00000075826	0.009	0.998	3.38	1.180	1.724	2.478	medium_impact	high_impact	high_impact
+10:102256959:C:A	405377	ENSG00000075826	0.001	1.0	2.8	2.062	1.894	1.870	high_impact	high_impact	medium_impact
+10:102256971:T:C	79882	ENSG00000075826	0.0	1.0	3.84	2.062	1.894	2.961	high_impact	high_impact	high_impact
+10:102257436:G:A	171481	ENSG00000075826	1.0	0.001	0.6	-3.463	-1.483	-0.438	low_impact	low_impact	medium_impact
+10:102257527:C:A	244780	ENSG00000075826	0.004	0.834	1.575	1.506	0.600	0.585	medium_impact	medium_impact	medium_impact
+10:102257790:G:A	173150	ENSG00000075826	0.001	0.868	2.52	2.062	0.666	1.576	high_impact	medium_impact	medium_impact
+10:102262172:G:A	47298	ENSG00000075826	0.024	0.004	2.42	0.782	-1.144	1.471	medium_impact	low_impact	medium_impact
+10:102265159:G:T	68235	ENSG00000075826	0.002	0.475	2.75	1.784	0.181	1.818	medium_impact	medium_impact	medium_impact
+10:102265222:G:C	538160	ENSG00000075826	0.008	0.997	2.825	1.228	1.625	1.896	medium_impact	high_impact	medium_impact
+10:102265248:G:A	82753	ENSG00000075826	0.02	0.276	2.395	0.856	-0.031	1.445	medium_impact	medium_impact	medium_impact
+10:102265860:C:A	365999	ENSG00000075826	0.02	0.002	1.65	0.856	-1.314	0.664	medium_impact	low_impact	medium_impact
+10:102266078:C:G	538307	ENSG00000075826	0.04	0.237	2.88	0.571	-0.081	1.954	medium_impact	medium_impact	medium_impact
+10:102268828:G:A	50846		0.0	1.0	1.39						
+10:102269090:C:G	270317	ENSG00000075826	0.0	1.0	1.655	2.062	1.894	0.669	high_impact	high_impact	medium_impact
+10:102269137:G:A	463845		0.09	0.007	2.46						
+10:102269216:C:T	201686	ENSG00000075826	0.009	1.0	3.5	1.180	1.894	2.604	medium_impact	high_impact	high_impact
+10:102275899:G:T	50732		0.063	0.0	2.31						
+10:102283616:C:T	442434	ENSG00000166136	0.522	0.001	0	-0.786	-1.814	-1.711	medium_impact	low_impact	low_impact
+10:102283617:G:A	308145	ENSG00000166136	0.015	0.608	0	0.845	0.361	-1.711	medium_impact	medium_impact	low_impact
+10:102283641:C:A	471749	ENSG00000166136	0.001	1.0	3.42	1.884	2.275	1.293	medium_impact	high_impact	medium_impact
+10:102283664:T:G	287304	ENSG00000166136	0.004	0.164	3.03	1.354	-0.251	0.951	medium_impact	medium_impact	medium_impact
+10:102286277:C:T	860985	ENSG00000166136	0.015			0.845			medium_impact		
+10:102286296:C:A	5143539	ENSG00000166136	0.001			1.884			medium_impact		
+10:102286777:C:A	224732	ENSG00000166136	0.006	1.0	3.505	1.198	2.275	1.368	medium_impact	high_impact	medium_impact
+10:102286817:G:T	1116799	ENSG00000166136	0.0			1.884			medium_impact		
+10:102289180:T:G	1858843	ENSG00000166136	0.602			-0.910			medium_impact		
+10:102289183:T:C	2286959	ENSG00000166136	0.328			-0.478			medium_impact		
+10:102289218:G:T	3893997	ENSG00000166136	0.002			1.619			medium_impact		
+10:102289241:C:A	3665234	ENSG00000166136	0.319			-0.463			medium_impact		
+10:102289578:C:T	192780	ENSG00000166136	0.641	0.001	0.245	-0.973	-1.814	-1.496	medium_impact	low_impact	low_impact
+10:102295836:C:G	22499	ENSG00000166135	0.162	0.002	0.895	-0.518	-1.208	-0.263	medium_impact	low_impact	medium_impact
+10:102295846:G:T	446870	ENSG00000166135	0.003	0.999	1.1	1.542	1.848	0.003	medium_impact	high_impact	medium_impact
+10:102296239:G:T	409135	ENSG00000166135	0.212	0.0	1.71	-0.681	-1.369	0.795	medium_impact	low_impact	medium_impact
+10:102296375:G:A	492146	ENSG00000166135	0.229	0.004	0	-0.730	-1.046	-1.425	medium_impact	low_impact	low_impact
+10:102304757:G:C	3632908	ENSG00000166135	0.043			0.204			medium_impact		
+10:102304792:C:T	179122	ENSG00000166135	0.0	1.0	3.88	2.086	1.848	3.614	high_impact	high_impact	high_impact
+10:102306329:C:G	3627553	ENSG00000166135	0.0			2.086			high_impact		
+10:102306916:G:T	307521	ENSG00000166135	0.072	0.027	0.345	-0.066	-0.595	-0.977	medium_impact	medium_impact	medium_impact
+10:102509535:G:A	316844	ENSG00000075891	0.088	0.958	1.525	-0.167	0.600	0.360	medium_impact	medium_impact	medium_impact
+10:102509536:T:G	210132	ENSG00000075891	0.0	0.999	3.11	1.644	1.451	2.009	medium_impact	medium_impact	high_impact
+10:102509614:G:A	2400794	ENSG00000075891	.	0.999			1.451			medium_impact	
+10:102509623:C:T	2006781	ENSG00000075891	.	1.0			1.451			medium_impact	
+10:102510473:A:G	3236450	ENSG00000075891	.	0.903			0.399			medium_impact	
+10:102510510:C:T	244461	ENSG00000075891	0.0	1.0	2.685	1.644	1.451	1.567	medium_impact	medium_impact	medium_impact
+10:102510513:C:T	463955		0.0	1.0	3.27						
+10:102510597:C:T	2253507	ENSG00000075891	.	0.939			0.512			medium_impact	
+10:102539298:G:T	199799	ENSG00000075891	0.001	0.53	2.595	1.644	-0.076	1.473	medium_impact	medium_impact	medium_impact
+10:102541041:A:G	3981523	ENSG00000075891	.	0.966			0.650			medium_impact	
+10:102541057:C:T	1322395	ENSG00000075891	.	0.999			1.451			medium_impact	
+10:102566244:G:A	262758	ENSG00000075891	0.04	0.999		0.166	1.451		medium_impact	medium_impact	
+10:102566256:G:A	3823885	ENSG00000075891	0.085	0.979		-0.152	0.761		medium_impact	medium_impact	
+10:102566297:C:T	170023	ENSG00000075891	0.003	1.0		1.207	1.451		medium_impact	medium_impact	
+10:102566342:G:A	716366	ENSG00000075891	0.014	0.988		0.592	0.889		medium_impact	medium_impact	
+10:102568959:C:A	1483204	ENSG00000075891	0.015	0.415		0.565	-0.181		medium_impact	medium_impact	
+10:102584408:G:A	92687	ENSG00000075891	.	0.999			1.451			medium_impact	
+10:102584444:C:T	727322	ENSG00000075891	0.001	1.0		1.644	1.451		medium_impact	medium_impact	
+10:102676359:A:G	442599	ENSG00000119906	0.187	0.0	0.695	-0.109	-1.667	-0.227	medium_impact	low_impact	medium_impact
+10:102676365:A:G	179125	ENSG00000119906	0.0	0.877	1.795	2.929	0.551	0.978	high_impact	medium_impact	medium_impact
+10:102676404:C:G	208500	ENSG00000119906	0.005	0.073	1.795	2.027	-0.575	0.978	high_impact	medium_impact	medium_impact
+10:102676536:C:T	421425	ENSG00000119906	0.082	0.007	1.445	0.420	-1.179	0.594	medium_impact	low_impact	medium_impact
+10:102676537:G:A	179126	ENSG00000119906	0.024	0.003	1.795	1.140	-1.392	0.978	medium_impact	low_impact	medium_impact
+10:102676625:G:A	72856	ENSG00000119906	0.829	0.0	1.39	-1.811	-1.667	0.534	low_impact	low_impact	medium_impact
+10:102676628:G:T	33772	ENSG00000119906	0.0	1.0	1.845	2.929	1.787	1.032	high_impact	high_impact	medium_impact
+10:102676648:G:A	135402	ENSG00000119906	0.338	0.002	0.41	-0.554	-1.493	-0.539	medium_impact	low_impact	medium_impact
+10:102676648:G:C	177111	ENSG00000119906	0.067	0.001	1.1	0.542	-1.667	0.217	medium_impact	low_impact	medium_impact
+10:102676692:G:A	46053	ENSG00000119906	0.016	0.028	1.445	1.371	-0.827	0.594	medium_impact	medium_impact	medium_impact
+10:102676711:G:A	140897	ENSG00000119906	0.316	0.005	1.39	-0.498	-1.263	0.534	medium_impact	low_impact	medium_impact
+10:102676725:G:A	448597	ENSG00000119906	0.043	0.001	0.55	0.804	-1.667	-0.385	medium_impact	low_impact	medium_impact
+10:102676827:G:C	96641	ENSG00000119906	0.0	0.994	1.845	2.929	1.338	1.032	high_impact	medium_impact	medium_impact
+10:102676867:C:T	179648	ENSG00000119906	0.001	0.024	1.65	2.929	-0.866	0.819	high_impact	medium_impact	medium_impact
+10:102676898:G:C	177112	ENSG00000119906	0.024	0.003	1.795	1.140	-1.392	0.978	medium_impact	low_impact	medium_impact
+10:102676978:T:C	140813	ENSG00000119906	0.255	0.0	0.345	-0.331	-1.667	-0.610	medium_impact	low_impact	medium_impact
+10:102676986:A:C	448891	ENSG00000119906	0.019	0.447	1.795	1.274	0.007	0.978	medium_impact	medium_impact	medium_impact
+10:102677002:A:G	78160	ENSG00000119906	0.043	0.058	1.735	0.804	-0.637	0.912	medium_impact	medium_impact	medium_impact
+10:102677035:G:A	78161	ENSG00000119906	0.006	1.0	0.975	1.925	1.787	0.080	medium_impact	high_impact	medium_impact
+10:102678153:C:T	140930	ENSG00000119906	0.12	0.0	0.46	0.183	-1.667	-0.484	medium_impact	low_impact	medium_impact
+10:102683830:G:C	42455	ENSG00000119906	0.0	0.999	0.975	2.929	1.787	0.080	high_impact	high_impact	medium_impact
+10:102683848:C:T	303300	ENSG00000119906	0.0	0.994	0.895	2.929	1.338	-0.008	high_impact	medium_impact	medium_impact
+10:102683849:G:A	129193		0.059	0.007	0.55						
+10:102683858:G:A	439303	ENSG00000119906	0.029	0.001	0.975	1.032	-1.667	0.080	medium_impact	low_impact	medium_impact
+10:102683877:A:T	209567	ENSG00000119906	0.0	0.739	0.975	2.929	0.320	0.080	high_impact	medium_impact	medium_impact
+10:102683879:T:G	36750	ENSG00000119906	0.001	1.0	0.975	2.929	1.787	0.080	high_impact	high_impact	medium_impact
+10:102684014:C:G	58776	ENSG00000119906	0.002	0.969	0.975	2.541	0.921	0.080	high_impact	medium_impact	medium_impact
+10:102684066:G:A	34442	ENSG00000119906	0.809	0.0	-0.55	-1.736	-1.667	-1.589	low_impact	low_impact	low_impact
+10:102684122:A:G	157051	ENSG00000119906	0.104	0.0	0.805	0.273	-1.667	-0.106	medium_impact	low_impact	medium_impact
+10:102684148:T:C	449669	ENSG00000119906	0.008	0.004	0.975	1.763	-1.320	0.080	medium_impact	low_impact	medium_impact
+10:102684170:C:G	129886		0.181	0.997	0						
+10:102684190:C:T	39686	ENSG00000119906	0.004	0.0	0.345	2.152	-1.667	-0.610	high_impact	low_impact	medium_impact
+10:102684212:C:G	157052	ENSG00000119906	0.0	1.0	0.975	2.929	1.787	0.080	high_impact	high_impact	medium_impact
+10:102684271:C:T	129078		0.001	0.003	0.46						
+10:102684305:C:T	419889	ENSG00000119906	0.003	0.023	0.55	2.314	-0.877	-0.385	high_impact	medium_impact	medium_impact
+10:102684356:C:T	130160		0.001	0.731	0.975						
+10:102684380:C:A	123591	ENSG00000119906	0.048	0.988	0.895	0.739	1.163	-0.008	medium_impact	medium_impact	medium_impact
+10:102684394:C:T	138993	ENSG00000119906	0.138	0.001	0	0.094	-1.667	-0.987	medium_impact	low_impact	medium_impact
+10:102684395:G:A	479330	ENSG00000119906	0.468	0.001	0.205	-0.858	-1.667	-0.763	medium_impact	low_impact	medium_impact
+10:102684412:C:T	129310		0.191	0.0	0.46						
+10:102684466:G:T	449850	ENSG00000119906	0.504	0.0	0.345	-0.938	-1.667	-0.610	medium_impact	low_impact	medium_impact
+10:102684487:C:T	267171	ENSG00000119906	0.292	0.996	0.975	-0.435	1.440	0.080	medium_impact	medium_impact	medium_impact
+10:102684506:C:T	220439	ENSG00000119906	0.187	0.183	0.895	-0.109	-0.314	-0.008	medium_impact	medium_impact	medium_impact
+10:102684581:T:C	140848	ENSG00000119906	0.001	0.999	0.975	2.929	1.787	0.080	high_impact	high_impact	medium_impact
+10:102684617:C:T	131005	ENSG00000119906	0.014	0.023	0.805	1.447	-0.877	-0.106	medium_impact	medium_impact	medium_impact
+10:102684649:A:C	448476	ENSG00000119906	0.012	0.999	0.975	1.534	1.787	0.080	medium_impact	high_impact	medium_impact
+10:102684668:C:T	366006	ENSG00000119906	0.056	0.007	0.895	0.648	-1.179	-0.008	medium_impact	low_impact	medium_impact
+10:102684688:G:A	106014	ENSG00000119906	0.013	0.287	0.895	1.489	-0.167	-0.008	medium_impact	medium_impact	medium_impact
+10:102684710:C:A	453081	ENSG00000119906	0.017	0.904	0.695	1.337	0.621	-0.227	medium_impact	medium_impact	medium_impact
+10:102684710:C:T	434934	ENSG00000119906	0.021	0.904	0.695	1.217	0.621	-0.227	medium_impact	medium_impact	medium_impact
+10:102685721:G:A	78162	ENSG00000119906	0.007	0.996	2.005	1.838	1.440	1.207	medium_impact	medium_impact	medium_impact
+10:102685724:A:G	129659		0.05	0.77	1.61						
+10:102685746:G:A	201955	ENSG00000119906	0.013	0.897	1.21	1.489	0.601	0.337	medium_impact	medium_impact	medium_impact
+10:102689105:G:T	360356	ENSG00000119906	0.001	1.0	2.325	2.929	1.787	1.558	high_impact	high_impact	medium_impact
+10:102689636:C:T	464240		0.001	0.991	2.57						
+10:102689690:T:G	430663	ENSG00000119906	0.135	0.773	1.43	0.108	0.366	0.578	medium_impact	medium_impact	medium_impact
+10:102690834:G:A	58445	ENSG00000119906	0.761	0.202	-0.535	-1.576	-0.283	-1.573	low_impact	medium_impact	low_impact
+10:102698458:G:T	366007	ENSG00000119906	0.189	0.372	1.32	-0.116	-0.071	0.458	medium_impact	medium_impact	medium_impact
+10:102698489:C:A	227263	ENSG00000119906	0.253	0.004	1.295	-0.325	-1.320	0.430	medium_impact	low_impact	medium_impact
+10:102703797:C:G	204750	ENSG00000119906	0.534	0.02	0	-1.006	-0.913	-0.987	low_impact	medium_impact	medium_impact
+10:102703821:A:G	225572	ENSG00000119906	0.171	0.045	1.245	-0.048	-0.704	0.376	medium_impact	medium_impact	medium_impact
+10:102703877:G:T	449899	ENSG00000119906	0.007	0.988	2.05	1.838	1.163	1.257	medium_impact	medium_impact	medium_impact
+10:102705132:C:T	167779	ENSG00000119906	0.023	0.991	1.355	1.165	1.236	0.496	medium_impact	medium_impact	medium_impact
+10:102707530:T:C	225800	ENSG00000119906	0.842	0.119	-0.22	-1.864	-0.441	-1.228	low_impact	medium_impact	low_impact
+10:102707556:G:C	270525	ENSG00000119906	0.002	0.973	2.11	2.541	0.956	1.322	high_impact	medium_impact	medium_impact
+10:102707594:G:C	442210	ENSG00000119906	0.281	0.066	1.1	-0.405	-0.603	0.217	medium_impact	medium_impact	medium_impact
+10:102709848:C:A	225573	ENSG00000119906	0.021	0.312	0.345	1.217	-0.138	-0.610	medium_impact	medium_impact	medium_impact
+10:102709894:T:C	366008	ENSG00000119906	0.326	0.072	0.895	-0.524	-0.579	-0.008	medium_impact	medium_impact	medium_impact
+10:102710474:A:C	366009	ENSG00000119906	0.1	0.998	1.79	0.298	1.613	0.972	medium_impact	high_impact	medium_impact
+10:102710497:C:T	224733	ENSG00000119906	0.008	0.994	1.245	1.763	1.338	0.376	medium_impact	medium_impact	medium_impact
+10:102710500:C:T	224734	ENSG00000119906	0.107	0.42	1.15	0.256	-0.021	0.272	medium_impact	medium_impact	medium_impact
+10:102710503:G:A	387837	ENSG00000119906	0.557	0.885	1.1	-1.057	0.570	0.217	low_impact	medium_impact	medium_impact
+10:102716215:T:C	441071	ENSG00000119906	0.002	0.002	-0.69	2.541	-1.493	-1.743	high_impact	low_impact	low_impact
+10:102719200:G:A	421577	ENSG00000119906	0.242	0.99	1.175	-0.292	1.209	0.299	medium_impact	medium_impact	medium_impact
+10:102719203:A:G	366011	ENSG00000119906	0.013	0.996	1.75	1.489	1.440	0.928	medium_impact	medium_impact	medium_impact
+10:102719243:G:A	57516	ENSG00000119906	0.401	0.03	-0.065	-0.705	-0.809	-1.058	medium_impact	medium_impact	low_impact
+10:102733352:G:A	428571	ENSG00000095539	0.001	1.0	2.99	1.949	1.856	1.550	medium_impact	high_impact	medium_impact
+10:102738085:G:A	101491	ENSG00000095539	0.0	1.0	2.325	1.949	1.856	0.994	medium_impact	high_impact	medium_impact
+10:102738085:G:C	360357	ENSG00000095539	0.0	1.0	2.425	1.949	1.856	1.078	medium_impact	high_impact	medium_impact
+10:102738121:C:T	187061	ENSG00000095539	0.098	1.0	1.935	0.194	1.856	0.668	medium_impact	high_impact	medium_impact
+10:102738632:G:A	482853	ENSG00000095539	0.073	0.996	2.035	0.315	1.524	0.751	medium_impact	high_impact	medium_impact
+10:102738660:G:A	143122	ENSG00000095539	0.001	1.0	2.15	1.949	1.856	0.848	medium_impact	high_impact	medium_impact
+10:102738662:G:T	534843	ENSG00000095539	0.0	1.0	1.835	1.949	1.856	0.584	medium_impact	high_impact	medium_impact
+10:102739634:G:A	166363	ENSG00000095539	0.133	1.0	2.295	0.065	1.856	0.969	medium_impact	high_impact	medium_impact
+10:102739897:C:T	117049	ENSG00000095539	0.0	1.0	3.155	1.949	1.856	1.688	medium_impact	high_impact	medium_impact
+10:102739907:G:A	527276	ENSG00000095539	0.013	1.0	1.995	0.984	1.856	0.718	medium_impact	high_impact	medium_impact
+10:102740027:G:A	179132	ENSG00000095539	0.155	0.006	1.165	-0.002	-1.013	0.024	medium_impact	low_impact	medium_impact
+10:102740364:C:A	479372	ENSG00000095539	0.01	0.996	1.395	1.083	1.524	0.216	medium_impact	high_impact	medium_impact
+10:102740600:C:T	392947	ENSG00000095539	0.48	0.001	0.505	-0.606	-1.442	-0.528	medium_impact	low_impact	medium_impact
+10:102740717:G:A	233306	ENSG00000095539	0.591	0.001	0.17	-0.774	-1.442	-0.808	medium_impact	low_impact	medium_impact
+10:102746534:C:T	3880566	ENSG00000055950									
+10:102746850:A:G	1003027	ENSG00000055950									
+10:102747984:G:A	135377	ENSG00000107815	0.179	0.086	1.445	-0.074	-0.318	0.513	medium_impact	medium_impact	medium_impact
+10:102748161:G:A	387608	ENSG00000107815	0.008	1.0	2.395	1.177	1.869	1.472	medium_impact	high_impact	medium_impact
+10:102748277:A:T	288463	ENSG00000107815	0.002	0.999	2.395	1.705	1.869	1.472	medium_impact	high_impact	medium_impact
+10:102748512:T:C	332282	ENSG00000107815	0.006	0.999	2.19	1.287	1.869	1.265	medium_impact	high_impact	medium_impact
+10:102748649:G:T	434752	ENSG00000107815	0.003	0.994	2.595	1.551	1.445	1.674	medium_impact	medium_impact	medium_impact
+10:102748730:C:T	245076	ENSG00000107815	0.061	0.999	2.78	0.385	1.869	1.861	medium_impact	high_impact	medium_impact
+10:102748731:G:A	435352	ENSG00000107815	0.026	0.992	1.74	0.723	1.377	0.811	medium_impact	medium_impact	medium_impact
+10:102748742:G:A	107306	ENSG00000107815	0.29	0.99	2.14	-0.312	1.324	1.215	medium_impact	medium_impact	medium_impact
+10:102748761:G:A	491255	ENSG00000107815	0.552	0.273	0.85	-0.731	0.008	-0.088	medium_impact	medium_impact	medium_impact
+10:102748871:C:T	366018	ENSG00000107815	0.001	1.0	2.35	1.968	1.869	1.427	medium_impact	high_impact	medium_impact
+10:102748904:C:T	105535	ENSG00000107815	0.016	1.0	2.965	0.911	1.869	2.048	medium_impact	high_impact	high_impact
+10:102749033:C:T	479361	ENSG00000107815	0.004	0.992	2.585	1.441	1.377	1.664	medium_impact	medium_impact	medium_impact
+10:102749036:C:T	59982	ENSG00000107815	0.022	0.999	2.3	0.788	1.869	1.376	medium_impact	high_impact	medium_impact
+10:102749454:T:C	366021	ENSG00000107815	0.002	0.999	2.94	1.705	1.869	2.023	medium_impact	high_impact	high_impact
+10:102749514:C:T	262757	ENSG00000107815	0.004	0.999	0.975	1.441	1.869	0.038	medium_impact	high_impact	medium_impact
+10:102749641:G:T	517520	ENSG00000107815	0.002	0.995	0.55	1.705	1.489	-0.391	medium_impact	medium_impact	medium_impact
+10:102750291:C:T	538907	ENSG00000107815	0.245	0.972	1.82	-0.225	1.077	0.891	medium_impact	medium_impact	medium_impact
+10:102750757:G:C	539472	ENSG00000107815	0.0	1.0	3.02	1.968	1.869	2.103	medium_impact	high_impact	high_impact
+10:102753064:C:T	62100	ENSG00000107815	0.084	0.741	1.58	0.255	0.488	0.649	medium_impact	medium_impact	medium_impact
+10:102753070:G:C	199460	ENSG00000107815	0.016	0.964	1.775	0.911	1.015	0.846	medium_impact	medium_impact	medium_impact
+10:102753166:C:T	352686	ENSG00000107815	0.326	0.0	0.075	-0.376	-1.390	-0.871	medium_impact	low_impact	medium_impact
+10:102762413:G:A	199061	ENSG00000107816	0.068	0.196	1.735	0.347	-0.140	0.753	medium_impact	medium_impact	medium_impact
+10:102762419:C:G	52579	ENSG00000107816	0.251	0.001	0.69	-0.263	-1.483	-0.343	medium_impact	low_impact	medium_impact
+10:102762635:C:T	311372	ENSG00000107816	0.008	0.946	1.79	1.228	0.905	0.810	medium_impact	medium_impact	medium_impact
+10:102763427:C:G	5836630										
+10:102763470:T:A	520202	ENSG00000107816	0.84	0.0	-0.64	-1.364	-1.483	-1.739	low_impact	low_impact	low_impact
+10:102763555:G:A	2658430										
+10:102763580:C:T	342624	ENSG00000107816	0.006	0.968	2.435	1.343	1.039	1.487	medium_impact	medium_impact	medium_impact
+10:102763640:G:A	2658347										
+10:102763858:G:C	358869	ENSG00000107816	0.007	0.716	1.7	1.281	0.431	0.716	medium_impact	medium_impact	medium_impact
+10:102763886:G:T	5837638										
+10:102765246:G:A	200025	ENSG00000107816	0.335	0.033	1.52	-0.426	-0.621	0.527	medium_impact	medium_impact	medium_impact
+10:102765434:C:T	399431	ENSG00000107816	0.02	0.977	1.1	0.856	1.122	0.087	medium_impact	medium_impact	medium_impact
+10:102766372:G:C	84646	ENSG00000107816	0.016	0.996	2.215	0.947	1.554	1.256	medium_impact	high_impact	medium_impact
+10:102766522:G:T	538817	ENSG00000107816	0.023	0.99	1.89	0.799	1.329	0.915	medium_impact	medium_impact	medium_impact
+10:102766527:C:T	45438	ENSG00000107816	0.001	1.0	2.715	2.062	1.894	1.781	high_impact	high_impact	medium_impact
+10:102766573:C:T	475409	ENSG00000107816	0.113	0.536	1.905	0.124	0.241	0.931	medium_impact	medium_impact	medium_impact
+10:102794552:G:A	23378	ENSG00000107819	0.083			0.286			medium_impact		
+10:102795364:G:A	1730232	ENSG00000107819	0.0			1.990			medium_impact		
+10:102795805:C:G	537424	ENSG00000107819	0.0	0.999	1.645	1.990	1.981	0.553	medium_impact	high_impact	medium_impact
+10:102796934:G:T	836301	ENSG00000107819	0.0			1.990			medium_impact		
+10:102798400:C:T	3405892	ENSG00000107819	0.043			0.551			medium_impact		
+10:102822357:C:T	366029	ENSG00000107821	0.0	0.024	0.345	2.277	-0.726	-0.956	high_impact	medium_impact	medium_impact
+10:102822569:G:A	235113	ENSG00000107821	0.015	1.0	3.29	1.113	1.841	2.430	medium_impact	high_impact	high_impact
+10:102822759:C:T	436509	ENSG00000107821	0.003	0.999	4.285	1.807	1.841	3.573	medium_impact	high_impact	high_impact
+10:102824349:G:C	49369	ENSG00000107821	1.0	0.0	-2.035	-3.631	-1.500	-3.692	low_impact	low_impact	low_impact
+10:102824358:C:T	487572	ENSG00000107821	0.262	0.551	0.705	-0.234	0.220	-0.542	medium_impact	medium_impact	medium_impact
+10:102824666:G:A	69009	ENSG00000107821	0.028	0.993	1.04	0.840	1.369	-0.157	medium_impact	medium_impact	medium_impact
+10:102891411:C:G	527255	ENSG00000107807	0.016	0.958	1.59	0.976	0.983	0.517	medium_impact	medium_impact	medium_impact
+10:102891411:C:T	96674	ENSG00000107807	0.124	0.203	1.59	0.138	-0.147	0.517	medium_impact	medium_impact	medium_impact
+10:102891845:T:A	460849		0.021	0.994	1.975						
+10:102893953:C:T	3220820	ENSG00000107807									
+10:102893977:G:A	1086643	ENSG00000107807									
+10:102893991:C:T	397055	ENSG00000107807	0.001	1.0	2.455	2.056	1.933	1.371	high_impact	high_impact	medium_impact
+10:102893992:G:A	179139	ENSG00000107807	0.003	1.0	0.765	1.630	1.933	-0.298	medium_impact	high_impact	medium_impact
+10:102893992:G:T	492145	ENSG00000107807	0.001	1.0	1.175	2.056	1.933	0.107	high_impact	high_impact	medium_impact
+10:102894060:G:A	147482	ENSG00000107807	0.075	0.976	0.52	0.353	1.128	-0.540	medium_impact	medium_impact	medium_impact
+10:102896476:G:A	537728	ENSG00000107807	0.004	0.995	2.98	1.518	1.527	1.890	medium_impact	high_impact	medium_impact
+10:102896546:C:T	366033	ENSG00000107807	0.001	0.367	2.685	2.056	0.059	1.598	high_impact	medium_impact	medium_impact
+10:102896554:G:A	289692	ENSG00000107807	0.065	0.146	0.895	0.413	-0.248	-0.170	medium_impact	medium_impact	medium_impact
+10:102896600:A:C	291413	ENSG00000107807	0.016	0.609	2.87	0.976	0.308	1.781	medium_impact	medium_impact	medium_impact
+10:102896648:C:T	232899	ENSG00000107807	0.01	0.9	2.125	1.160	0.749	1.045	medium_impact	medium_impact	medium_impact
+10:102896654:C:T	236952	ENSG00000107807	0.485	0.999	0.595	-0.597	1.933	-0.466	medium_impact	high_impact	medium_impact
+10:102987419:G:A	278978	ENSG00000138136	0.007	1.0	0	1.300	1.933	-1.054	medium_impact	high_impact	low_impact
+10:102987446:G:A	179140	ENSG00000138136	0.0	1.0	1.99	2.056	1.933	0.912	high_impact	high_impact	medium_impact
+10:103281409:A:T	318873	ENSG00000166167	0.017	0.017	0.695	0.778	-0.730	-0.393	medium_impact	medium_impact	medium_impact
+10:103285793:G:C	107308	ENSG00000166167	0.243	1.0	2.7	-0.390	1.976	1.864	medium_impact	high_impact	medium_impact
+10:103285904:A:G	121725	ENSG00000166167	0.028	0.929	3.62	0.574	0.906	2.900	medium_impact	medium_impact	high_impact
+10:103285923:C:A	17298	ENSG00000166167	0.048	0.068	1.1	0.350	-0.374	0.063	medium_impact	medium_impact	medium_impact
+10:103285923:C:T	1846992	ENSG00000166167									
+10:103291028:G:A	1096283	ENSG00000166167									
+10:103292173:G:A	513409	ENSG00000166167	0.002	1.0	1.43	1.640	1.976	0.434	medium_impact	high_impact	medium_impact
+10:103292733:T:C	230033		0.0	0.993	2.265						
+10:103294576:G:A	3731957	ENSG00000166167									
+10:103294662:A:G	205267	ENSG00000166167	0.253	0.974	0.045	-0.411	1.165	-1.125	medium_impact	medium_impact	low_impact
+10:103295137:T:G	1846990	ENSG00000166167									
+10:103295142:G:C	2028107	ENSG00000166167									
+10:103296361:C:T	8622	ENSG00000166167	0.0	1.0	2.215	1.918	1.976	1.318	medium_impact	high_impact	medium_impact
+10:103296374:T:A	521401	ENSG00000166167	0.016	0.997	2.345	0.803	1.704	1.465	medium_impact	high_impact	medium_impact
+10:103310522:G:A	537712	ENSG00000166167	0.073	0.999	-0.89	0.172	1.976	-2.177	medium_impact	high_impact	low_impact
+10:103339220:C:T	513502	ENSG00000166169	0.0	1.0	4.465	2.017	1.877	3.572	high_impact	high_impact	high_impact
+10:103340014:G:A	665081	ENSG00000166169	0.178	0.999		-0.185	1.877		medium_impact	high_impact	
+10:103342528:C:G	535037	ENSG00000166169	0.087	0.176	1.88	0.151	-0.145	0.904	medium_impact	medium_impact	medium_impact
+10:103342623:C:T	240631	ENSG00000166169	0.011	0.998	2.78	1.031	1.711	1.833	medium_impact	high_impact	medium_impact
+10:103342641:C:T	2087398	ENSG00000166169	0.007			1.218			medium_impact		
+10:103344580:C:G	889049	ENSG00000166169	0.309			-0.482			medium_impact		
+10:103345144:G:A	1991426	ENSG00000166169	0.372			-0.597			medium_impact		
+10:103345652:T:A	3830902	ENSG00000166169	0.001			2.017			high_impact		
+10:103345743:G:A	2775307	ENSG00000166169	0.013	0.885		0.962	0.713		medium_impact	medium_impact	
+10:103345763:A:T	446898	ENSG00000166169	0.002	0.938	2.67	1.733	0.875	1.719	medium_impact	medium_impact	medium_impact
+10:103345853:T:A	2069293	ENSG00000166169	0.002			1.733			medium_impact		
+10:103345880:C:T	491242	ENSG00000166169	0.114			0.028			medium_impact		
+10:103345895:C:A	492008	ENSG00000166169	0.06			0.316			medium_impact		
+10:103347065:G:A	230544		0.043	0.001	1.61						
+10:103354447:G:A	366045	ENSG00000166171	0.004	1.0	3.11	1.506	1.894	2.195	medium_impact	high_impact	high_impact
+10:103354462:G:C	256161	ENSG00000166171	0.0	1.0	3.15	2.062	1.894	2.237	high_impact	high_impact	high_impact
+10:103360506:C:T	1891785	ENSG00000166171	0.0			2.062			high_impact		
+10:103360560:C:G	995565	ENSG00000166171	0.173			-0.075			medium_impact		
+10:103360972:C:T	6200	ENSG00000166171	0.001	1.0	3.03	2.062	1.894	2.111	high_impact	high_impact	high_impact
+10:103361009:G:A	4047565	ENSG00000166171	0.0			2.062			high_impact		
+10:103361062:C:T	609781	ENSG00000166171	0.013			1.031			medium_impact		
+10:103368654:T:C	119267	ENSG00000166171	.								
+10:103371071:C:T	366046	ENSG00000107829	1.0	0.001	0.485	-3.528	-1.516	-0.530	low_impact	low_impact	medium_impact
+10:103372098:C:T	244325	ENSG00000107829	0.114	0.254	0.345	0.098	-0.070	-0.676	medium_impact	medium_impact	medium_impact
+10:103372106:C:T	151465	ENSG00000107829	0.0	1.0	3.245	2.064	1.910	2.349	high_impact	high_impact	high_impact
+10:103433254:C:T	269806	ENSG00000107829	0.004	1.0	2.395	1.502	1.910	1.462	medium_impact	high_impact	medium_impact
+10:103433266:G:A	241298	ENSG00000107829	0.043	0.985	1.995	0.524	1.235	1.045	medium_impact	medium_impact	medium_impact
+10:103454256:G:T	451199	ENSG00000107829	0.015	0.997	2.13	0.962	1.637	1.186	medium_impact	high_impact	medium_impact
+10:103530240:G:A	34277	ENSG00000107831	0.0	1.0		2.867	3.079		high_impact	high_impact	
+10:103542039:G:A	529173	ENSG00000107833	0.017	0.977	1.32	0.950	1.198	0.238	medium_impact	medium_impact	medium_impact
+10:103542338:C:G	534945	ENSG00000107833	0.022	0.896	2.235	0.845	0.796	1.087	medium_impact	medium_impact	medium_impact
+10:103543034:G:T	140934	ENSG00000107833	1.0	0.01	-0.065	-3.414	-0.902	-1.046	low_impact	medium_impact	low_impact
+10:103546219:G:A	2721631	ENSG00000198408	0.0	0.108		2.082	-0.154		high_impact	medium_impact	
+10:103546243:G:A	4032485	ENSG00000198408	0.262	1.0		-0.193	2.062		medium_impact	high_impact	
+10:103547198:T:C	244638	ENSG00000198408	0.34	0.226	2.305	-0.337	0.062	0.842	medium_impact	medium_impact	medium_impact
+10:103550655:C:T	537455	ENSG00000198408	0.073	0.852	2.215	0.391	0.795	0.773	medium_impact	medium_impact	medium_impact
+10:103550822:A:T	319170	ENSG00000198408	0.0	0.194	1.555	2.082	0.015	0.268	high_impact	medium_impact	medium_impact
+10:103550838:C:T	2025670	ENSG00000198408	0.001	0.999		2.082	2.062		high_impact	high_impact	
+10:103551118:C:G	537486	ENSG00000198408	0.005	0.999	2.495	1.457	2.062	0.987	medium_impact	high_impact	medium_impact
+10:103552700:G:A	96710	ENSG00000198408	0.0	1.0	2.56	2.082	2.062	1.037	high_impact	high_impact	medium_impact
+10:103553717:C:A	3035784	ENSG00000198408	0.001	0.826		2.082	0.748		high_impact	medium_impact	
+10:103557764:T:C	201312	ENSG00000198408	0.007	0.037	0.675	1.326	-0.436	-0.406	medium_impact	medium_impact	medium_impact
+10:103557766:G:A	1847503	ENSG00000198408	0.007	0.972		1.326	1.236		medium_impact	medium_impact	
+10:103557823:T:C	391846	ENSG00000198408	0.0	1.0	2.255	2.082	2.062	0.804	high_impact	high_impact	medium_impact
+10:103557835:G:A	694114	ENSG00000198408	0.012	0.99		1.115	1.494		medium_impact	medium_impact	
+10:103557853:C:G	275881	ENSG00000198408	0.543	0.099	0.345	-0.661	-0.178	-0.658	medium_impact	medium_impact	medium_impact
+10:103557874:T:A	224736	ENSG00000198408	0.043	0.941	1.91	0.608	1.045	0.539	medium_impact	medium_impact	medium_impact
+10:103557892:C:A	3798341	ENSG00000198408	0.0	0.998		2.082	1.891		high_impact	high_impact	
+10:103558670:G:A	4663040	ENSG00000198408	0.005	0.995		1.457	1.665		medium_impact	high_impact	
+10:103558700:C:T	3814921	ENSG00000198408	0.015	1.0		1.027	2.062		medium_impact	high_impact	
+10:103558747:G:A	3894135	ENSG00000198408	0.001	0.938		2.082	1.032		high_impact	medium_impact	
+10:103558759:G:A	292704	ENSG00000198408	0.183	0.004		-0.014	-0.991		medium_impact	medium_impact	
+10:103558790:G:A	179146	ENSG00000198408	0.13	0.963	1.04	0.143	1.166	-0.126	medium_impact	medium_impact	medium_impact
+10:103558844:T:C	3233012	ENSG00000198408	0.107	0.049		0.228	-0.364		medium_impact	medium_impact	
+10:103558904:C:T	3880581	ENSG00000198408	0.391	0.993		-0.422	1.582		medium_impact	high_impact	
+10:103558939:G:A	491269	ENSG00000198408	0.072	0.974	0.805	0.396	1.255	-0.306	medium_impact	medium_impact	medium_impact
+10:103559054:T:C	3894138	ENSG00000198408	0.149	0.0		0.081	-1.332		medium_impact	low_impact	
+10:103560019:C:A	215536	ENSG00000198408	0.187	0.004	0.55	-0.025	-0.991	-0.502	medium_impact	medium_impact	medium_impact
+10:103560119:A:T	360365	ENSG00000198408	0.018	0.992	0	0.956	1.549	-0.923	medium_impact	high_impact	medium_impact
+10:103563692:T:A	3876161	ENSG00000198408	0.001			2.082			high_impact		
+10:103563707:G:C	3894150	ENSG00000198408	0.03			0.753			medium_impact		
+10:103563732:C:G	3798342	ENSG00000198408	0.086			0.322			medium_impact		
+10:103563735:C:T	3894151	ENSG00000198408	0.526			-0.634			medium_impact		
+10:103563773:G:A	224738	ENSG00000198408	0.003	0.999	3.005	1.656	2.062	1.378	medium_impact	high_impact	medium_impact
+10:103563774:G:A	50278		0.006	0.97	2.03						
+10:103565822:C:G	270573	ENSG00000198408	0.137	0.045	1.215	0.119	-0.386	0.007	medium_impact	medium_impact	medium_impact
+10:103567511:C:T	3880584	ENSG00000198408	1.0			-3.271			low_impact		
+10:103567570:G:T	1859072	ENSG00000198408	0.0			2.082			high_impact		
+10:103569961:A:T	3894152	ENSG00000198408	0.003			1.656			medium_impact		
+10:103569984:G:A	3897713	ENSG00000198408	0.001			2.082			high_impact		
+10:103569992:G:C	280867	ENSG00000198408	0.171	0.988	0.85	0.018	1.449	-0.272	medium_impact	medium_impact	medium_impact
+10:103570015:C:T	3950354	ENSG00000198408	0.002			1.813			medium_impact		
+10:103572873:C:A	45571	ENSG00000198408	0.145	0.173	0.61	0.093	-0.019	-0.456	medium_impact	medium_impact	medium_impact
+10:103572878:C:A	3897717	ENSG00000198408	0.016			1.002			medium_impact		
+10:103573338:C:A	448612	ENSG00000198408	0.14	0.8	2.045	0.109	0.705	0.643	medium_impact	medium_impact	medium_impact
+10:103573348:G:A	3845111	ENSG00000198408	0.002			1.813			medium_impact		
+10:103577706:G:A	449755	ENSG00000198408	0.122	0.203	0.55	0.171	0.029	-0.502	medium_impact	medium_impact	medium_impact
+10:103577750:C:A	140909	ENSG00000198408	0.013	0.91	0.55	1.084	0.933	-0.502	medium_impact	medium_impact	medium_impact
+10:103577776:C:A	305845	ENSG00000198408	0.0	0.155	0.695	2.082	-0.052	-0.391	high_impact	medium_impact	medium_impact
+10:103590868:G:A	198185	ENSG00000120049	0.177	0.0	1.935	-0.151	-1.453	0.818	medium_impact	low_impact	medium_impact
+10:103603322:G:A	77433	ENSG00000120049	0.0	0.999	0.69	1.968	2.041	-0.477	medium_impact	high_impact	medium_impact
+10:103607293:T:C	233724	ENSG00000120029	0.018	0.868	1.795	0.942	0.659	0.707	medium_impact	medium_impact	medium_impact
+10:103607300:G:T	245282	ENSG00000120029	0.462	0.057	1.245	-0.614	-0.475	0.152	medium_impact	medium_impact	medium_impact
+10:103609618:G:A	59025	ENSG00000120029	0.004	1.0	2.36	1.555	1.873	1.276	medium_impact	high_impact	medium_impact
+10:103750317:T:C	420037	ENSG00000120029	0.005	0.941	1.7	1.465	0.873	0.611	medium_impact	medium_impact	medium_impact
+10:103751746:G:A	244416	ENSG00000120029	0.001	1.0	2.44	2.117	1.873	1.357	high_impact	high_impact	medium_impact
+10:103751749:C:T	2091909	ENSG00000120029	0.011			1.144			medium_impact		
+10:103766383:G:A	513210	ENSG00000120029	0.02	0.998	1.245	0.898	1.705	0.152	medium_impact	high_impact	medium_impact
+10:103769156:C:T	491284	ENSG00000120029	0.002	1.0	2.095	1.836	1.873	1.009	medium_impact	high_impact	medium_impact
+10:103769756:C:T	407042	ENSG00000120029	0.636	0.113	0.345	-0.901	-0.294	-0.755	medium_impact	medium_impact	medium_impact
+10:103771512:G:T	11262	ENSG00000120029	0.36	0.145	0.51	-0.442	-0.225	-0.589	medium_impact	medium_impact	medium_impact
+10:103772632:C:T	513702	ENSG00000120029	0.001	0.999	2.265	2.117	1.873	1.181	high_impact	high_impact	medium_impact
+10:103783272:C:T	44873	ENSG00000120029	0.517	0.409	1.04	-0.703	0.115	-0.054	medium_impact	medium_impact	medium_impact
+10:103783479:T:C	416449	ENSG00000120029	0.14	0.091	0.69	0.059	-0.353	-0.407	medium_impact	medium_impact	medium_impact
+10:103789421:A:G	390245	ENSG00000120029	0.415	0.894	1.7	-0.536	0.719	0.611	medium_impact	medium_impact	medium_impact
+10:103789437:G:C	367394	ENSG00000120029	0.011	0.756	2.125	1.144	0.477	1.039	medium_impact	medium_impact	medium_impact
+10:103789475:G:A	336012	ENSG00000120029	1.0	0.004	-0.05	-3.467	-1.130	-1.153	low_impact	low_impact	low_impact
+10:103789493:C:T	366061	ENSG00000120029	0.081	0.792	1.745	0.307	0.527	0.656	medium_impact	medium_impact	medium_impact
+10:103792895:G:A	354825	ENSG00000120029	0.031	0.736	1.735	0.716	0.451	0.646	medium_impact	medium_impact	medium_impact
+10:103799868:C:T	366062	ENSG00000120029	0.014	0.427	0.69	1.045	0.133	-0.407	medium_impact	medium_impact	medium_impact
+10:103826396:G:A	536637	ENSG00000166189	0.446	0.003	0.83	-0.614	-1.214	-0.197	medium_impact	low_impact	medium_impact
+10:103826414:G:C	539061	ENSG00000166189	0.242	0.958	2.34	-0.244	0.970	1.387	medium_impact	medium_impact	medium_impact
+10:103826444:G:C	270348	ENSG00000166189	0.0	1.0	2.38	2.062	1.894	1.429	high_impact	high_impact	medium_impact
+10:103826716:G:T	520465	ENSG00000166189	0.233	0.119	1.64	-0.224	-0.284	0.653	medium_impact	medium_impact	medium_impact
+10:103826990:G:A	491246	ENSG00000166189	0.16	0.999	1.87	-0.037	1.894	0.894	medium_impact	high_impact	medium_impact
+10:103827125:C:T	190198	ENSG00000166189	0.001	1.0	2.57	2.062	1.894	1.629	high_impact	high_impact	medium_impact
+10:103827231:G:A	154728	ENSG00000166189	0.333	0.115	0.69	-0.423	-0.294	-0.343	medium_impact	medium_impact	medium_impact
+10:103827338:G:A	538230	ENSG00000166189	0.083	0.763	1.95	0.260	0.491	0.978	medium_impact	medium_impact	medium_impact
+10:103827353:C:G	432049	ENSG00000166189	0.363	0.065	0.98	-0.476	-0.447	-0.039	medium_impact	medium_impact	medium_impact
+10:103827518:G:T	391839	ENSG00000166189	0.009	0.696	2.2	1.180	0.408	1.241	medium_impact	medium_impact	medium_impact
+10:103827534:C:T	384416	ENSG00000166189	0.0	1.0	2.57	2.062	1.894	1.629	high_impact	high_impact	medium_impact
+10:1038429:G:T	160606	ENSG00000107937	0.0	0.998	3.125	1.937	1.828	1.518	medium_impact	high_impact	medium_impact
+10:1038463:G:A	81497	ENSG00000107937	0.001	1.0	3.59	1.937	2.000	1.912	medium_impact	high_impact	medium_impact
+10:1038475:C:A	532478	ENSG00000107937	0.0	1.0	3.27	1.937	2.000	1.641	medium_impact	high_impact	medium_impact
+10:103867930:C:T	404037	ENSG00000198728	1.0	0.0	-0.205	-3.490	-1.614	-1.743	low_impact	low_impact	low_impact
+10:103867963:C:T	157259	ENSG00000198728	0.179			-0.030			medium_impact		
+10:103868023:C:T	177118	ENSG00000198728	0.0	0.992	3.085	2.180	1.280	2.075	high_impact	medium_impact	high_impact
+10:103868035:C:G	538366	ENSG00000198728	0.001	0.933	3.085	2.180	0.741	2.075	high_impact	medium_impact	high_impact
+10:103868035:C:T	157260	ENSG00000198728	0.001	0.968	3.085	2.180	0.932	2.075	high_impact	medium_impact	high_impact
+10:103868806:C:T	151462	ENSG00000198728	0.094	0.145		0.275	-0.347		medium_impact	medium_impact	
+10:103869722:G:A	236329	ENSG00000198728	0.0	1.0	2.67	2.180	1.795	1.594	high_impact	high_impact	medium_impact
+10:103869739:G:A	309847	ENSG00000198728	0.004	1.0	1.87	1.610	1.795	0.665	medium_impact	high_impact	medium_impact
+10:103869748:C:T	877578	ENSG00000198728	0.002	1.0		1.895	1.795		medium_impact	high_impact	
+10:103869749:G:A	198716	ENSG00000198728	0.0	1.0		2.180	1.795		high_impact	high_impact	
+10:103870339:C:T	491568	ENSG00000198728	0.001	0.999	2.82	2.180	1.795	1.768	high_impact	high_impact	medium_impact
+10:103870449:C:T	753466	ENSG00000198728	0.001	1.0		2.180	1.795		high_impact	high_impact	
+10:103870450:G:A	73310	ENSG00000198728	0.0	1.0	2.97	2.180	1.795	1.942	high_impact	high_impact	medium_impact
+10:103870687:G:T	54685	ENSG00000198728	0.002	0.963	2.97	1.895	0.895	1.942	medium_impact	medium_impact	medium_impact
+10:103870721:T:C	653585	ENSG00000198728	0.003	1.0		1.728	1.795		medium_impact	high_impact	
+10:103871028:A:G	358871	ENSG00000198728	0.133	0.91	0	0.115	0.662	-1.505	medium_impact	medium_impact	low_impact
+10:103892905:C:T	89883	ENSG00000148840	1.0	0.0	-1.935	-3.499	-1.483	-3.132	low_impact	low_impact	low_impact
+10:103892932:G:A	292113	ENSG00000148840	0.002	0.011	1.545	1.776	-0.892	0.470	medium_impact	medium_impact	medium_impact
+10:103897653:C:T	360370	ENSG00000148840	0.001	0.94	1.935	2.056	0.885	0.873	high_impact	medium_impact	medium_impact
+10:103897697:G:A	527282	ENSG00000148840	0.002	0.028	1.935	1.776	-0.659	0.873	medium_impact	medium_impact	medium_impact
+10:103898488:C:T	135407	ENSG00000148840	0.001	1.0	1.935	2.056	1.904	0.873	high_impact	high_impact	medium_impact
+10:103898675:C:T	192735	ENSG00000148840	0.102	0.007	1.545	0.153	-1.004	0.470	medium_impact	low_impact	medium_impact
+10:103898676:G:A	105536	ENSG00000148840	0.011	0.016	1.895	1.087	-0.799	0.832	medium_impact	medium_impact	medium_impact
+10:103898696:G:A	360371	ENSG00000148840	0.002	0.59	1.935	1.776	0.300	0.873	medium_impact	medium_impact	medium_impact
+10:103898705:G:A	506432	ENSG00000148840	0.145	0.978	1.935	-0.008	1.141	0.873	medium_impact	medium_impact	medium_impact
+10:103898903:C:G	539000	ENSG00000148840	0.014	0.906	1.795	0.989	0.766	0.728	medium_impact	medium_impact	medium_impact
+10:103898977:C:T	418077	ENSG00000148840	0.005	0.024	1.935	1.407	-0.698	0.873	medium_impact	medium_impact	medium_impact
+10:103898989:C:G	200040	ENSG00000148840	0.04	0.997	1.935	0.556	1.634	0.873	medium_impact	high_impact	medium_impact
+10:103898993:G:A	115590	ENSG00000148840	0.001	1.0	1.935	2.056	1.904	0.873	high_impact	high_impact	medium_impact
+10:103899079:C:T	491680	ENSG00000148840	0.017	0.001	0.9	0.910	-1.483	-0.198	medium_impact	low_impact	medium_impact
+10:103899095:A:C	520844	ENSG00000148840	0.002	0.976	1.895	1.776	1.119	0.832	medium_impact	medium_impact	medium_impact
+10:103899304:G:A	536811	ENSG00000148840	0.0	0.999	1.935	2.056	1.904	0.873	high_impact	high_impact	medium_impact
+10:103899460:G:C	360373	ENSG00000148840	0.002	0.624	1.75	1.776	0.335	0.682	medium_impact	medium_impact	medium_impact
+10:103899639:G:T	490870	ENSG00000148840	0.001	0.999	1.895	2.056	1.904	0.832	high_impact	high_impact	medium_impact
+10:103899845:C:T	346007	ENSG00000148840	0.0	0.976	1.935	2.056	1.119	0.873	high_impact	medium_impact	medium_impact
+10:103899871:A:G	48735	ENSG00000148840	0.559	0.001	0.44	-0.817	-1.483	-0.674	medium_impact	low_impact	medium_impact
+10:103899979:A:G	179151	ENSG00000148840	0.308	0.0	-0.66	-0.396	-1.483	-1.812	medium_impact	low_impact	low_impact
+10:103900396:G:A	116508	ENSG00000148840	0.022	0.191	0	0.804	-0.143	-1.129	medium_impact	medium_impact	low_impact
+10:103900541:G:A	144898	ENSG00000148840	0.0	0.979	1.905	2.056	1.152	0.842	high_impact	medium_impact	medium_impact
+10:103900552:C:T	398867	ENSG00000148840	0.0	1.0	1.905	2.056	1.904	0.842	high_impact	high_impact	medium_impact
+10:103900609:C:T	245073	ENSG00000148840	0.002	0.959	1.905	1.776	0.983	0.842	medium_impact	medium_impact	medium_impact
+10:103900612:C:T	348364	ENSG00000148840	0.0	0.996	1.905	2.056	1.563	0.842	high_impact	high_impact	medium_impact
+10:103900793:C:T	230870		0.149	0.0	0.805						
+10:103901063:G:A	151459	ENSG00000148840	0.003	0.014	1.905	1.613	-0.832	0.842	medium_impact	medium_impact	medium_impact
+10:103901173:G:A	188942	ENSG00000148840	0.048	0.012	1.525	0.479	-0.871	0.449	medium_impact	medium_impact	medium_impact
+10:103901185:A:G	278796	ENSG00000148840	0.082	0.001	1.79	0.250	-1.483	0.723	medium_impact	low_impact	medium_impact
+10:103901266:C:T	81455	ENSG00000148840	0.0	1.0	1.585	2.056	1.904	0.511	high_impact	high_impact	medium_impact
+10:103901363:C:T	55596	ENSG00000148840	0.002	0.585	0.345	1.776	0.295	-0.772	medium_impact	medium_impact	medium_impact
+10:103901428:G:A	229600		0.007	0.868	1.545						
+10:103901552:C:T	3407852	ENSG00000148840	0.207			-0.182			medium_impact		
+10:103906528:A:C	4038130	ENSG00000148840	0.002			1.776			medium_impact		
+10:103906948:G:A	1080522	ENSG00000148840	0.212			-0.194			medium_impact		
+10:103906993:C:T	360381	ENSG00000148840	0.086	0.057	1.04	0.229	-0.477	-0.053	medium_impact	medium_impact	medium_impact
+10:103907098:C:T	360382	ENSG00000148840	0.003	0.986	1.79	1.613	1.253	0.723	medium_impact	medium_impact	medium_impact
+10:103907134:A:C	4048456	ENSG00000148840	0.505			-0.730			medium_impact		
+10:103907142:T:C	244764	ENSG00000148840	0.002	0.911	1.735	1.776	0.781	0.666	medium_impact	medium_impact	medium_impact
+10:103908158:G:A	57352	ENSG00000148840	0.003	1.0	1.87	1.613	1.904	0.806	medium_impact	high_impact	medium_impact
+10:103908179:C:T	154982	ENSG00000148840	0.002	1.0	1.87	1.776	1.904	0.806	medium_impact	high_impact	medium_impact
+10:103908197:C:T	244873	ENSG00000148840	0.003	0.985	1.78	1.613	1.236	0.713	medium_impact	medium_impact	medium_impact
+10:103908274:C:T	2039888	ENSG00000148840	0.013	1.0		1.019	1.904		medium_impact	high_impact	
+10:103908277:C:T	1083139	ENSG00000148840	0.019	1.0		0.864	1.904		medium_impact	high_impact	
+10:103908614:G:A	1889293	ENSG00000148840	0.006	0.999		1.333	1.904		medium_impact	high_impact	
+10:103908623:G:A	240708	ENSG00000148840	0.027	0.915	-0.08	0.720	0.793	-1.212	medium_impact	medium_impact	low_impact
+10:103908641:G:T	2025697	ENSG00000148840	0.0	1.0		2.056	1.904		high_impact	high_impact	
+10:103908645:C:A	1079163	ENSG00000148840	0.001	1.0		2.056	1.904		high_impact	high_impact	
+10:103908946:G:A	1080523	ENSG00000148840	0.0	1.0		2.056	1.904		high_impact	high_impact	
+10:103909051:G:A	302549	ENSG00000148840	0.016	0.953	1.89	0.935	0.948	0.827	medium_impact	medium_impact	medium_impact
+10:103909051:G:T	278710	ENSG00000148840	0.023	0.98	1.085	0.786	1.164	-0.007	medium_impact	medium_impact	medium_impact
+10:103909703:G:A	535033	ENSG00000148840	0.014	0.77	1.63	0.989	0.507	0.557	medium_impact	medium_impact	medium_impact
+10:103909715:G:A	311233	ENSG00000148840	0.003	0.594	1.81	1.613	0.304	0.744	medium_impact	medium_impact	medium_impact
+10:103986390:T:C	434185	ENSG00000119915	0.141	0.001	1.285	-0.013	-1.418	0.203	medium_impact	low_impact	medium_impact
+10:103988606:G:A	308141	ENSG00000119915	0.0	1.0	2.955	2.014	1.978	1.850	high_impact	high_impact	medium_impact
+10:103988611:C:T	84565	ENSG00000119915	0.001	1.0	3.07	2.014	1.978	1.963	high_impact	high_impact	medium_impact
+10:103988621:T:C	413009	ENSG00000119915	0.001	0.223	2.285	2.014	-0.027	1.189	high_impact	medium_impact	medium_impact
+10:103988761:G:C	358763	ENSG00000119915	0.002	1.0	3.69	1.738	1.978	2.574	medium_impact	high_impact	high_impact
+10:103990815:C:T	491012	ENSG00000107859	0.0	1.0	2.25	2.059	1.929	1.149	high_impact	high_impact	medium_impact
+10:103990819:C:T	536854	ENSG00000107859	0.001	1.0	1.89	2.059	1.929	0.781	high_impact	high_impact	medium_impact
+10:103990840:G:T	528680	ENSG00000107859	0.0	1.0	3.925	2.059	1.929	2.863	high_impact	high_impact	high_impact
+10:103991526:G:A	138995	ENSG00000107859	0.076	0.082	0	0.280	-0.380	-1.153	medium_impact	medium_impact	low_impact
+10:104018760:G:A	7548	ENSG00000107862	0.005	0.997	2.86	1.190	1.756	1.857	medium_impact	high_impact	medium_impact
+10:104019846:C:G	157093	ENSG00000107862	0.0	0.841	2.585	1.824	0.729	1.581	medium_impact	medium_impact	medium_impact
+10:104103841:G:A	241663	ENSG00000107862	0.574	0.993	0.09	-1.007	1.544	-0.921	low_impact	high_impact	medium_impact
+10:104103904:C:T	336253	ENSG00000107862	0.006	0.938	0.955	1.118	0.989	-0.053	medium_impact	medium_impact	medium_impact
+10:104111088:C:T	492491	ENSG00000107862	0.001	1.0	2.965	1.824	2.028	1.962	medium_impact	high_impact	medium_impact
+10:104112241:A:G	513863	ENSG00000107862	0.282	0.397	0.89	-0.522	0.212	-0.118	medium_impact	medium_impact	medium_impact
+10:104113405:G:T	491348	ENSG00000107862	0.216	0.11	1.7	-0.383	-0.203	0.694	medium_impact	medium_impact	medium_impact
+10:104119115:C:T	536992	ENSG00000107862	0.006	0.962	1.445	1.118	1.117	0.438	medium_impact	medium_impact	medium_impact
+10:104119976:C:T	366081	ENSG00000107862	0.0	1.0	2.83	1.824	2.028	1.827	medium_impact	high_impact	medium_impact
+10:104120097:A:G	237182	ENSG00000107862	0.145	0.0	-1.005	-0.192	-1.397	-2.019	medium_impact	low_impact	low_impact
+10:104123503:C:T	421927	ENSG00000107862	0.009	0.901	1.895	0.957	0.863	0.889	medium_impact	medium_impact	medium_impact
+10:104123524:G:A	446658	ENSG00000107862	0.404	0.0	-0.345	-0.737	-1.397	-1.357	medium_impact	low_impact	low_impact
+10:104125283:C:T	366083	ENSG00000107862	0.041	0.54	2.625	0.349	0.356	1.621	medium_impact	medium_impact	medium_impact
+10:104126180:C:T	202004	ENSG00000107862	0.0	1.0	3.985	1.824	2.028	2.985	medium_impact	high_impact	high_impact
+10:104126181:G:A	244713	ENSG00000107862	0.0	1.0	3.985	1.824	2.028	2.985	medium_impact	high_impact	high_impact
+10:104126202:G:A	244710	ENSG00000107862	0.0	1.0	3.26	1.824	2.028	2.258	medium_impact	high_impact	high_impact
+10:104126938:C:T	485788	ENSG00000107862	0.0	1.0	2.61	1.824	2.028	1.606	medium_impact	high_impact	medium_impact
+10:104127241:C:T	420810	ENSG00000107862	0.003	1.0	0.46	1.391	2.028	-0.550	medium_impact	high_impact	medium_impact
+10:104127242:G:A	244672	ENSG00000107862	0.023	0.998	1.15	0.583	1.856	0.142	medium_impact	high_impact	medium_impact
+10:104129049:C:T	35938	ENSG00000107862	0.051	1.0	2.515	0.259	2.028	1.511	medium_impact	high_impact	medium_impact
+10:104129067:C:T	470869	ENSG00000107862	0.0	1.0	2.995	1.824	2.028	1.992	medium_impact	high_impact	medium_impact
+10:104129142:G:C	537788	ENSG00000107862	0.004	1.0	1.625	1.278	2.028	0.619	medium_impact	high_impact	medium_impact
+10:104129471:G:A	179659	ENSG00000107862	0.0	1.0	2.945	1.824	2.028	1.942	medium_impact	high_impact	medium_impact
+10:104129685:C:T	533662	ENSG00000107862	0.001	1.0	2.11	1.824	2.028	1.105	medium_impact	high_impact	medium_impact
+10:104135324:C:T	91359	ENSG00000107862	0.215	0.121	1.245	-0.381	-0.176	0.238	medium_impact	medium_impact	medium_impact
+10:104136068:A:T	487080	ENSG00000107862	0.042	0.03	0.895	0.339	-0.546	-0.113	medium_impact	medium_impact	medium_impact
+10:104136818:G:A	366090	ENSG00000107862	0.668	0.355	0.755	-1.164	0.168	-0.254	low_impact	medium_impact	medium_impact
+10:104136823:G:A	296667	ENSG00000107862	0.053	0.585	1.245	0.243	0.401	0.238	medium_impact	medium_impact	medium_impact
+10:104136846:C:G	23066		0.974	0.003	0.865						
+10:104139119:G:C	313121	ENSG00000107862	0.018	0.0	2.595	0.682	-1.397	1.591	medium_impact	low_impact	medium_impact
+10:104139304:C:G	331169	ENSG00000107862	0.003	0.993	3.035	1.391	1.544	2.032	medium_impact	high_impact	high_impact
+10:104139316:C:T	301890	ENSG00000107862	0.0	1.0	3.005	1.824	2.028	2.002	medium_impact	high_impact	high_impact
+10:104139687:G:C	416416	ENSG00000107862	0.518	0.851	0.855	-0.918	0.748	-0.153	medium_impact	medium_impact	medium_impact
+10:104140106:C:T	339517	ENSG00000107862	0.016	0.995	2.395	0.729	1.628	1.391	medium_impact	high_impact	medium_impact
+10:104140293:A:G	162132	ENSG00000107862	0.004	0.062	2.51	1.278	-0.358	1.506	medium_impact	medium_impact	medium_impact
+10:104140354:C:T	198712	ENSG00000107862	0.518	0.008	-0.55	-0.918	-0.880	-1.562	medium_impact	medium_impact	low_impact
+10:104140384:G:A	513392	ENSG00000107862	0.003	0.999	2.395	1.391	2.028	1.391	medium_impact	high_impact	medium_impact
+10:104140922:G:A	244865	ENSG00000107862	0.308	0.002	0.345	-0.571	-1.225	-0.665	medium_impact	low_impact	medium_impact
+10:104140992:C:T	344061	ENSG00000107862	0.0	0.998	2.175	1.824	1.856	1.170	medium_impact	high_impact	medium_impact
+10:104142011:C:T	56301	ENSG00000107862	0.093	0.999	1.845	0.005	2.028	0.839	medium_impact	high_impact	medium_impact
+10:104156724:C:T	343907	ENSG00000077150	0.001	0.285	2.755	2.033	-0.103	1.962	high_impact	medium_impact	medium_impact
+10:104156761:C:T	522597	ENSG00000077150	0.205	0.932	1.24	-0.220	0.752	0.261	medium_impact	medium_impact	medium_impact
+10:104157099:A:G	179157	ENSG00000077150	1.0	0.031	-1.455	-3.574	-0.712	-2.766	low_impact	medium_impact	low_impact
+10:104157142:G:A	244291	ENSG00000077150	0.044	0.995	2.745	0.479	1.399	1.951	medium_impact	medium_impact	medium_impact
+10:104157155:G:T	301888	ENSG00000077150	0.114	0.53	0.695	0.062	0.149	-0.351	medium_impact	medium_impact	medium_impact
+10:104157359:G:A	374339	ENSG00000077150	0.119	0.999	1.845	0.042	1.789	0.940	medium_impact	high_impact	medium_impact
+10:104157804:G:A	517632	ENSG00000077150	0.0	1.0	3.095	2.033	1.789	2.344	high_impact	high_impact	high_impact
+10:104158035:C:T	253217	ENSG00000077150	0.0	1.0	2.635	2.033	1.789	1.827	high_impact	high_impact	medium_impact
+10:104158595:C:T	296074	ENSG00000077150	0.091	0.976	2.19	0.164	1.015	1.327	medium_impact	medium_impact	medium_impact
+10:104159110:A:G	495798	ENSG00000077150	0.577	0.0	-0.14	-0.896	-1.550	-1.289	medium_impact	low_impact	low_impact
+10:104160553:T:C	517622	ENSG00000077150	0.002	0.999	1.86	1.751	1.789	0.957	medium_impact	high_impact	medium_impact
+10:104160707:C:T	296113	ENSG00000077150	0.014	0.983	0.695	0.957	1.100	-0.351	medium_impact	medium_impact	medium_impact
+10:104160708:G:A	486710	ENSG00000077150	0.317	0.224	0.145	-0.459	-0.181	-0.969	medium_impact	medium_impact	medium_impact
+10:104161068:G:A	267065	ENSG00000077150	0.007	0.012	2.175	1.241	-0.946	1.311	medium_impact	medium_impact	medium_impact
+10:104161508:G:C	163998	ENSG00000077150	0.775	0.005	1.5	-1.272	-1.160	0.553	low_impact	low_impact	medium_impact
+10:104161523:A:G	407044	ENSG00000077150	0.028	0.131	1.5	0.669	-0.338	0.553	medium_impact	medium_impact	medium_impact
+10:104161558:G:A	469237	ENSG00000077150	0.423	0.031	0.41	-0.644	-0.712	-0.671	medium_impact	medium_impact	medium_impact
+10:104161625:C:A	413014	ENSG00000077150	0.116	0.999	1.95	0.054	1.789	1.058	medium_impact	high_impact	medium_impact
+10:104163063:G:A	5847130										
+10:104163121:C:A	2660318										
+10:104163721:C:T	5856866										
+10:104164452:C:T	5846902										
+10:104164700:A:G	463195		0.0	0.978	3.295						
+10:104164743:G:T	297981	ENSG00000059915	0.002	1.0	3.54	1.551	2.028	2.539	medium_impact	high_impact	high_impact
+10:104165232:T:C	5861345										
+10:104171572:A:G	389166	ENSG00000059915	0.048	0.88	1.465	0.284	0.810	0.458	medium_impact	medium_impact	medium_impact
+10:104172186:C:T	5840071										
+10:104172331:C:T	1071457										
+10:104173676:G:T	292381	ENSG00000059915	0.002	0.972	1.95	1.551	1.195	0.945	medium_impact	medium_impact	medium_impact
+10:104173704:C:T	53913	ENSG00000059915	0.032	0.509	2.075	0.450	0.325	1.070	medium_impact	medium_impact	medium_impact
+10:104173719:C:T	177121	ENSG00000059915	0.352	0.997	1.39	-0.650	1.756	0.383	medium_impact	high_impact	medium_impact
+10:104173805:G:A	2660892										
+10:104173860:C:T	244072	ENSG00000059915	0.001	1.0	2.475	1.824	2.028	1.471	medium_impact	high_impact	medium_impact
+10:104174666:C:T	81510	ENSG00000059915	0.015	0.9	1.245	0.754	0.861	0.238	medium_impact	medium_impact	medium_impact
+10:104174684:C:T	327921	ENSG00000059915	0.28	0.121	0.345	-0.518	-0.176	-0.665	medium_impact	medium_impact	medium_impact
+10:104174744:G:A	5841191										
+10:104174852:C:T	231598										
+10:104174893:G:A	231639										
+10:104175794:G:A	346479	ENSG00000059915	0.0	0.998	2.095	1.824	1.856	1.090	medium_impact	high_impact	medium_impact
+10:104175805:G:T	245152	ENSG00000059915	0.0	0.993	2.34	1.824	1.544	1.336	medium_impact	high_impact	medium_impact
+10:104175860:G:A	331260	ENSG00000059915	0.671	0.001	1.935	-1.169	-1.397	0.929	low_impact	low_impact	medium_impact
+10:104175863:G:A	167011	ENSG00000059915	0.092	0.011	1.085	0.010	-0.800	0.077	medium_impact	medium_impact	medium_impact
+10:104175873:C:T	353804	ENSG00000059915	0.125	0.046	1.645	-0.125	-0.436	0.639	medium_impact	medium_impact	medium_impact
+10:104176302:G:A	314451	ENSG00000059915	0.003	0.001	0.345	1.391	-1.397	-0.665	medium_impact	low_impact	medium_impact
+10:104176327:C:T	320777	ENSG00000059915	0.003	0.227	0.695	1.391	0.012	-0.314	medium_impact	medium_impact	medium_impact
+10:104176398:G:C	295973	ENSG00000059915	0.003	0.698	0.55	1.391	0.524	-0.459	medium_impact	medium_impact	medium_impact
+10:104176509:G:A	116875	ENSG00000059915	0.005	0.041	0	1.190	-0.466	-1.011	medium_impact	medium_impact	low_impact
+10:104176513:C:T	536895	ENSG00000059915	0.002	0.999	0.345	1.551	2.028	-0.665	medium_impact	high_impact	medium_impact
+10:104176536:G:A	536727	ENSG00000059915	0.001	0.948	0.345	1.824	1.036	-0.665	medium_impact	medium_impact	medium_impact
+10:104176584:C:T	36422	ENSG00000059915	0.0	0.964	0.55	1.824	1.131	-0.459	medium_impact	medium_impact	medium_impact
+10:104176612:G:A	278915	ENSG00000059915	0.0	0.995	0.55	1.824	1.628	-0.459	medium_impact	high_impact	medium_impact
+10:104176632:G:T	539686	ENSG00000059915	0.006	0.021	0	1.118	-0.637	-1.011	medium_impact	medium_impact	low_impact
+10:104176654:G:A	179161	ENSG00000059915	0.0	0.002	0.55	1.824	-1.225	-0.459	medium_impact	low_impact	medium_impact
+10:104176714:C:T	537851	ENSG00000059915	0.008	0.023	0.345	1.004	-0.614	-0.665	medium_impact	medium_impact	medium_impact
+10:104176717:G:A	438557	ENSG00000059915	0.005	0.308	0.55	1.190	0.115	-0.459	medium_impact	medium_impact	medium_impact
+10:104176737:C:T	350919	ENSG00000059915	0.0	0.021	0.55	1.824	-0.637	-0.459	medium_impact	medium_impact	medium_impact
+10:104182667:G:A	5837957										
+10:104183193:C:T	264384	ENSG00000107874	0.104	0.995	1.495	0.161	1.500	0.501	medium_impact	high_impact	medium_impact
+10:104183229:G:A	479845	ENSG00000107874	0.035	0.915	0.69	0.626	0.786	-0.343	medium_impact	medium_impact	medium_impact
+10:104183256:C:A	152328	ENSG00000107874	0.004	0.982	1.7	1.506	1.183	0.716	medium_impact	medium_impact	medium_impact
+10:104183302:C:T	55834	ENSG00000107874	0.208	0.996	2.19	-0.166	1.554	1.230	medium_impact	high_impact	medium_impact
+10:104184080:C:T	151259	ENSG00000107874	0.081	0.342	2.075	0.271	0.045	1.109	medium_impact	medium_impact	medium_impact
+10:104184086:G:A	286863	ENSG00000107874	0.031	0.001	1.1	0.676	-1.483	0.087	medium_impact	low_impact	medium_impact
+10:104184490:G:A	1749	ENSG00000107874	0.056	0.964	2.08	0.429	1.009	1.115	medium_impact	medium_impact	medium_impact
+10:104184514:C:T	358876	ENSG00000107874	0.002	1.0	2.54	1.784	1.894	1.597	medium_impact	high_impact	medium_impact
+10:1041878:C:T	26915	ENSG00000107937	0.0	1.0	3.64	1.937	2.000	1.955	medium_impact	high_impact	medium_impact
+10:1041920:C:T	346294	ENSG00000107937	0.0	1.0	3.27	1.937	2.000	1.641	medium_impact	high_impact	medium_impact
+10:104229808:G:T	403034	ENSG00000138111	0.089	0.546	2.625	0.370	0.106	1.886	medium_impact	medium_impact	medium_impact
+10:104230681:G:A	476896	ENSG00000138111	0.04	1.0	2.735	0.846	1.787	2.007	medium_impact	high_impact	high_impact
+10:104230687:G:A	476958	ENSG00000138111	0.01	1.0	3.14	1.637	1.787	2.450	medium_impact	high_impact	high_impact
+10:104230750:G:A	179164	ENSG00000138111	0.236	0.006	0.935	-0.273	-1.218	0.036	medium_impact	low_impact	medium_impact
+10:104230835:G:A	25182	ENSG00000138111	0.593	0.661	1.24	-1.140	0.227	0.370	low_impact	medium_impact	medium_impact
+10:104231080:C:T	457264		0.122	0.983							
+10:104231116:G:A	64899	ENSG00000138111	0.281	0.01	1.7	-0.405	-1.089	0.874	medium_impact	low_impact	medium_impact
+10:104231152:A:G	414273	ENSG00000138111	0.0	1.0	3.15	2.929	1.787	2.461	high_impact	high_impact	high_impact
+10:104233580:C:T	2667143	ENSG00000138111									
+10:104233653:T:C	1080300	ENSG00000138111									
+10:104235578:G:A	753618	ENSG00000138111									
+10:104240648:G:A	127897	ENSG00000138107	0.022	0.0	1.37	0.781	-1.449	0.241	medium_impact	low_impact	medium_impact

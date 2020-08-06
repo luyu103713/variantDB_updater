@@ -1,7 +1,7 @@
 import optparse
 import pymysql
 import os
-from lib import readFile
+from lib import readFile,featuresRelyOn
 from features import feature_process
 
 
@@ -27,8 +27,35 @@ class updater_opt:
     def verification(self):
         if not self.options.input or not self.options.output or not self.options.filename:
             exit('ERROR: must support input,output and file id parameters!\nType "python updater.py -h" to seek for help')
+def check_rely(config_dict,rely_dict):
+	# check rely_on_dict itself, recursive algorithm to fix:
+	#print(config_dict)
+	rely_count = 1
+	while rely_count != 0:
+		rely_count = 0
+		for key in rely_dict:
+			for rely_key in rely_dict[key]:
+				if rely_key in rely_dict:
+					if len(list(set(rely_dict[key] + rely_dict[rely_key]))) != len(rely_dict[key]):
+						rely_count = len(list(set(rely_dict[key] + rely_dict[rely_key]))) - len(rely_dict[key])
+						rely_dict[key] = list(set(rely_dict[key] + rely_dict[rely_key]))
+	#match rely on #{'biodbnet': ['transvar'], 'transfic': ['annovar', 'biodbnet', 'transvar'], 'oncokb': ['transvar']}
+	for k in rely_dict:
+		if k in config_dict:
+			if config_dict[k]:
+				for rely_key in rely_dict[k]:
+					config_dict[rely_key] = True
+
+
+	#print(config_dict)
+
+
+	return config_dict
+
+
 def match_config(config_dict):     # Logic of calculation order!!
 	normal_methods = ['transvar','annovar','biodbnet','transfic']
+	rely_dict = featuresRelyOn.relyOnDict
 
 	del_list = []
 	for k in config_dict:                      #first delete key not right in config
@@ -48,14 +75,7 @@ def match_config(config_dict):     # Logic of calculation order!!
 		if k not in config_dict:
 			config_dict[k] = True
 
-	if config_dict['biodbnet']:     # bionetbio rely on transvar 
-		config_dict['transvar'] = True
-	if config_dict['transfic']:   # tansfic rely on ensgid annovar sorce in dbnsfp
-		config_dict['biodbnet'] = True
-		config_dict['annovar'] = True
-		config_dict['transvar'] = True
-
-
+	config_dict = check_rely(config_dict,rely_dict) 
 
 
 	return config_dict
@@ -106,7 +126,7 @@ def main():
 
 	print(var_list)
 
-	feature_process(var_list,output_path,jobid,config_dict)	
+	#feature_process(var_list,output_path,jobid,config_dict)	
 	#print()
 	#result_dict = collect_result(output_path,jobid)
 
