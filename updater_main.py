@@ -45,16 +45,11 @@ def check_rely(config_dict,rely_dict):
 			if config_dict[k]:
 				for rely_key in rely_dict[k]:
 					config_dict[rely_key] = True
-
-
-	#print(config_dict)
-
-
 	return config_dict
 
 
 def match_config(config_dict):     # Logic of calculation order!!
-	normal_methods = ['transvar','annovar','biodbnet','transfic']
+	normal_methods = ['transvar','annovar','biodbnet','transfic','oncokb']
 	rely_dict = featuresRelyOn.relyOnDict
 
 	del_list = []
@@ -119,14 +114,19 @@ def main():
 	else:
 		config_dict = None
 		#print(feature_config)
+	print('\n'.join([''.join([('VariantDB'[(x-y) % len('VariantDB')] if ((x*0.05)**2+(y*0.1)**2-1)**3-(x*0.05)**2*(y*0.1)**3 <= 0else' ') for x in range(-30, 30)]) for y in range(30, -30, -1)]))
+	#print('\n')
+	print('Begin work : ')
 
 	error_code,error_massage,var_list,file_base_list= readFile.readFileFromInput(input_file,'variant',split_symbol,hasTitle) # now only read variant
 	if error_code:
 		exit(error_massage)	
 
-	print(var_list)
+	#print(var_list)
+	print('Variant number : ' + str(len(var_list)))
 
-	#feature_process(var_list,output_path,jobid,config_dict)	
+
+	feature_process(var_list,output_path,jobid,config_dict)	
 	#print()
 	#result_dict = collect_result(output_path,jobid)
 

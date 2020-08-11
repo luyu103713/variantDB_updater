@@ -3,7 +3,7 @@ import time
 import requests
 import json
 from cut_file import get_index_for_cols
-from mufa_ui import test_mufa
+from mufa_ui import *
 
 def test_venv():
 
@@ -35,7 +35,7 @@ def inti_variant_input(var_list,output_path,jobid):
 	f_input = open(output_path+ '/' + jobid + '/' + jobid +'.input','w')
 	job_count = 0
 	for i in var_list:
-		print(i)
+		#print(i)
 		temp = i.split(':')
 		nl = ''
 		for col in temp:
@@ -67,18 +67,18 @@ def biodbnet_process(output_path,jobid,basic_dict):
 		temp =l.split('\t')
 		index = int(temp[0])
 		symbol = temp[6]
-		symbol_dict[symbol] = index
-
+		#symbol_dict[symbol] = index
+		symbol_dict[index] = symbol
 		l = f_transvar.readline()
 	total_count = len(basic_dict)
 
 	url = "https://biodbnet-abcc.ncifcrf.gov/webServices/rest.php/biodbnetRestApi.json?method=db2db&input=genesymbol&inputValues="
-	for key in symbol_dict:
+	for i in range(len(symbol_dict)):
 		#https://biodbnet-abcc.ncifcrf.gov/webServices/rest.php/biodbnetRestApi.json?method=db2db&input=genesymbol&inputValues=TP53,BRAF&outputs=affyid&taxonId=9606
-		url += key
+		url += symbol_dict[i]
 		url += ','
 	url = url[:-1] + "&outputs=ensemblgeneid&taxonId=9606"
-	#print(url)
+	print(url)
 	r = requests.get(url)
 	text_dict = json.loads(r.text)
 	#print(text)
@@ -88,7 +88,8 @@ def biodbnet_process(output_path,jobid,basic_dict):
 	for i in range(total_count):
 		print(text_dict[str(i)])
 		symbol = text_dict[str(i)]['InputValue']
-		index = symbol_dict[symbol]
+		#index = symbol_dict[symbol]
+		index = i
 		if text_dict[str(i)]['outputs'] != []:
 			ensg = text_dict[str(i)]['outputs']['Ensembl Gene ID'][0]   #use first one
 		else:
@@ -132,7 +133,7 @@ def ANNOVAR_process(output_path,jobid,basic_dict):
 	f_sh.close()
 
 	os.system('sh '+ sh_root)
-	time.sleep(1)
+	time.sleep(0.5)
 	#rename annovar output 
 	fw = open(output_path+ '/' + jobid + '/' + jobid +'_annovar_out.tsv','w')               
 	fbase = open(output_path+ '/' + jobid + '/' + jobid +'.hg19_multianno.csv','r')
@@ -182,7 +183,7 @@ def transvar_process(output_path,jobid,basic_dict):
 	f_sh.close()
 	transvar_result_file = output_path+ '/' + jobid + '/' + jobid +'_transvar.result'
 	os.system('sh '+ sh_root + ' > ' + transvar_result_file)
-	time.sleep(1)
+	time.sleep(0.5)
 	f_result = open(transvar_result_file,'r')
 	transvar_result_dict = {}
 	l = f_result.readline()
@@ -276,7 +277,7 @@ def write_transfic_base(output_path,jobid,basic_dict):
 
 def transfic_process(output_path,jobid,basic_dict):
 	f_transfic_base,transfic_big_dict = write_transfic_base(output_path,jobid,basic_dict)
-	print(transfic_big_dict)
+	#print(transfic_big_dict)
 	sh = "perl  ./transf_scores.pl gosmf " + f_transfic_base + ' ' + output_path+ '/' + jobid + '/' + jobid +'_transfic_result.txt'
 	sh_root = output_path+ '/' + jobid + '/' + jobid +'_transfic_main.sh'
 	f_sh = open(sh_root,'w')
@@ -342,14 +343,12 @@ def transfic_process(output_path,jobid,basic_dict):
 	f_result.close()
 
 
-
-
 def feature_process(var_list,output_path,jobid,config_dict=None):
 	#test_venv()
 	basic_dict = inti_variant_input(var_list,output_path,jobid)
+	print(config_dict)
 
-
-	print(basic_dict)
+	#print(basic_dict)
 	if not config_dict:
 		has_error,error_type = transvar_process(output_path,jobid,basic_dict)
 		if has_error:
@@ -360,6 +359,7 @@ def feature_process(var_list,output_path,jobid,config_dict=None):
 
 		biodbnet_process(output_path,jobid,basic_dict)
 		transfic_process(output_path,jobid,basic_dict)
+		oncokb_process(output_path,jobid,basic_dict)
 	else:  # use config_dict
 		if config_dict['transvar']:
 			has_error,error_type = transvar_process(output_path,jobid,basic_dict)
@@ -373,11 +373,8 @@ def feature_process(var_list,output_path,jobid,config_dict=None):
 			biodbnet_process(output_path,jobid,basic_dict)
 		if config_dict['transfic']:
 			transfic_process(output_path,jobid,basic_dict)
-
-
-
-
-
+		if config_dict['oncokb']:
+			oncokb_process(output_path,jobid,basic_dict)
 
 
 
