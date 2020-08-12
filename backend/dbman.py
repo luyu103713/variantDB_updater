@@ -4,6 +4,7 @@ import sys
 import time
 from lib import dbconfig
 import pymysql
+from subprocess import call
 
 def print_time():
     print('begin dbman.py')
@@ -17,6 +18,7 @@ def change_status(jobid, newstatus):
         cur = db.cursor()
         cur.execute("UPDATE varientDB_new.database_job set status= %s where job LIKE %s ", (newstatus, jobid))
         db.commit()
+        print("change jobid : " + str(jobid) + " status to " + str(newstatus))
     except:
 
         print("jobid : "+ jobid + "db error!")
@@ -81,6 +83,9 @@ def create_updater_input(job_dict,jobid):
     file_root = "/data/Luhy/tools/variantDB_updater/input_file/" + str(jobid) + '/'
     if not os.path.exists(file_root):
         os.makedirs(file_root)
+    out_path = "/data/Luhy/tools/variantDB_updater/output/" + str(jobid) + '/'
+    if not os.path.exists(out_path):
+        os.makedirs(out_path)
     #print(job_dict['features'])
     fw = open(file_root + jobid + '.input','w')
     for i in range(len(job_dict['details'])):
@@ -99,18 +104,27 @@ def create_updater_input(job_dict,jobid):
     f_config.close()
 
     #python updater_main.py -i ./example/test02.tsv -o ./output/ -n 20200810 -c config.txt
-    f_sh_pwd = file_root + jobid + '._main.sh'
+    f_sh_pwd = file_root + jobid + '_main.sh'
     f_sh = open(f_sh_pwd,'w')
     start_sh = 'echo start:`date +"%Y-%m-%d %H:%M:%S"` >> ./input_file/' + jobid + '/time.log\n'
     end_sh = 'echo end:`date +"%Y-%m-%d %H:%M:%S"` >> ./input_file/' + jobid + '/time.log\n'
-    change_status_to_3_sh = "/home/Luhy/anaconda3/bin/python change_status_to_3.py " + str(jobid) + '\n'
-    updater_main_sh = "/home/Luhy/anaconda3/bin/python updater_main.py -i ./input_file/" + str(jobid) + "/" + str(jobid)+ ".input -o ./output/ -n " + str(jobid) + " -c ./input_file/" +  str(jobid) + "/" + str(jobid) + ".config\n"
-    mail_sh = ""
+    change_status_to_3_sh = "/home/Luhy/anaconda3/bin/python ./backend/change_status_to_3.py " + str(jobid) + '\n'
+    updater_main_sh = "/home/Luhy/anaconda3/bin/python updater_main.py -i ./input_file/" + str(jobid) + "/" + str(jobid)+ ".input -o ./output/ -n " \
+    + str(jobid) + " -c ./input_file/" +  str(jobid) + "/" + str(jobid) + ".config > ./output/" + str(jobid) + "/" + str(jobid) + "_updater_main_debug.txt\n"
+    
+    mail_sh = "/home/Luhy/anaconda3/bin/python ./backend/updater_result_and_mail.py " + str(jobid) + ' > ./output/' + str(jobid) + "/" + str(jobid) + "_updater_result_and_mail_debug.txt\n"
+    
+    f_sh.write(change_status_to_3_sh)
+    f_sh.write(start_sh)
     f_sh.write(updater_main_sh)
+    f_sh.write(end_sh)
+    f_sh.write(mail_sh)
 
 
     f_sh.close()
-    os.system("sh " + f_sh_pwd)
+    os.chmod(f_sh_pwd,0o775)
+    call("ts sh "+f_sh_pwd, shell=True)
+    #os.system("sh " + f_sh_pwd)
 
 def main():
     result_dict = get_new_jobs()
@@ -119,13 +133,6 @@ def main():
     for jobid in result_dict:
         create_updater_input(result_dict[jobid],jobid)
         print('job : ' + str(jobid) + ' inputfiles....OK!')
-        #break;
-
-
-
-
-
-
 
 
 if __name__ == '__main__':

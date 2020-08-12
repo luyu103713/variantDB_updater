@@ -21,7 +21,8 @@ def get_file_map_list(input_file,key_type,split_symbol,hasTitle):
 		l = f.readline()
 	map_key_list = []
 	file_base_list =[]
-	
+	if not l:
+		exit('empty input file!')
 	while l:
 		
 		l = l .strip()
@@ -44,7 +45,33 @@ def get_file_map_list(input_file,key_type,split_symbol,hasTitle):
 			key_name = temp[0] + ':' + temp[1] + ':' + temp[2]
 		elif key_type == 'index':
 			key_name = l
-
+		elif key_type == 'cds':
+			#BRAF:c.1799T>A
+			temp = l.split(':')
+			gene = temp[0]
+			if temp[1][0:2] == 'c.':
+				info = temp[1][2:]
+			else:
+				info =temp[1]
+			pos = info[:-3]
+			ref = info[-3]
+			alt = info[-1]
+			key_name = gene + ":c." + pos + ref+ ">" + alt
+		elif key_type == 'aa':
+			#PIK3CA:p.H1047R
+			temp = l.split(':')
+			gene = temp[0]
+			if temp[1][0:2] == 'p.':
+				info = temp[1][2:]
+			else:
+				info =temp[1]
+			pos = info[1:-1]
+			ref = info[0]
+			alt = info[-1]
+			key_name = gene + ":p." + ref + pos + alt 
+		#elif key_type == 'protein':
+			#temp = l.split(':')
+			#pdb = temp[0]
 		map_key_list.append(key_name)
 
 
@@ -66,7 +93,7 @@ def readFileFromInput(input_file,key_type,split_symbol,hasTitle):
 	map_key_list = []
 	file_base_list = []
 
-	key_type_list = ['variant','gene','uniprot','structure','gene-mutaAA','index']
+	key_type_list = ['variant','gene','uniprot','structure','gene-mutaAA','index','cds','aa']
 
 	if key_type not in key_type_list:
 		error_massage = "Annotation key error , please check it!"

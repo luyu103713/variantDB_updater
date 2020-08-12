@@ -3,7 +3,10 @@ import time
 import requests
 import json
 from cut_file import get_index_for_cols
+from lib import readFile
 from mufa_ui import *
+
+
 
 def test_venv():
 
@@ -159,7 +162,81 @@ def ANNOVAR_process(output_path,jobid,basic_dict):
 
 	
 	return has_error,error_type
+def transvar_g_to_updater_input(gene_hg19_v):
+	# chr3:g.178952085A>G -> 3\t178952085\tA\tG\n
+	if gene_hg19_v == '.':
+		nl = '.\t.\t.\t.\n'
+	else:
 
+		temp = gene_hg19_v.split(':g.')
+		chrom = temp[0][3:]
+		pos = temp[1][:-3]
+		ref = temp[1][-3]
+		alt = temp[1][-1]
+		nl = chrom + '\t' + pos + '\t' + ref + '\t' + alt + '\n'
+	return nl
+
+
+
+
+def map_back_to_hg19(input_file,split_symbol,variant_type,hasTitle,output_path,jobid):
+	if variant_type in ['aa','cds']:
+		print("begin transfer back to hg19,")
+		error_code,error_massage,var_list,file_base_list= readFile.readFileFromInput(input_file,variant_type,split_symbol,hasTitle)
+		if error_code:
+			exit(error_massage)	
+		print(var_list)
+		sh = "source /data/Luhy/tools/2020/transvar/bin/activate\n"
+		total_count = len(var_list)
+		f_transvar_pwd = output_path+ '/' + jobid + '/' + jobid+'_'+ variant_type +'_to_hg19.result'
+
+		#transvar canno --ccds -i 'BRAF:c.1799T>A' --ensembl
+		#transvar panno -i BRAF:p.V600E --ensembl
+		for info in var_list:
+			if variant_type == "cds":
+				sh_transvar = "transvar canno --ccds -i '" + info + "'\n"
+			elif variant_type == "aa":
+				sh_transvar = "transvar panno -i '" + info + "' --ensembl\n"
+			sh += sh_transvar
+		sh_root = output_path+ '/' + jobid + '/' + jobid +'_'+ variant_type +'_to_hg19_transvar.sh'
+
+		
+		f_sh = open(sh_root,'w')
+		f_sh.write(sh[:-1])
+		f_sh.close()
+		os.system('sh '+ sh_root + ' > ' + f_transvar_pwd)
+		time.sleep(0.5)
+		f_out = output_path+ '/' + jobid + '/' + jobid+'_'+ variant_type +'_to_hg19_out.tsv'
+		fw = open(f_out,'w')
+		f_result = open(f_transvar_pwd,'r')
+
+		transvar_result_dict = {}
+		l = f_result.readline()
+		#l = f_result.readline()
+		result_index = 0
+		begin_read = False
+		while l:
+			#print(l)
+			if l[0:5] == 'input':
+				begin_read = True
+			if l[0:5] != 'input' and begin_read: #cols name, multiple rusult,only read first one!!!  need check!
+				
+				#print(l[0:4])
+				temp = l.split('\t')
+				gene_hg19_v = temp[4].split('/')[0]  #chr3:g.178952085A>G
+
+				nl = transvar_g_to_updater_input(gene_hg19_v)  # chr3:g.178952085A>G -> 3\t178952085\tA\tG\n
+				fw.write(nl)
+				result_index += 1
+				begin_read = False
+
+			l = f_result.readline()
+		fw.close()
+
+
+		return f_out
+	else:
+		return input_file
 
 
 def transvar_process(output_path,jobid,basic_dict):
