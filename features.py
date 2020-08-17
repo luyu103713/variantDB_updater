@@ -106,6 +106,20 @@ def biodbnet_process(output_path,jobid,basic_dict):
 	fw.close()
 	f_transvar.close()
 	
+def write_candra_input(output_path,jobid,basic_dict):
+	index_dict = {}
+	f_candra= output_path+ '/' + jobid + '/' + jobid +'_candra.input'
+	fw = open(f_candra,'w')
+	total_count = len(basic_dict)
+	for i in range(total_count):
+		#info = basic_dict[i]
+		#1	948921	948921	T	C
+		nl =  str(basic_dict[i]['chr']) + '\t' + str(basic_dict[i]['pos'])+ '\t' + basic_dict[i]['ref'] + '\t' + basic_dict[i]['mut']+'\t+' + '\n'
+		#index_dict[str(basic_dict[i]['chr']) + ':' + str(basic_dict[i]['pos']) + ':' + basic_dict[i]['ref']+ ':' + basic_dict[i]['mut']] = i
+		index_dict[i] = str(basic_dict[i]['chr']) + ':' + str(basic_dict[i]['pos']) + ':' + basic_dict[i]['ref']+ ':' + basic_dict[i]['mut']
+		fw.write(nl)
+	fw.close()
+	return f_candra,index_dict 
 
 
 
@@ -121,6 +135,55 @@ def write_avinput(output_path,jobid,basic_dict):
 		fw.write(nl)
 	fw.close()
 	return f_avinput
+def fathmm_cancer(output_path,jobid,basic_dict):
+	
+
+
+
+def candra_process(output_path,jobid,basic_dict):
+	input_file,index_dict = write_candra_input(output_path,jobid,basic_dict)
+	output_file = output_path+ '/' + jobid + '/' + jobid +'_candra_result.tsv'
+	sh = "perl /data/Luhy/tools/2020/CanDrA/open_candra.pl GENERAL " + input_file + " > " + output_file
+	sh_root = output_path+ '/' + jobid + '/' + jobid +'_candra.sh'
+
+	f_sh = open(sh_root,'w')
+	f_sh.write(sh)
+	f_sh.close()
+
+	os.system('sh '+ sh_root)
+	time.sleep(0.5)
+
+	fr = open(output_file,'r')
+	fw = open(output_path+ '/' + jobid + '/' + jobid +'_candra_out.tsv','w')
+	match_result = {}
+
+	ls = fr.readlines()
+	col_name = ls[0]
+	fw.write('index\t' + col_name)
+	for l in ls[1:]:
+		l = l.strip()
+		temp = l.split('\t')
+		match_index = temp[0] + ':' + temp[1] + ':' + temp[2] + ':' + temp[3]
+		match_result[match_index] = l
+	for index in index_dict:
+		nl = str(index) + '\t'
+		if index_dict[index] in match_result:
+			nl += match_result[index_dict[index]]
+			nl += '\n'
+		else:
+			temp = index_dict[index].split(':')
+			for k in temp:
+				nl += k
+				nl += '\t'
+			nl += '+'
+			for i in range(8):
+				nl += '\t'
+				nl += '.'
+			nl += '\n'
+		fw.write(nl)
+	fw.close()
+	fr.close()
+
 
 def ANNOVAR_process(output_path,jobid,basic_dict):
 	has_error = False
@@ -158,8 +221,6 @@ def ANNOVAR_process(output_path,jobid,basic_dict):
 		fw.write(nl)		
 		index += 1
 		l = fbase.readline()
-		
-
 	
 	return has_error,error_type
 def transvar_g_to_updater_input(gene_hg19_v):
@@ -206,7 +267,7 @@ def map_back_to_hg19(input_file,split_symbol,variant_type,hasTitle,output_path,j
 		f_sh.close()
 		os.system('sh '+ sh_root + ' > ' + f_transvar_pwd)
 		time.sleep(0.5)
-		f_out = output_path+ '/' + jobid + '/' + jobid+'_'+ variant_type +'_to_hg19_out.tsv'
+		f_out = output_path+ '/' + jobid + '/' + jobid+'_'+ variant_type +'_to_hg19_result.tsv'
 		fw = open(f_out,'w')
 		f_result = open(f_transvar_pwd,'r')
 
@@ -237,6 +298,7 @@ def map_back_to_hg19(input_file,split_symbol,variant_type,hasTitle,output_path,j
 		return f_out
 	else:
 		return input_file
+
 
 
 def transvar_process(output_path,jobid,basic_dict):
@@ -420,6 +482,7 @@ def transfic_process(output_path,jobid,basic_dict):
 	f_result.close()
 
 
+
 def feature_process(var_list,output_path,jobid,config_dict=None):
 	#test_venv()
 	basic_dict = inti_variant_input(var_list,output_path,jobid)
@@ -433,7 +496,8 @@ def feature_process(var_list,output_path,jobid,config_dict=None):
 		has_error,error_type = ANNOVAR_process(output_path,jobid,basic_dict)
 		if has_error:
 			exit(error_type)
-
+		candra_process(output_path,jobid,basic_dict)
+		fathmm_cancer(output_path,jobid,basic_dict)
 		biodbnet_process(output_path,jobid,basic_dict)
 		transfic_process(output_path,jobid,basic_dict)
 		oncokb_process(output_path,jobid,basic_dict)
@@ -446,12 +510,18 @@ def feature_process(var_list,output_path,jobid,config_dict=None):
 			has_error,error_type = ANNOVAR_process(output_path,jobid,basic_dict)
 			if has_error:
 				exit(error_type)
+		if config_dict['candra']:
+			candra_process(output_path,jobid,basic_dict)
+		if config_dict['fathmm_cancer']:
+			fathmm_cancer(output_path,jobid,basic_dict)
 		if config_dict['biodbnet']:
 			biodbnet_process(output_path,jobid,basic_dict)
 		if config_dict['transfic']:
 			transfic_process(output_path,jobid,basic_dict)
 		if config_dict['oncokb']:
 			oncokb_process(output_path,jobid,basic_dict)
+
+
 
 
 

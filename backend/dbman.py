@@ -35,7 +35,7 @@ def get_new_jobs():
         db = pymysql.connect(dbconfig.ip,dbconfig.user,dbconfig.passwd)
 
         cur = db.cursor()
-        cur.execute("SELECT job,creation_date,job_type,features,order_in_job,chrname,position,ref,alt FROM varientDB_new.database_job,varientDB_new.database_job_details where status = 1 AND database_job.job = database_job_details.job_id;")
+        cur.execute("SELECT job,creation_date,job_type,features,order_in_job,main_name,position,ref,alt FROM varientDB_new.database_job,varientDB_new.database_job_details where status = 1 AND database_job.job = database_job_details.job_id;")
 
         rows = cur.fetchall()
 
@@ -49,7 +49,7 @@ def get_new_jobs():
             job_type = row[2]
             features = row[3]
             order_in_job = row[4]
-            chrname = row[5]
+            chrname = row[5]   # chrname = main_name
             position = row[6]
             ref = row[7]
             alt = row[8]
@@ -80,6 +80,7 @@ def get_new_jobs():
             con.close()    
 def create_updater_input(job_dict,jobid):
     #/data/Luhy/tools/variantDB_updater/input_file/
+    #print(str(job_dict['job_type']))
     file_root = "/data/Luhy/tools/variantDB_updater/input_file/" + str(jobid) + '/'
     if not os.path.exists(file_root):
         os.makedirs(file_root)
@@ -90,7 +91,15 @@ def create_updater_input(job_dict,jobid):
     fw = open(file_root + jobid + '.input','w')
     for i in range(len(job_dict['details'])):
         info = job_dict['details'][i]
-        fw.write(info['chrname'] + '\t' + info['position'] + '\t' +info['ref'] + '\t' +info['alt'] + '\n' )
+        if str(job_dict['job_type']) == '1':
+            fw.write(info['chrname'] + '\t' + info['position'] + '\t' +info['ref'] + '\t' +info['alt'] + '\n' )
+        elif str(job_dict['job_type']) == '2':   #BRAF:c.1799T>A
+            fw.write(info['chrname'] +':c.' + str(info['position']) + info['ref'] +">"+ info['alt'] + '\n')
+        elif str(job_dict['job_type']) == '3':   #BRAF:p.V600E
+            fw.write(info['chrname'] +':p.'+ info['ref']  + str(info['position']) + info['alt'] + '\n')
+
+
+
     fw.close()
     f_config = open(file_root + jobid + '.config','w')
     config_list = job_dict['features'].split(';')
@@ -103,6 +112,16 @@ def create_updater_input(job_dict,jobid):
 
     f_config.close()
 
+    # job type for different -v args
+    if str(job_dict['job_type']) == '2': #cds
+        v_args = "-v 2"
+    elif str(job_dict['job_type']) == '3': #muta aa (BRAF:V600E)
+        v_args = "-v 3"
+    elif str(job_dict['job_type']) == '1': #gene var
+        v_args = "-v 1"
+    else:
+        v_args = "-v 1"
+
     #python updater_main.py -i ./example/test02.tsv -o ./output/ -n 20200810 -c config.txt
     f_sh_pwd = file_root + jobid + '_main.sh'
     f_sh = open(f_sh_pwd,'w')
@@ -110,7 +129,7 @@ def create_updater_input(job_dict,jobid):
     end_sh = 'echo end:`date +"%Y-%m-%d %H:%M:%S"` >> ./input_file/' + jobid + '/time.log\n'
     change_status_to_3_sh = "/home/Luhy/anaconda3/bin/python ./backend/change_status_to_3.py " + str(jobid) + '\n'
     updater_main_sh = "/home/Luhy/anaconda3/bin/python updater_main.py -i ./input_file/" + str(jobid) + "/" + str(jobid)+ ".input -o ./output/ -n " \
-    + str(jobid) + " -c ./input_file/" +  str(jobid) + "/" + str(jobid) + ".config > ./output/" + str(jobid) + "/" + str(jobid) + "_updater_main_debug.txt\n"
+    + str(jobid) + " -c ./input_file/" +  str(jobid) + "/" + str(jobid) + ".config " + v_args + " > ./output/" + str(jobid) + "/" + str(jobid) + "_updater_main_debug.txt\n"
     
     mail_sh = "/home/Luhy/anaconda3/bin/python ./backend/updater_result_and_mail.py " + str(jobid) + ' > ./output/' + str(jobid) + "/" + str(jobid) + "_updater_result_and_mail_debug.txt\n"
     
@@ -123,14 +142,16 @@ def create_updater_input(job_dict,jobid):
 
     f_sh.close()
     os.chmod(f_sh_pwd,0o775)
-    call("ts sh "+f_sh_pwd, shell=True)
+    call("/usr/local/bin/ts sh "+f_sh_pwd, shell=True)
     #os.system("sh " + f_sh_pwd)
 
 def main():
     result_dict = get_new_jobs()
     #print(result_dict)
-    print_time()
+    if result_dict != {}:
+        print_time()
     for jobid in result_dict:
+
         create_updater_input(result_dict[jobid],jobid)
         print('job : ' + str(jobid) + ' inputfiles....OK!')
 

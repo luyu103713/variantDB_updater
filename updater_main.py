@@ -14,7 +14,7 @@ class updater_opt:
         parser.add_option("-i", "--input", dest="input", help="input file(absolute or relative)")
         parser.add_option("-o", "--output", dest="output", help="output file path(absolute or relative)")
         parser.add_option("-n", "--filename", dest="filename", help="job name or id")
-        parser.add_option("-v", "--variant_type", dest="variant_type", help="optional: variant_type,1:hg19(default),2.Protein,3.Mutation CDS,4.Mutation AA")
+        parser.add_option("-v", "--variant_type", dest="variant_type", help="optional: variant_type,1:hg19(default),2.Mutation CDS,3.Protein variant,4.Protein structure mutation")
         parser.add_option("-c", "--feature_config", dest="feature_config", help="optional: Custom features calculation")
         parser.add_option("-s", "--split_type", dest="split_type", help="optional:how to split input file.\n t:tab(default)\n c:comma")
         parser.add_option("-t", "--title", dest="title", help="optional:Has title or not.\n 1:no(default)\n 2:yes")
@@ -49,7 +49,7 @@ def check_rely(config_dict,rely_dict):
 
 
 def match_config(config_dict):     # Logic of calculation order!!
-    normal_methods = ['transvar','annovar','biodbnet','transfic','oncokb']
+    normal_methods = ['transvar','annovar','biodbnet','transfic','oncokb','candra','fathmm_cancer']
     rely_dict = featuresRelyOn.relyOnDict
 
     del_list = []
@@ -101,11 +101,11 @@ def main():
     else:
         hasTitle = False
 
-    if main_opt.options.variant_type == '2':
+    if main_opt.options.variant_type == '4':
         variant_type = 'protein'
-    elif main_opt.options.variant_type == '3':
+    elif main_opt.options.variant_type == '2':
         variant_type ='cds'
-    elif main_opt.options.variant_type == '4':
+    elif main_opt.options.variant_type == '3':
         variant_type = 'aa'
     else:
         variant_type = 'hg19'
@@ -141,7 +141,7 @@ def main():
     #print(var_list)
     print('Variant number : ' + str(len(var_list)))
 
-
+    print(config_dict)
     feature_process(var_list,output_path,jobid,config_dict)    
     #print()
     #result_dict = collect_result(output_path,jobid)

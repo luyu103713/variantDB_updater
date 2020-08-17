@@ -76,7 +76,6 @@ def get_file_map_list(input_file,key_type,split_symbol,hasTitle):
 
 
 
-
 		l = f.readline()
 
 	f.close()
