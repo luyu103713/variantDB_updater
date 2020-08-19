@@ -40,7 +40,7 @@ def inti_variant_input(var_list,output_path,jobid):
 	for i in var_list:
 		#print(i)
 		temp = i.split(':')
-		nl = ''
+		nl = str(job_count) + '\t'
 		for col in temp:
 			nl += col
 			nl += '\t'
@@ -135,10 +135,57 @@ def write_avinput(output_path,jobid,basic_dict):
 		fw.write(nl)
 	fw.close()
 	return f_avinput
-def fathmm_cancer(output_path,jobid,basic_dict):
+def create_fathmm_cancer_input(output_path,jobid,basic_dict):
+	f_fcinput = output_path+ '/' + jobid + '/' + jobid +'_fathmm_cancer.input'
+	fw = open(f_fcinput,'w')
+	f_tr = open(output_path+ '/' + jobid + '/' + jobid +'_transvar_out.tsv','r')
+	ls = f_tr.readlines()
+	for l in ls[1:]:
+		l = l.strip()
+		temp = l.split('\t')
+		ensp = temp[8]
+		if temp[7] != '.':
+			aa = temp[7][2:]
+		else:
+			aa = '.'
+		nl = ensp + '\t' + aa + '\n'
+		fw.write(nl)
+	return f_fcinput
+#def chasmplus_process(output_path,jobid,basic_dict):
 	
 
+def fathmm_cancer(output_path,jobid,basic_dict):    ### change  fathmm.py : database config pwd; or fathmm.py can not find config.ini file;
+	fathmm_cancer_input_file = create_fathmm_cancer_input(output_path,jobid,basic_dict)
+	#sh = "cd /data/Luhy/tools/2020/fathmmCancer/fathmm_cancer_main/\n"
+	sh = "/usr/bin/python  /data/Luhy/tools/2020/fathmmCancer/fathmm_cancer_main/fathmm.py  -w Cancer -t -0.75 " + fathmm_cancer_input_file + " " + output_path+ '/' + jobid + '/' + jobid +'_fathmm_cancer.result'
+	sh_root = output_path+ '/' + jobid + '/' + jobid +'_fathmm_cancer.sh'
+	f_sh = open(sh_root,'w')
+	f_sh.write(sh)
+	f_sh.close()
 
+	os.system('sh '+ sh_root)
+	time.sleep(0.5)
+
+	f = open(output_path+ '/' + jobid + '/' + jobid +'_fathmm_cancer.result','r')
+	fw = open(output_path+ '/' + jobid + '/' + jobid +'_fathmm_cancer_out.tsv','w')
+	fw.write('index\tfathmm_cancer_score\tfathmm_cancer_predict\n')
+	ls = f.readlines()
+	for l in ls[1:]:
+		l = l.strip()
+		temp = l.split('\t')
+		if temp[5] != '':
+			score = temp[5]
+		else:
+			score = '.'
+		if temp[4] != '':
+			predict = temp[4]
+		else:
+			predict = '.'
+		index = temp[0]
+		nl = index + '\t' +  score + '\t' +  predict + '\n'
+		fw.write(nl)
+	fw.close()
+	f.close()
 
 def candra_process(output_path,jobid,basic_dict):
 	input_file,index_dict = write_candra_input(output_path,jobid,basic_dict)
@@ -296,6 +343,71 @@ def map_back_to_hg19(input_file,split_symbol,variant_type,hasTitle,output_path,j
 
 
 		return f_out
+	elif variant_type == 'hg38':
+		error_code,error_massage,var_list,file_base_list= readFile.readFileFromInput(input_file,variant_type,split_symbol,hasTitle)
+		if error_code:
+			exit(error_massage)	
+		print(var_list)
+		#dict for map
+		var38_map = {}
+		var38_list = []
+		for i in var_list:
+			temp = i.split(':')
+			#2:25245350:G:A
+			var38_map[temp[0] +':' + temp[1]] = temp[2] + ':' + temp[3]
+			var38_list.append(temp[0] +':' + temp[1])
+		#exit('debug')
+		#write hg38 BED file
+		hg38_bed = output_path+ '/' + jobid + '/' + jobid+'_'+ variant_type +'.BED3'
+		fw = open(hg38_bed,'w')
+		for hg38v in var_list:
+			temp = hg38v.split(':')
+			chrname = temp[0]
+			hg38pos = temp[1]
+			try:
+				hg38pos_add = str(int(hg38pos)+1)
+			except:
+				hg38pos_add = '.'
+			nl = chrname + '\t' + hg38pos + '\t' + hg38pos_add + '\n'
+			fw.write(nl)
+		fw.close()
+		#CrossMap.py bed hg38ToHg19.over.chain.gz test.txt test19.txt
+		hg19_bed = output_path+ '/' + jobid + '/' + jobid+'_'+ 'hg19' +'.BED3'
+		hg19_result = output_path+ '/' + jobid + '/' + jobid+'_'+ 'hg38_to_hg19' +'.result'
+		sh = "CrossMap.py bed /data/Luhy/tools/variantDB_updater/crossMap/hg38ToHg19.over.chain.gz " + hg38_bed + " " + hg19_bed + '\n'
+		sh += "CrossMap.py bed /data/Luhy/tools/variantDB_updater/crossMap/hg38ToHg19.over.chain.gz " + hg38_bed + " > " + hg19_result
+		sh_root = output_path+ '/' + jobid + '/' + jobid +'_'+ variant_type +'_to_hg19_crossmap.sh'
+		f_sh = open(sh_root,'w')
+		f_sh.write(sh)
+		f_sh.close()
+
+		os.system('sh '+ sh_root)
+		time.sleep(0.5)	
+		fr = open(hg19_result,'r')
+		ls = fr.readlines()
+		new_hg19_map_hg38= {}
+
+		for l in ls:
+			l = l.strip()
+			temp = l.split('\t')
+			if '->' in temp:
+				hg_38_chr = temp[0]
+				hg_38_pos = temp[1]
+				hg_19_chr = temp[4]
+				hg_19_pos = temp[5]
+				new_hg19_map_hg38[hg_38_chr + ':' + hg_38_pos] = hg_19_chr + ':' +hg_19_pos
+		hg19_out_file = output_path+ '/' + jobid + '/' + jobid+'_'+ variant_type +'_to_hg19.input'
+		fw2 = open(hg19_out_file,'w')
+		for key in var38_list:
+			if key in new_hg19_map_hg38:
+				ref_muta_info = var38_map[key].split(':')
+				hg19_info = new_hg19_map_hg38[key].split(':')
+				nl = hg19_info[0] + '\t' + hg19_info[1] + '\t' + ref_muta_info[0] + '\t' + ref_muta_info[1] + '\n'
+			else:
+				nl = '.\t.\t.\t.\n'
+			fw2.write(nl)
+		return hg19_out_file
+		#exit('debug')
 	else:
 		return input_file
 
@@ -310,10 +422,10 @@ def transvar_process(output_path,jobid,basic_dict):
 	#{0: {'chr': '7', 'pos': '140453136', 'ref': 'A', 'mut': 'T'}}  # basic dict
 	total_count = len(basic_dict)
 	fw = open(output_path+ '/' + jobid + '/' + jobid +'_transvar_out.tsv','w')
-	fw.write('index\tchr\tposition\tref\talt\ttranscript\tsymbol\taa_change\n')
+	fw.write('index\tchr\tposition\tref\talt\ttranscript\tsymbol\taa_change\tENSPid\n')
 	for i in range(total_count):
 		info = basic_dict[i]
-		sh_head = "transvar ganno --ccds -i 'chr"
+		sh_head = "transvar ganno --ensembl -i 'chr"
 		temp_sh = sh_head + str(info['chr']) + ':g.' + str(info['pos']) + info['ref'] + '>' + info['mut'] + "'\n"
 		sh += temp_sh
 	sh_root = output_path+ '/' + jobid + '/' + jobid +'_transvar.sh'
@@ -329,10 +441,17 @@ def transvar_process(output_path,jobid,basic_dict):
 	#l = f_result.readline()
 	result_index = 0
 	begin_read = False
-	while l:
+	while l:   #a complex process~ 
 		#print(l)
 		if l[0:5] == 'input':
-			begin_read = True
+			if begin_read == True:
+				
+				nl = str(result_index) + '\t' + str(basic_dict[result_index]['chr']) + '\t' + str(basic_dict[result_index]['pos']) + '\t' + basic_dict[result_index]['ref'] + '\t' + basic_dict[result_index]['mut'] + '\t.\t.\t.\t.\n'
+				
+				fw.write(nl)
+				result_index += 1
+			else:
+				begin_read = True
 		if l[0:5] != 'input' and begin_read: #cols name, multiple rusult,only read first one!!!  need check!
 			
 			#print(l[0:4])
@@ -341,9 +460,13 @@ def transvar_process(output_path,jobid,basic_dict):
 			transcript = temp[1].split(' (p')[0]
 			symbol = temp[2]
 			aa_change = temp[4].split('/')[-1]
+			if 'source=Ensembl' in temp[6]:
+				enspid = temp[6].split('aliases=')[-1].split(';source=')[0]
+			else:
+				enspid = '.'
 			print(transcript,symbol,aa_change)
 			nl = str(result_index) + '\t' + str(basic_dict[result_index]['chr']) + '\t' + str(basic_dict[result_index]['pos']) + '\t' + basic_dict[result_index]['ref'] + '\t' + basic_dict[result_index]['mut'] + '\t' + \
-			transcript + '\t' +  symbol + '\t' +  aa_change + '\n'
+			transcript + '\t' +  symbol + '\t' +  aa_change  + '\t' + enspid + '\n'
 			fw.write(nl)
 			result_index += 1
 			begin_read = False

@@ -3,6 +3,7 @@ import pymysql
 import os
 from lib import readFile,featuresRelyOn
 from features import feature_process,map_back_to_hg19
+from cut_file import count_time
 
 
 
@@ -14,7 +15,7 @@ class updater_opt:
         parser.add_option("-i", "--input", dest="input", help="input file(absolute or relative)")
         parser.add_option("-o", "--output", dest="output", help="output file path(absolute or relative)")
         parser.add_option("-n", "--filename", dest="filename", help="job name or id")
-        parser.add_option("-v", "--variant_type", dest="variant_type", help="optional: variant_type,1:hg19(default),2.Mutation CDS,3.Protein variant,4.Protein structure mutation")
+        parser.add_option("-v", "--variant_type", dest="variant_type", help="optional: variant_type,1:hg19(default),2.Mutation CDS,3.Protein variant,4.Protein structure mutation,5.hg38")
         parser.add_option("-c", "--feature_config", dest="feature_config", help="optional: Custom features calculation")
         parser.add_option("-s", "--split_type", dest="split_type", help="optional:how to split input file.\n t:tab(default)\n c:comma")
         parser.add_option("-t", "--title", dest="title", help="optional:Has title or not.\n 1:no(default)\n 2:yes")
@@ -75,9 +76,27 @@ def match_config(config_dict):     # Logic of calculation order!!
 
     return config_dict
     
+def index_input(input_file,split_symbol,hasTitle,output_path,jobid):
+	f = open(input_file,'r')
+	ls = f.readlines()
+	fw = open(output_path+ '/' + jobid + '/' + jobid+'_index.input','w')
+	if hasTitle:
+		col = ls[0]
+		nl = 'index' + split_symbol + col
+		fw.write(nl)
+		ls = ls[1:]
+	index = 0
+	for l in ls:
+		nl = str(index) + split_symbol + l
+		fw.write(nl)
+		index += 1
+
+	f.close()
+	fw.close()
 
 
 
+@count_time
 def main():
     main_opt = updater_opt()
     main_opt.verification()
@@ -107,6 +126,8 @@ def main():
         variant_type ='cds'
     elif main_opt.options.variant_type == '3':
         variant_type = 'aa'
+    elif main_opt.options.variant_type == '5':
+    	variant_type = 'hg38'
     else:
         variant_type = 'hg19'
     #print(main_opt.options.feature_config)
@@ -128,13 +149,14 @@ def main():
     #print('\n'.join([''.join([('VariantDB'[(x-y) % len('VariantDB')] if ((x*0.05)**2+(y*0.1)**2-1)**3-(x*0.05)**2*(y*0.1)**3 <= 0else' ') for x in range(-30, 30)]) for y in range(30, -30, -1)]))
     #print('\n')
     print('Begin work : ')
+    
     if variant_type != 'protein':   # begin from hg19 or pdb_structures /protein module is a independent part
-    	input_file = map_back_to_hg19(input_file,split_symbol,variant_type,hasTitle,output_path,jobid)
+    	real_input_file = map_back_to_hg19(input_file,split_symbol,variant_type,hasTitle,output_path,jobid)
 
     	split_symbol = "\t"  # use out.tsv for input
 
-
-    error_code,error_massage,var_list,file_base_list= readFile.readFileFromInput(input_file,'variant',split_symbol,hasTitle) # now only read variant
+    index_input(input_file,split_symbol,hasTitle,output_path,jobid)
+    error_code,error_massage,var_list,file_base_list= readFile.readFileFromInput(real_input_file,'variant',split_symbol,hasTitle) # now only read variant
     if error_code:
         exit(error_massage)    
 

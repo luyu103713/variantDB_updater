@@ -72,6 +72,11 @@ def get_file_map_list(input_file,key_type,split_symbol,hasTitle):
 		#elif key_type == 'protein':
 			#temp = l.split(':')
 			#pdb = temp[0]
+		elif key_type == 'hg38':
+			temp = l.split(split_symbol)
+			#print(temp)
+			key_name = temp[0] + ':' + temp[1] + ':' + temp[2] + ':' + temp[3]
+
 		map_key_list.append(key_name)
 
 
@@ -92,7 +97,7 @@ def readFileFromInput(input_file,key_type,split_symbol,hasTitle):
 	map_key_list = []
 	file_base_list = []
 
-	key_type_list = ['variant','gene','uniprot','structure','gene-mutaAA','index','cds','aa']
+	key_type_list = ['variant','gene','uniprot','structure','gene-mutaAA','index','cds','aa','hg38']
 
 	if key_type not in key_type_list:
 		error_massage = "Annotation key error , please check it!"
@@ -112,7 +117,7 @@ def readFileFromInput(input_file,key_type,split_symbol,hasTitle):
 		return error_work,error_massage,map_key_list,file_base_list
 
 
-
+	
 
 
 
@@ -131,8 +136,11 @@ def readFileFromInput(input_file,key_type,split_symbol,hasTitle):
 		error_work = True
 		return error_work,error_massage,map_key_list,file_base_list
 
-
-	map_key_list,file_base_list = get_file_map_list(input_file,key_type,split_symbol,hasTitle)
+	try:
+		map_key_list,file_base_list = get_file_map_list(input_file,key_type,split_symbol,hasTitle)
+	except:
+		error_work =True
+		error_massage="input file format error"
 
 	return error_work,error_massage,map_key_list,file_base_list
 

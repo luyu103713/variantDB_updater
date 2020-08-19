@@ -235,7 +235,7 @@ def count_time(func):
         func()
         over_time = time.time() 
         total_time = over_time - start_time
-        print('function running : %s s' % total_time)
+        print('Updater process running : %s s' % total_time)
 
     return int_time
 def main():
