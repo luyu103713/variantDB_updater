@@ -50,7 +50,7 @@ def check_rely(config_dict,rely_dict):
 
 
 def match_config(config_dict):     # Logic of calculation order!!
-    normal_methods = ['transvar','annovar','biodbnet','transfic','oncokb','candra','fathmm_cancer']
+    normal_methods = ['transvar','annovar','biodbnet','transfic','oncokb','candra','fathmm_cancer','to_pdb_structure']
     rely_dict = featuresRelyOn.relyOnDict
 
     del_list = []

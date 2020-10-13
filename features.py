@@ -60,6 +60,92 @@ def test_ANNOVAR():
 	f.write(sh)
 	f.close()
 	os.system('sh test.sh > test.txt')
+def prepare_muta3dmap_input(output_path,jobid,basic_dict):
+	total_count = len(basic_dict)
+	muta3dmap_input_dir = output_path+ '/' + jobid + '/muta3dmap/'
+	if not os.path.exists(muta3dmap_input_dir):
+		os.makedirs(muta3dmap_input_dir)	
+	f1 = open(output_path+ '/' + jobid + '/' + jobid +'_uniprotAccession_out.tsv','r') # uniprot
+	f2 = open(output_path+ '/' + jobid + '/' + jobid +'_transvar_out.tsv','r') # aa change
+	ls1 = f1.readlines()
+	ls2 = f2.readlines()
+	big_dict = {}
+	for i in range(total_count):
+		big_dict[i] = {'uniprot':'.','ref':'.','pos':'.','alt':'.'}
+	for l in ls1[1:]:
+		l = l.strip()
+		temp = l.split('\t')
+		uniprot = temp[2]
+		index = int(temp[0])
+		big_dict[index]['uniprot'] = uniprot
+	f1.close()
+	for l in ls2[1:]:
+		l = l.strip()
+		temp = l.split('\t')
+		aa_change = temp[7]	#p.*208R
+		index = int(temp[0])
+		if ('p.' not in aa_change) and (aa_change[0:2] != 'p.'):
+			ref = '.'
+			pos = '.'
+			alt = '.'
+		else:
+			ref = aa_change[2]
+			alt = aa_change[-1]
+			pos = aa_change[3:-1]
+		big_dict[index]['ref'] = ref
+		big_dict[index]['alt'] = alt
+		big_dict[index]['pos'] = pos
+	f2.close()
+	#print(big_dict)
+	fw1 = open(muta3dmap_input_dir+'uniprot_id.txt','w')
+	fw1.write('UniProt\tyourlist\n')
+	fw2 = open(muta3dmap_input_dir+'uniprot_muta.txt','w')
+	fw2.write('from_id\tRef\tPos\tAlt\n')
+	for i in range(total_count):
+		nl1 = big_dict[i]['uniprot'] + '\t' + big_dict[i]['uniprot'] + '\n'
+		nl2 = big_dict[i]['uniprot'] + '\t' + big_dict[i]['ref'] + '\t' + big_dict[i]['pos'] + '\t' + big_dict[i]['alt'] + '\n'
+		fw1.write(nl1)
+		fw2.write(nl2)
+	fw1.close()
+	fw2.close()
+
+
+
+def to_pdb(output_path,jobid,basic_dict):
+	f_ensg = open(output_path+ '/' + jobid + '/' + jobid +'_ensemblgeneid_out.tsv','r')
+	ls = f_ensg.readlines()
+	total_count = len(basic_dict)
+	#https://biodbnet-abcc.ncifcrf.gov/webServices/rest.php/biodbnetRestApi.json?method=db2db&input=ensemblgeneid&inputValues=ENSG00000157764,ENSG00000133703&outputs=uniprotaccession&taxonId=9606
+	url = "https://biodbnet-abcc.ncifcrf.gov/webServices/rest.php/biodbnetRestApi.json?method=db2db&input=ensemblgeneid&inputValues="
+	for l in ls[1:]:
+		l = l.strip()
+		temp = l.split('\t')
+		url += temp[2]
+		url += ','
+
+	url = url[:-1] + "&outputs=uniprotaccession&taxonId=9606"
+	r = requests.get(url)
+	text_dict = json.loads(r.text)	
+	write_dict = {}
+	fw = open(output_path+ '/' + jobid + '/' + jobid +'_uniprotAccession_out.tsv','w')
+	fw.write('index\tensg\tuniprotAccession\n')
+	for i in range(total_count):
+		print(text_dict[str(i)])
+		ensg = text_dict[str(i)]['InputValue']
+		#index = symbol_dict[symbol]
+		index = i
+		if text_dict[str(i)]['outputs'] != []:
+			uniprot = text_dict[str(i)]['outputs']['UniProt Accession'][0]   #use first one
+		else:
+			uniprot = '.'
+		write_dict[index] = [ensg,uniprot]
+
+	for i in range(total_count):
+		nl = str(i) + '\t' + write_dict[i][0] + '\t' + write_dict[i][1] + '\n'
+		fw.write(nl)
+	fw.close()
+	prepare_muta3dmap_input(output_path,jobid,basic_dict)
+
 def biodbnet_process(output_path,jobid,basic_dict):
 	f_transvar = open(output_path+ '/' + jobid + '/' + jobid +'_transvar_out.tsv','r')
 	symbol_dict = {}
@@ -462,6 +548,11 @@ def transvar_process(output_path,jobid,basic_dict):
 			aa_change = temp[4].split('/')[-1]
 			if 'source=Ensembl' in temp[6]:
 				enspid = temp[6].split('aliases=')[-1].split(';source=')[0]
+				try:
+					if enspid[:4].upper() != "ENSP":
+						enspid= '.'
+				except:
+					enspid= '.'
 			else:
 				enspid = '.'
 			print(transcript,symbol,aa_change)
@@ -619,9 +710,11 @@ def feature_process(var_list,output_path,jobid,config_dict=None):
 		has_error,error_type = ANNOVAR_process(output_path,jobid,basic_dict)
 		if has_error:
 			exit(error_type)
+		
 		candra_process(output_path,jobid,basic_dict)
 		fathmm_cancer(output_path,jobid,basic_dict)
 		biodbnet_process(output_path,jobid,basic_dict)
+		to_pdb(output_path,jobid,basic_dict)
 		transfic_process(output_path,jobid,basic_dict)
 		oncokb_process(output_path,jobid,basic_dict)
 	else:  # use config_dict
@@ -633,12 +726,15 @@ def feature_process(var_list,output_path,jobid,config_dict=None):
 			has_error,error_type = ANNOVAR_process(output_path,jobid,basic_dict)
 			if has_error:
 				exit(error_type)
+
 		if config_dict['candra']:
 			candra_process(output_path,jobid,basic_dict)
 		if config_dict['fathmm_cancer']:
 			fathmm_cancer(output_path,jobid,basic_dict)
 		if config_dict['biodbnet']:
 			biodbnet_process(output_path,jobid,basic_dict)
+		if config_dict['to_pdb_structure']:
+			to_pdb(output_path,jobid,basic_dict)
 		if config_dict['transfic']:
 			transfic_process(output_path,jobid,basic_dict)
 		if config_dict['oncokb']:
